@@ -68,9 +68,23 @@ GitHub:
    ```
 
 3. On GitHub: **Settings → Pages → Build and deployment → Source** → choose
-   **GitHub Actions**.
+   **GitHub Actions** (not “Deploy from a branch”). Save if prompted.
 4. The workflow runs on every push to `main`. When it finishes, the site is
    at `https://YOUR_USER.github.io/YOUR_REPO/`.
+
+### Deploy job fails with 404 / “Ensure GitHub Pages has been enabled”
+
+The **build** job can succeed while **deploy** fails if Pages is not set up for
+Actions yet. Fix:
+
+1. Open **Settings → Pages** for the repo.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+3. If you do not see that option, an org admin may need to allow GitHub Pages
+   for the organization ( **Org Settings → Pages** ).
+4. Re-run the workflow: **Actions → Deploy to GitHub Pages → Run workflow**.
+
+Until **deploy** succeeds (green), the site URL may load blank or show a
+placeholder. Check the **deploy** job, not only **build**.
 
 To deploy only static files without Actions, build locally and push the
 contents of `dist/` to a `gh-pages` branch instead (optional).
