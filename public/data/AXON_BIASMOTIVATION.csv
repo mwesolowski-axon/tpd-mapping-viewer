@@ -1,0 +1,18 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+INCIDENTNUMBER,P2606150134,axon.BiasMotivation,IncidentNumber,,,"Incident Number is not surfaced directly in EntOffense_AxonBiasMotivationInvolved, but can be derived from Report Number. 
+
+Don't use LatestIncidentReport_EntOffense_AxonBiasMotivationInvolved because earlier arrests are not included. (-1 won't show up if -3 has an arrest on it)"
+REPORTNUMBER,P2606150134-1,axon.BiasMotivation,ReportNumber,Records.IncidentReport_EntOffense_AxonBiasMotivationInvolved,ReportFriendlyId,
+OFFENSEEXTERNALID,c35fcec9-aa75-4b4a-91a9-2b478e5d2918,axon.BiasMotivation,OffenseExternalId,Records.IncidentReport_EntOffense_AxonBiasMotivationInvolved,OffenseFriendlyId,
+BIASMOTIVATIONINVOLVED,ANTI_BLACK_OR_AFRICAN_AMERICAN,axon.BiasMotivation,BiasMotivationInvolved,Records.IncidentReport_EntOffense_AxonBiasMotivationInvolved,Key,Key or KeyFull both contain the same information
+REPORTCREATEDAT_INDEXED_UTC,2026-06-15 22:41:17,axon.BiasMotivation,ReportCreatedAt_Indexed_Utc,Records.IncidentReport_EntOffense_AxonBiasMotivationInvolved,CreatedAt,
+REPORTUPDATEDAT_INDEXED_UTC,2026-06-18 17:33:56,axon.BiasMotivation,ReportUpdatedAt_Indexed_Utc,Records.IncidentReport_EntOffense_AxonBiasMotivationInvolved,UpdatedAt,
+FILE_NAMES,axon.BiasMotivation/part-00000-fb7795f9-70e8-49ed-a555-7656632cb2ee-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,214889,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-08-20 9:02:12,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,,,,,,Snowflake Specific
+ETL_LOADED_AT,,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,,,,,,Snowflake Specific

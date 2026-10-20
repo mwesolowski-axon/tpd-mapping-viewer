@@ -1,0 +1,69 @@
+{
+  "tables": [
+    {
+      "id": "AXON_ARRESTS",
+      "name": "AXON_ARRESTS",
+      "file": "data/AXON_ARRESTS.csv"
+    },
+    {
+      "id": "AXON_ARRESTSCHARGES",
+      "name": "AXON_ARRESTSCHARGES",
+      "file": "data/AXON_ARRESTSCHARGES.csv"
+    },
+    {
+      "id": "AXON_BIASMOTIVATION",
+      "name": "AXON_BIASMOTIVATION",
+      "file": "data/AXON_BIASMOTIVATION.csv"
+    },
+    {
+      "id": "AXON_CALLFORSERVICE_TUCSONPDAZ",
+      "name": "AXON_CALLFORSERVICE_TUCSONPDAZ",
+      "file": "data/AXON_CALLFORSERVICE_TUCSONPDAZ.csv"
+    },
+    {
+      "id": "AXON_CASEFACTORS",
+      "name": "AXON_CASEFACTORS",
+      "file": "data/AXON_CASEFACTORS.csv"
+    },
+    {
+      "id": "AXON_CASES",
+      "name": "AXON_CASES",
+      "file": "data/AXON_CASES.csv"
+    },
+    {
+      "id": "AXON_CHARGES",
+      "name": "AXON_CHARGES",
+      "file": "data/AXON_CHARGES.csv"
+    },
+    {
+      "id": "AXON_CITATIONS",
+      "name": "AXON_CITATIONS",
+      "file": "data/AXON_CITATIONS.csv"
+    },
+    {
+      "id": "AXON_CITATIONSCHARGES",
+      "name": "AXON_CITATIONSCHARGES",
+      "file": "data/AXON_CITATIONSCHARGES.csv"
+    },
+    {
+      "id": "AXON_CONTACTINFORMATIONPHONENUMBERS",
+      "name": "AXON_CONTACTINFORMATIONPHONENUMBERS",
+      "file": "data/AXON_CONTACTINFORMATIONPHONENUMBERS.csv"
+    },
+    {
+      "id": "AXON_DEFLECTION_TUCSONPDAZ",
+      "name": "AXON_DEFLECTION_TUCSONPDAZ",
+      "file": "data/AXON_DEFLECTION_TUCSONPDAZ.csv"
+    },
+    {
+      "id": "AXON_FORM4C_TUCSONPDAZ",
+      "name": "AXON_FORM4C_TUCSONPDAZ",
+      "file": "data/AXON_FORM4C_TUCSONPDAZ.csv"
+    },
+    {
+      "id": "AXON_IDENTITYDOCUMENTS",
+      "name": "AXON_IDENTITYDOCUMENTS",
+      "file": "data/AXON_IDENTITYDOCUMENTS.csv"
+    }
+  ]
+}

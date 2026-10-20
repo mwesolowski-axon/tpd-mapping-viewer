@@ -1,0 +1,26 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+CASERAWDATA,"{""createdAt"":""2026-09-24T03:41:28.810Z"",""data"":{""axon"":{""dispositions"":[{""status"":""OPEN"",""ucrDisposition"":""NONE""},{""assignedDetective"":""4caac224-c459-4020-8496-ca8315d09315"",""date"":""2026-09-24T03:41:43.371Z"",""reason"":""INFO"",""status"":""CLOSED"",""ucrDisposition"":""NONE"",""unit"":""Patrol Drug Cases / CNA""}]},""id"":""16842603-b726-4f22-b611-ffeba98857bb""},""deleted"":false,""documents"":{""results"":[],""totalResults"":0},""friendlyId"":""CASE-P2609220185"",""id"":""16842603-b726-4f22-b611-ffeba98857bb"",""incidents"":[{""data"":{""axon"":{""ucrDisposition"":""NONE""},""id"":""42e8d875-2b99-42c3-bf74-9ebb7ea9fb76""},""friendlyId"":""P2609220185"",""id"":""42e8d875-2b99-42c3-bf74-9ebb7ea9fb76"",""incidentDate"":""2026-09-23T03:17:07.000Z"",""incidentLocation"":{""data"":{""axon"":{""addressRange"":"""",""addressType"":""STREET_ADDRESS"",""city"":""Tucson"",""country"":""USA"",""district"":""T2"",""houseNumber"":""601"",""lat"":32.265053,""lon"":-110.962624,""postalCode"":""85705"",""postalCodeExt"":""3997"",""score"":100,""sector"":""4"",""state"":""AZ"",""street"":""East Fort Lowell Road"",""streetName"":""Fort Lowell"",""streetPrefixDirection"":""East"",""streetPrefixType"":"""",""streetSuffixDirection"":"""",""streetType"":""Road"",""unitNumber"":"""",""unitType"":"""",""verified"":true,""zone"":""T204""},""id"":""4514bd6f-a209-5eba-8e3b-92753b2949ad""},""id"":""4514bd6f-a209-5eba-8e3b-92753b2949ad"",""txid"":""dc5d75ae-b7c9-11f1-81ff-6ea3aef371fe""},""sequenceId"":2,""txid"":""dc5d75ae-b7c9-11f1-81ff-6ea3aef371fe""}],""isDraft"":false,""sequenceId"":0,""submodule"":""RECORDS"",""txid"":""dc5d75ae-b7c9-11f1-81ff-6ea3aef371fe"",""updatedAt"":""2026-09-24T03:41:43.862Z""}",axon.Cases,CaseRawData,,,Raw form json data is not exposed in V2
+INCIDENTID,42e8d875-2b99-42c3-bf74-9ebb7ea9fb76,axon.Cases,IncidentId,Records.RelCaseIncident,ToId,Using CaseId from EntCase as FromId on RelCaseIncident joins to get Incident Id
+UNIT,Patrol Drug Cases / CNA,axon.Cases,Unit,Records.EntCase_AxonDispositions,Unit,
+UPDATEDAT_INDEXED_UTC,2026-09-24 3:41:44,axon.Cases,UpdatedAt_Indexed_Utc,Records.EntCase,LastUpdated,
+UPDATEDAT,2026-09-24 3:41:44,axon.Cases,UpdatedAt,Records.EntCase,LastUpdated,
+CASENUMBER,CASE-P2609220185,axon.Cases,CaseNumber,Records.EntCase,CaseFriendlyId,
+CREATEDAT,2026-09-24 3:41:29,axon.Cases,CreatedAt,Records.EntCase,CreatedAt,
+ASSIGNEDDETECTIVEUSERNAME,RMartin3,axon.Cases,AssignedDetectiveUsername,Records.Officer,Username,Joined from Records.EntCase_AxonDispositions where AssignedDetective = Id
+REASON,INFO,axon.Cases,Reason,Records.EntCase_AxonDispositions,Reason,
+CASEID,1661737,axon.Cases,CaseId,,,No V2 equivalent
+CASESTATUS,CLOSED,axon.Cases,CaseStatus,Records.EntCase_AxonDispositions,Status,
+EXTERNALID,16842603-b726-4f22-b611-ffeba98857bb,axon.Cases,ExternalId,Records.EntCase,Id,
+CREATEDAT_INDEXED_UTC,2026-09-24 3:41:29,axon.Cases,CreatedAt_Indexed_Utc,Records.EntCase,CreatedAt,
+ASSIGNEDDETECTIVEID,4caac224-c459-4020-8496-ca8315d09315,axon.Cases,AssignedDetectiveId,Records.EntCase_AxonDispositions,AssignedDetective,
+INCIDENTNUMBER,P2609220185,axon.Cases,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Using CaseId from EntCase as FromId on RelCaseIncident joins to get Incident Id which gives Incident Friendly Id on EntIncident
+INTERNALDISPOSITION,CLOSED,axon.Cases,InternalDisposition,Records.EntCase_AxonDispositions,Status,
+FILE_NAMES,axon_delta/axon.Cases/delta/load_id=20260924090115/part-00000-b1dc046f-6e17-45ea-a42c-09aa776dbba4-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,48,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-09-24 9:20:32,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,20260924090115,,,,,Snowflake Specific
+ETL_LOADED_AT,2026-09-24 9:20:29,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,2026-09-23 8:55:39,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,2026-09-23 6:55:39,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,2026-09-24 9:15:30,,,,,Snowflake Specific

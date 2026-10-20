@@ -1,0 +1,33 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+INCIDENTNUMBER,P2608028514,axon.CaseFactors,IncidentNumber,,,"Incident Number is not surfaced directly in Records.IncidentReport, but can be derived from Report Number. 
+
+Don't use LatestIncidentReport because earlier reports are not included. (-1 won't show up if -3 has an arrest on it)"
+REPORTNUMBER,P2608028514-2,axon.CaseFactors,ReportNumber,Records.IncidentReport,ReportFriendlyId,
+FORMID,59909972,axon.CaseFactors,FormId,,,Raw form json data is not exposed in V2
+SECTION,onlineReport,axon.CaseFactors,Section,,,Used for json processing
+FACTOR,0,axon.CaseFactors,Factor,,,Used for json processing
+CASEFACTOR,ONLINE_REPORT,axon.CaseFactors,CaseFactor,Records.IncidentReport,*CustomUsCaseFactorsOnlineReportCount,"Instead of one column with many values, V2 utilizes multiple columns with a binary value to indicate specific Case Factors:
+
+'1' indicates a Yes
+'0' indicates a No
+
+CustomUsCaseFactorsOnlineReportCount 
+CustomUsCaseFactorsK9DeploymentCount
+CustomUsCaseFactorsNonFatalshootingCount
+CustomUsCaseFactorsK9DeploymentCount
+CustomUsCaseFactorsOfficerInvolvedShootingCount
+
+V1 required multiple entries in case of multiple Case Factors, V2 resolves that
+
+In the case of K9 Deployments, determining K9 Bite or K9 Show of Force require checking the value of CustomUsCaseFactorsK9DeploymentList"
+REPORTCREATEDAT_INDEXED_UTC,2026-09-10 7:04:48,axon.CaseFactors,ReportCreatedAt_Indexed_Utc,Records.IncidentReport,CreatedAt,
+REPORTUPDATEDAT_INDEXED_UTC,2026-09-13 1:17:23,axon.CaseFactors,ReportUpdatedAt_Indexed_Utc,Records.IncidentReport,UpdatedAt,
+FILE_NAMES,axon_delta/axon.CaseFactors/delta/load_id=20260914090151/part-00000-b3397b28-0c06-4b47-ace5-bb2232a70c4c-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,2,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-09-14 9:17:40,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,20260914090151,,,,,Snowflake Specific
+ETL_LOADED_AT,2026-09-14 9:17:38,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,2026-09-13 1:42:38,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,2026-09-12 23:42:38,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,2026-09-14 2:27:33,,,,,Snowflake Specific

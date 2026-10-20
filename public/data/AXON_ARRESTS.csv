@@ -1,0 +1,43 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+EXTERNALID,ad44ddfb-f614-427d-a954-4e5118ca33b5,axon.Arrests,ExternalId,Records.IncidentReport_EntArrest,Id,
+INCIDENTNUMBER,P2609040011,axon.Arrests,IncidentNumber,,,"Incident Number is not surfaced directly in EntArrest, but can be derived from Report Number. 
+
+Don't use LatestIncidentReport_EntArrest because earlier arrests are not included. (-1 won't show up if -3 has an arrest on it)"
+REPORTNUMBER,P2609040011-1,axon.Arrests,ReportNumber,Records.IncidentReport_EntArrest,ReportFriendlyId,
+LOCATIONEXTERNALID,55e41d9e-9e1c-547b-82eb-d1572ef8d936,axon.Arrests,LocationExternalId,Records.IncidentReport_EntArrest,AxonArrestLocationLocation,
+ARRESTNUMBER,AR260170799,axon.Arrests,ArrestNumber,Records.IncidentReport_EntArrest,ArrestFriendlyId,
+ARRESTINGOFFICER,b92d6ddf-345a-4604-9a0a-8cf5b7637247,axon.Arrests,ArrestingOfficer,Records.IncidentReport_EntArrest,AxonArrestingOfficer,
+ARRESTTIME,2026-09-04 8:06:00,axon.Arrests,ArrestTime,,,Only given as UTC in Records.IncidentReport_EntArrest.AxonArrestTime
+ARRESTTIME_EASTERN,2026-09-04 4:06:00,axon.Arrests,ArrestTime_Eastern,,,Only given as UTC in Records.IncidentReport_EntArrest.AxonArrestTime
+ARRESTTIME_CENTRAL,2026-09-04 3:06:00,axon.Arrests,ArrestTime_Central,,,Only given as UTC in Records.IncidentReport_EntArrest.AxonArrestTime
+ARRESTTIME_MOUNTAIN,2026-09-04 2:06:00,axon.Arrests,ArrestTime_Mountain,,,Only given as UTC in Records.IncidentReport_EntArrest.AxonArrestTime
+ARRESTTIME_ARIZONA,2026-09-04 1:06:00,axon.Arrests,ArrestTime_Arizona,,,Only given as UTC in Records.IncidentReport_EntArrest.AxonArrestTime
+ARRESTTIME_PACIFIC,2026-09-04 1:06:00,axon.Arrests,ArrestTime_Pacific,,,Only given as UTC in Records.IncidentReport_EntArrest.AxonArrestTime
+ARRESTTYPE,SUMMONED_CITED,axon.Arrests,ArrestType,Records.IncidentReport_EntArrest,AxonArrestType,
+MULTIPLEARRESTEESEGMENTSINDICATOR,NOT_APPLICABLE,axon.Arrests,MultipleArresteeSegmentsIndicator,Records.IncidentReport_EntArrest,AxonMultipleArresteeSegmentsIndicator,
+ARRESTLOCATION,55e41d9e-9e1c-547b-82eb-d1572ef8d936,axon.Arrests,ArrestLocation,Records.IncidentReport_EntArrest,AxonArrestLocationLocation,
+ARRESTNOTES,,axon.Arrests,ArrestNotes,Records.IncidentReport_EntArrest,AxonArrestLocationNote,
+OFFENSETRACKINGNUMBER,,axon.Arrests,OffenseTrackingNumber,,,"No direct in V2, but no non-null values in V1"
+DISPOSITION,,axon.Arrests,Disposition,Records.IncidentReport_EntArrest,AxonDisposition,
+OTHERARRESTEEDISPOSITION,,axon.Arrests,OtherArresteeDisposition,,,"No direct in V2, but no non-null values in V1"
+PRIMARYOFFENSEFORARREST,fc05fd0f-5e73-4698-bcc7-3dc6dd881ec9,axon.Arrests,PrimaryOffenseForArrest,Records.IncidentReport_EntArrest,AxonPrimaryOffenseForArrest,
+MEDICALATTENTION,,axon.Arrests,MedicalAttention,Records.IncidentReport_EntArrest,AxonMedicalAttention,
+INJURY,,axon.Arrests,Injury,Records.IncidentReport_EntArrest,AxonInjury,
+DRUGSNARCOTICS,,axon.Arrests,DrugsNarcotics,Records.IncidentReport_EntArrest,AxonDrugsNarcotics,
+ARMEDWITH,UNARMED,axon.Arrests,ArmedWith,Records.IncidentReport_EntArrest,AxonArmedWith,
+ATTITUDE,,axon.Arrests,Attitude,Records.IncidentReport_EntArrest,AxonAttitude,
+ARRESTDETAILS,,axon.Arrests,ArrestDetails,Records.IncidentReport_EntArrest,AxonArrestDetails,
+JUVENILEDISPOSITION,,axon.Arrests,JuvenileDisposition,Records.IncidentReport_EntArrest,AxonJuvenileDisposition,
+ARRESTRAWDATA,"{""axon"":{""armedWith"":""UNARMED"",""arrestLocation"":{""location"":""55e41d9e-9e1c-547b-82eb-d1572ef8d936""},""arrestTime"":""2026-09-04T08:06:00.000Z"",""arrestType"":""SUMMONED_CITED"",""arrestingOfficer"":""b92d6ddf-345a-4604-9a0a-8cf5b7637247"",""charges"":[{""charge"":""6572938b-0631-41c8-ae40-034261baa70b"",""counts"":1},{""charge"":""c2896381-33b9-495a-8966-0b8d08ef0bdb"",""counts"":1},{""charge"":""c1f0bf71-d4e3-467e-b812-b10f92a17bf3"",""counts"":1},{""charge"":""bdecf866-a51c-4356-947b-d9eacbe4f967"",""counts"":1},{""charge"":""3e9f6e91-c606-4862-9e4c-b0b1adf29e44"",""counts"":1},{""charge"":""5c195619-71f5-4e85-90ee-90e79502fd57"",""counts"":1},{""charge"":""9f81ff7b-02d0-4020-8cad-f2d2e051bf3e"",""counts"":1}],""multipleArresteeSegmentsIndicator"":""NOT_APPLICABLE"",""primaryOffenseForArrest"":""fc05fd0f-5e73-4698-bcc7-3dc6dd881ec9""},""id"":""ad44ddfb-f614-427d-a954-4e5118ca33b5"",""friendlyId"":""AR260170799""}",axon.Arrests,ArrestRawData,,,V1 Specific
+ARRESTTIME_INDEXED_UTC,2026-09-04 8:06:00,axon.Arrests,ArrestTime_Indexed_Utc,Records.IncidentReport_EntArrest,AxonArrestTime,
+REPORTCREATEDAT_INDEXED_UTC,2026-09-04 8:10:53,axon.Arrests,ReportCreatedAt_Indexed_Utc,Records.IncidentReport_EntArrest,CreatedAt,
+REPORTUPDATEDAT_INDEXED_UTC,2026-09-16 7:06:37,axon.Arrests,ReportUpdatedAt_Indexed_Utc,Records.IncidentReport_EntArrest,UpdatedAt,
+FILE_NAMES,axon_delta/axon.Arrests/delta/load_id=20260916090103/part-00000-399a948a-a81a-40dc-b2f8-5b3f9ad89f32-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,30,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-09-16 9:13:01,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,20260916090103,,,,,Snowflake Specific
+ETL_LOADED_AT,2026-09-16 9:12:59,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,2026-09-15 9:13:10,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,2026-09-15 7:13:10,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,2026-09-16 9:12:04,,,,,Snowflake Specific

@@ -1,0 +1,13 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+REPORTID,59736572,axon.CallForService_TucsonPdAz,ReportId,,,No V2 Equivalent
+EXTERNALID,40d50348-321a-484f-a693-ce1003749925,axon.CallForService_TucsonPdAz,ExternalId,Records.IncidentReport,ReportId,
+INCIDENTID,78e57617-34bd-4ade-a3e0-0f32e480314e,axon.CallForService_TucsonPdAz,IncidentId,Records.EntIncident,Id,
+INCIDENTNUMBER,P2411270009,axon.CallForService_TucsonPdAz,IncidentNumber,Records.EntIncident,IncidentFriendlyId,
+REPORTNUMBER,P2411270009-1,axon.CallForService_TucsonPdAz,ReportNumber,Records.IncidentReport,ReportFriendlyId,
+CALLFORSERVICELOCATION,55fb38a9-6ca0-5c4a-bc5c-fd16366def28,axon.CallForService_TucsonPdAz,CallForServiceLocation,Records.IncidentReport,CustomUsCfsLocation,
+CALLFORSERVICECREATEDDATE,,axon.CallForService_TucsonPdAz,CallForServiceCreatedDate,Records.EntCallForService,AxonCreatedOn,
+CFSID,E243321421,axon.CallForService_TucsonPdAz,cfsId,Records.EntCallForService,AxonCfsId,
+CALLTYPE,UNWANT,axon.CallForService_TucsonPdAz,callType,Records.EntCallForService,AxonCallType,
+DISPOSITION,UNWANTED PERSON/TRESPASSER,axon.CallForService_TucsonPdAz,disposition,Records.EntCallForService,AxonDisposition,
+LATITUDE,32.1882844,axon.CallForService_TucsonPdAz,latitude,Records.EntCallForService_AxonLocation,AxonLat,
+LONGITUDE,-110.9694416,axon.CallForService_TucsonPdAz,longtidue,Records.EntCallForService_AxonLocation,AxonLon,

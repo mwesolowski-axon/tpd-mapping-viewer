@@ -1,0 +1,28 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+COUNTS,1,axon.ArrestsCharges,Counts,Records.IncidentReport_EntArrest_CustomAxonCharges,Counts,
+DRUGS,,axon.ArrestsCharges,Drugs,Records.IncidentReport_EntArrest_CustomAxonCharges,Drugs,
+WARRANTNUMBER,BW104120259352,axon.ArrestsCharges,WarrantNumber,Records.IncidentReport_EntArrest_CustomAxonCharges,WarrantNumber,
+DATEOFOFFENSE,,axon.ArrestsCharges,DateOfOffense,,,"No direct in V2, but no non-null values in V1"
+CHARGETYPE,,axon.ArrestsCharges,ChargeType,,,"No direct in V2, but no non-null values in V1"
+COUNTY,,axon.ArrestsCharges,County,,,"No direct in V2, but no non-null values in V1"
+STATE,,axon.ArrestsCharges,State,,,"No direct in V2, but no non-null values in V1"
+DOI,,axon.ArrestsCharges,Doi,,,"No direct in V2, but no non-null values in V1"
+BAILAMOUNTCENTS,,axon.ArrestsCharges,BailAmountCents,,,"No direct in V2, but no non-null values in V1"
+ISCORRECTABLE,,axon.ArrestsCharges,IsCorrectable,,,"No direct in V2, but no non-null values in V1"
+REPORTCREATEDAT_INDEXED_UTC,2025-07-29 4:41:57,axon.ArrestsCharges,ReportCreatedAt_Indexed_Utc,Records.IncidentReport_EntArrest_CustomAxonCharges,CreatedAt,
+REPORTUPDATEDAT_INDEXED_UTC,2026-08-17 15:44:34,axon.ArrestsCharges,ReportUpdatedAt_Indexed_Utc,Records.IncidentReport_EntArrest_CustomAxonCharges,UpdatedAt,
+PARENTEXTERNALID,b24411c6-9c66-4d8d-aa02-aa66ce26f56a,axon.ArrestsCharges,ParentExternalId,Records.IncidentReport_EntArrest_CustomAxonCharges,ParentId,
+REPORTNUMBER,P2507280196-1,axon.ArrestsCharges,ReportNumber,Records.IncidentReport_EntArrest_CustomAxonCharges,ReportFriendlyId,
+INCIDENTNUMBER,P2507280196,axon.ArrestsCharges,IncidentNumber,,,"Incident Number is not surfaced directly in EntArrest_CustomAxonCharges, but can be derived from Report Number. 
+
+Don't use LatestIncidentReport_EntArrest_CustomAxonCharges because earlier arrests are not included. (-1 won't show up if -3 has an arrest on it)"
+CHARGEID,5e23436c-2738-4ce7-a846-bfa39676fd77,axon.ArrestsCharges,ChargeId,Records.IncidentReport_EntArrest_CustomAxonCharges,Charge,
+FILE_NAMES,axon.ArrestsCharges/part-00000-7d148c45-1893-4b7c-9d39-c70ddd3b3a19-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,77560,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-08-20 8:58:12,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,,,,,,Snowflake Specific
+ETL_LOADED_AT,,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,,,,,,Snowflake Specific

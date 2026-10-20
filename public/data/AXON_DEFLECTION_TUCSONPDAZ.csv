@@ -1,0 +1,24 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+INCIDENTNUMBER,P2507160026,axon.Deflection_TucsonPdAz,IncidentNumber,,,"Incident Number is not surfaced directly in Records.Deflection, but can be derived from Report Number."
+REPORTNUMBER,2507-DEF-00005,axon.Deflection_TucsonPdAz,ReportNumber,Records.Deflection,ReportFriendlyId,
+AUTHOR,FLopez1,axon.Deflection_TucsonPdAz,Author,Records.Officer,Username,
+AUTHOREXTERNALID,7a696aa8-a157-4104-a685-3f0e224cad40,axon.Deflection_TucsonPdAz,AuthorExternalId,Records.Deflection,AuthorId,
+PERSONEXTERNALID,E2C1C9F2-0AFF-4172-882A-D4BBC8ABD2A4,axon.Deflection_TucsonPdAz,PersonExternalID,Records.Deflection_EntPerson,Id,
+FIRSTNAME,FRANK,axon.Deflection_TucsonPdAz,FirstName,Records.Deflection_EntPerson,AxonFirstName,
+LASTNAME,LAMPART,axon.Deflection_TucsonPdAz,LastName,Records.Deflection_EntPerson,AxonLastName,
+INVOLVEMENT,DEFLECTED,axon.Deflection_TucsonPdAz,Involvement,Records.Deflection_CustomUsParties_IndividualRole,AxonInvolvement,
+DEFLECTIONLOCATION,BUENA_VISTA,axon.Deflection_TucsonPdAz,DeflectionLocation,Records.Deflection,CustomDeflectionInformationWhereWereTheyTaken,
+OTHERDEFLECTIONLOCATION,JAIL,axon.Deflection_TucsonPdAz,OtherDeflectionLocation,Records.Deflection,CustomDeflectionInformationOtherSpecify,
+REASONFORDEFLECTION,SUBJECT_VOLUNTARY_ADMITTED,axon.Deflection_TucsonPdAz,ReasonForDeflection,Records.Deflection,CustomDeflectionInformationReasonForDeflection,
+REASONINGADDITIONALINFO,Flagged down about drug use by subject,axon.Deflection_TucsonPdAz,ReasoningAdditionalInfo,Records.Deflection,CustomDeflectionInformationReasoningAddtInfo,
+CHARGESDEFLECTED,2406,axon.Deflection_TucsonPdAz,ChargesDeflected,Records.Deflection,CustomDeflectionInformationWhatChargesWereDeflectedSelectAllThatApplyList,
+RELATEDEVENTS,ONSITE_ACTIVITY,axon.Deflection_TucsonPdAz,RelatedEvents,Records.Deflection,CustomDeflectionInformationResultOf,
+ONSITEACTIVITYOBSERVATION,TRESPASSING,axon.Deflection_TucsonPdAz,OnsiteActivityObservation,Records.Deflection,CustomDeflectionInformationOnsiteActivityObservation,
+ONSITEACTIVITYADDITIONALINFORMATION,"WAS OBSERVED TRESPASSING, OFFERED RESOURCES, ADMITTED TO STRUGGLING WITH A DRUG ADDICTION, ACCEPTED TO BE TRANSPORTED TO BUENA VISTA, TRANSPORTED.",axon.Deflection_TucsonPdAz,OnsiteActivityAdditionalInformation,Records.Deflection,CustomDeflectionInformationOnsiteActivityAdditionalInformation,
+CALLFORSERVICETYPE,OTHER,axon.Deflection_TucsonPdAz,CallForServiceType,Records.Deflection,CustomDeflectionInformationCallForService,
+CALLFORSERVICEADDITIONALINFORMATION,Tucson Environmental Services called Sgt. Williams requesting assistance with individuals not leaving a clean up location.,axon.Deflection_TucsonPdAz,callForServiceAdditionalInformation,Records.Deflection,CustomDeflectionInformationCallForService,
+ADDITIONALINFORMATION,"BILLY WAS BOOKED ON A PROBATION VIOLATION FELONY WARRANT, STATED HE NEEDED AND WANTED HELP WITH HIS ADDICTION TO FENTANYL PILLS, SPOKE TO CODAC PERSONAL, RAPPORT WAS ESTABLISH, CODAC WILL CONDUCT FOLLOW UP AT JAIL TO PROVIDE HIM WITH FURTHER INFORMATION ON THE OPTIONS AVAILABLE FOR TREATMENT.",axon.Deflection_TucsonPdAz,AdditionalInformation,Records.Deflection,CustomDeflectionInformationAdditionalInformation,
+FILE_NAMES,axon.Deflection_TucsonPdAz/part-00000-6a3e2220-a18b-4cc5-9cd8-a2c7502ab3b4-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,422,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-10-07 11:14:08,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific

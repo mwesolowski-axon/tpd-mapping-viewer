@@ -1,0 +1,34 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+EXTERNALID,aca23177-1676-4899-872b-233701f607c6,axon.Charges,ExternalId,Records.IncidentReport_EntCharge,Id,
+INCIDENTNUMBER,P2601010167,axon.Charges,IncidentNumber,,,"Incident Number is not surfaced directly in Records.IncidentReport_EntCharge, but can be derived from Report Number. 
+
+Don't use LatestIncidentReport because earlier reports are not included. (-1 won't show up if -3 has an arrest on it)"
+REPORTNUMBER,P2601010167-1,axon.Charges,ReportNumber,Records.IncidentReport_EntCharge,ReportFriendlyId,
+CHARGEFRIENDLYID,CHG00006330,axon.Charges,ChargeFriendlyId,Records.IncidentReport_EntCharge,ChargeFriendlyId,
+SECTION,902,axon.Charges,Section,Records.IncidentReport_EntCharge,AxonSection,
+DESCRIPTION,Other Assaults - No Injury,axon.Charges,Description,Records.IncidentReport_EntCharge,AxonDescription,
+SHORTDESCRIPTION,Other Assaults - No Injury,axon.Charges,ShortDescription,Records.IncidentReport_EntCharge,AxonShortDescription,
+SOURCE,UCR,axon.Charges,Source,Records.IncidentReport_EntCharge,AxonSource,
+VALIDFROMTIME,1991-07-03 7:00:00,axon.Charges,ValidFromTime,Records.IncidentReport_EntCharge,AxonValidFromTime,
+VALIDTOTIME,1829-11-23 7:50:52,axon.Charges,ValidToTime,Records.IncidentReport_EntCharge,AxonValidToTime,
+UCR,902,axon.Charges,Ucr,Records.IncidentReport_EntCharge,AxonUcr,
+NIBRSUCRCODES,"[""13B"",""13C""]",axon.Charges,NibrsUcrCodes,Records.IncidentReport_EntCharge,AxonNibrsUcrCodesList,"Format is different between versions: 
+V1 -> [""13B"",""13C""] 
+V2 -> 13B,13C"
+CHARGERAWDATA,"{""axon"":{""UCR"":""0902"",""chargeType"":""OFFENSE"",""description"":""Other Assaults - No Injury"",""nibrsUCRCodes"":[""13B"",""13C""],""offenseCategories"":[""TEAM""],""reviewPriority"":""HIGH"",""section"":""0902"",""severity"":""NOT_APPLICABLE"",""shortDescription"":""Other Assaults - No Injury"",""source"":""UCR"",""validFromTime"":""1991-07-03T07:00:00Z"",""validToTime"":""2999-01-01T07:00:00Z""},""id"":""aca23177-1676-4899-872b-233701f607c6"",""friendlyId"":""CHG00006330""}",axon.Charges,ChargeRawData,,,Raw form json data is not exposed in V2
+SEVERITY,NOT_APPLICABLE,axon.Charges,Severity,Records.IncidentReport_EntCharge,AxonSeverity,
+CODE,,axon.Charges,Code,Records.IncidentReport_EntCharge,AxonCode,
+REVIEWPRIORITY,HIGH,axon.Charges,ReviewPriority,Records.IncidentReport_EntCharge,AxonReviewPriority,
+REPORTCREATEDAT_INDEXED_UTC,2026-01-02 6:21:21,axon.Charges,ReportCreatedAt_Indexed_Utc,Records.IncidentReport_EntCharge,CreatedAt,
+REPORTUPDATEDAT_INDEXED_UTC,2026-01-29 19:05:13,axon.Charges,ReportUpdatedAt_Indexed_Utc,Records.IncidentReport_EntCharge,UpdatedAt,
+CJISCODE,,axon.Charges,CjisCode,Records.IncidentReport_EntCharge,AxonCjisCode,
+HIERARCHY,,axon.Charges,Hierarchy,Records.IncidentReport_EntCharge,AxonHierarchyNumber,
+FILE_NAMES,axon.Charges/part-00004-6e924311-6ee9-467f-afa3-46d72f1c2ce1-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,194313,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-08-20 9:01:33,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,,,,,,Snowflake Specific
+ETL_LOADED_AT,,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,,,,,,Snowflake Specific

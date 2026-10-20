@@ -1,0 +1,25 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+PERSONEXTERNALID,2430b98e-0b1f-4e3b-a50f-4e7cd6faf6b3,axon.ContactInformationPhoneNumbers,PersonExternalId,IncidentReport_EntPerson_AxonContactPhoneNumbers,ParentId,
+LASTNAME,MARQUEZ,axon.ContactInformationPhoneNumbers,LastName,IncidentReport_EntPerson,AxonLastName,
+REPORTEXTERNALID,b9a16a58-5b27-455e-b0c7-0b633071de58,axon.ContactInformationPhoneNumbers,ReportExternalId,IncidentReport_EntPerson_AxonContactPhoneNumbers,ReportId,
+REPORTNUMBER,P2601010007-1,axon.ContactInformationPhoneNumbers,ReportNumber,IncidentReport_EntPerson_AxonContactPhoneNumbers,ReportFriendlyId,
+INCIDENTNUMBER,P2601010007,axon.ContactInformationPhoneNumbers,IncidentNumber,,,"Incident Number is not surfaced directly in Records.IncidentReport_EntPerson_AxonContactPhoneNumbers or Records.IncidentReport_EntPerson, but can be derived from Report Number. 
+
+Don't use LatestIncidentReport because earlier reports are not included. (-1 won't show up if -3 has an arrest on it)"
+PERSONNUMBER,PER2500821372,axon.ContactInformationPhoneNumbers,PersonNumber,IncidentReport_EntPerson_AxonContactPhoneNumbers,PersonFriendlyId,
+REPORTUPDATEDAT_INDEXED_UTC,2026-08-07 1:18:15,axon.ContactInformationPhoneNumbers,ReportUpdatedAt_Indexed_Utc,IncidentReport_EntPerson_AxonContactPhoneNumbers,UpdatedAt,
+PHONENUMBERTYPE,HOME,axon.ContactInformationPhoneNumbers,PhoneNumberType,IncidentReport_EntPerson_AxonContactPhoneNumbers,Type,
+FIRSTNAME,ALANSO,axon.ContactInformationPhoneNumbers,FirstName,IncidentReport_EntPerson,AxonFirstName,
+MIDDLENAME,RICARDO,axon.ContactInformationPhoneNumbers,MiddleName,IncidentReport_EntPerson,AxonMiddleName,
+REPORTCREATEDAT_INDEXED_UTC,2026-01-01 8:06:17,axon.ContactInformationPhoneNumbers,ReportCreatedAt_Indexed_Utc,IncidentReport_EntPerson_AxonContactPhoneNumbers,CreatedAt,
+PHONENUMBER,520-5898447,axon.ContactInformationPhoneNumbers,PhoneNumber,IncidentReport_EntPerson_AxonContactPhoneNumbers,Value,
+INCIDENTEXTERNALID,6bac68f3-3d32-45b6-af30-3aa66d0dc8fb,axon.ContactInformationPhoneNumbers,IncidentExternalId,,,"No V2 value since Incident Number is not surfaced. "
+FILE_NAMES,axon.contactinformationphonenumbers/part-00009-b37efb3c-c9b7-4ebb-b81a-a11a4f832514-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,181935,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-08-20 12:09:32,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,,,,,,Snowflake Specific
+ETL_LOADED_AT,,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,,,,,,Snowflake Specific

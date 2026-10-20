@@ -1,0 +1,47 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+REPORTNUMBER,P2610190001-1,axon.IdentityDocuments,ReportNumber,Records.IncidentReport_EntPerson_AxonIdentityDocuments,ReportFriendlyId,
+ISSUINGSTATE,AZ,axon.IdentityDocuments,IssuingState,,,V2 has different Columns for issuing state depending on type
+DRIVERLICENSEISSUINGSTATE,AZ,axon.IdentityDocuments,DriverLicenseIssuingState,Records.IncidentReport_EntPerson_AxonIdentityDocuments,DriverLicenseIssuingState,"V2 has different columns for each type of ID for Issuing State: 
+
+- DriverLicenseIssuingState
+- BirthCertificateIssuingState"
+NUMBER,D03999903,axon.IdentityDocuments,Number,Records.IncidentReport_EntPerson_AxonIdentityDocuments,DriverLicenseNumber,"V2 has different columns for each type of ID for Number: 
+
+- DriverLicenseNumber
+- PassportNumber
+- SsnNumber
+- CommonAccessCardNumber
+- BirthCertificateNumber
+- OriginatingAgencyPoliceOrIdNumberNumber
+- FederalBureauOfInvestigationNumberNumber
+- OtherNumber "
+DRIVERLICENSEISSUINGSTATE_UPDATED,AZ,axon.IdentityDocuments,DriverLicenseIssuingState_Updated,,,No V2 Equivalent
+IDENTITYDOCUMENTID,198745018,axon.IdentityDocuments,IdentityDocumentId,,,No V2 Equivalent
+TYPE,DRIVERS_LICENSE,axon.IdentityDocuments,Type,Records.IncidentReport_EntPerson_AxonIdentityDocuments,Type,
+EXPIRATIONDATE,2030-07-08,axon.IdentityDocuments,ExpirationDate,,,V2 has different Columns for Expiration Date depending on type
+DRIVERLICENSEEXPIRATIONDATE,2030-07-08,axon.IdentityDocuments,DriverLicenseExpirationDate,Records.IncidentReport_EntPerson_AxonIdentityDocuments,DriverLicenseExpirationDate,"V2 has different columns for each type of ID for Expiration Date: 
+
+- DriverLicenseExpirationDate
+- PassportExpirationDate
+- CommonAccessCardExpirationDate
+- OtherExpirationDate"
+INCIDENTNUMBER,P2610190001,axon.IdentityDocuments,IncidentNumber,,,Incident Number is not surfaced directly in Records.IncidentReport_EntPerson_AxonIdentityDocuments
+PERSONEXTERNALID,1CF03648-7BB9-4389-B90B-66EE0ADE0D09,axon.IdentityDocuments,PersonExternalId,Records.IncidentReport_EntPerson_AxonIdentityDocuments,ParentId,
+COUNTRY,US,axon.IdentityDocuments,Country,Records.IncidentReport_EntPerson_AxonIdentityDocuments,PassportCountry,Typically provided for passports and passport cards
+CLASS,CLASS_D,axon.IdentityDocuments,Class,Records.IncidentReport_EntPerson_AxonIdentityDocuments,DriverLicenseClass,
+RESTRICTIONS,CORRECTIVE LENSES,axon.IdentityDocuments,Restrictions,Records.IncidentReport_EntPerson_AxonIdentityDocuments,DriverLicenseRestrictions,
+REPORTCREATEDAT_INDEXED_UTC,2026-10-19 7:06:05,axon.IdentityDocuments,ReportCreatedAt_Indexed_Utc,Records.IncidentReport_EntPerson_AxonIdentityDocuments,CreatedAt,
+RAWDATA,"{""driverLicense"":{""issuingState"":""AZ"",""number"":""D03999903""},""type"":""DRIVERS_LICENSE""}",axon.IdentityDocuments,RawData,,,Raw form json data is not exposed in V2
+ISSUER,U.S. AIR FORCE,axon.IdentityDocuments,Issuer,Records.IncidentReport_EntPerson_AxonIdentityDocuments,CommonAccessCardIssuer,Typically provided for Common Access Cards (CAC)
+REPORTUPDATEDAT_INDEXED_UTC,2026-10-19 8:44:51,axon.IdentityDocuments,ReportUpdatedAt_Indexed_Utc,Records.IncidentReport_EntPerson_AxonIdentityDocuments,UpdatedAt,
+OTHERDESCRIPTION,Local ID,axon.IdentityDocuments,OtherDescription,Records.IncidentReport_EntPerson_AxonIdentityDocuments,OtherDescription,
+BIRTHCERTIFICATEISSUINGSTATE,AZ,axon.IdentityDocuments,BirthCertificateIssuingState,Records.IncidentReport_EntPerson_AxonIdentityDocuments,BirthCertificateIssuingState,Typically provided for Birth Certificates
+FILE_NAMES,axon_delta/axon.identitydocuments/delta/load_id=20261019090049/part-00000-ef7a0228-e7dd-45a9-99a2-34abdd7dbaff-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,57,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-10-19 9:02:09,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,20261019090049,,,,,Snowflake Specific
+ETL_LOADED_AT,2026-10-19 9:02:07,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,2026-10-18 9:02:00,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,2026-10-18 7:02:00,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,2026-10-19 9:01:50,,,,,Snowflake Specific
