@@ -1,0 +1,24 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+EXTERNALID,deb1c67e-e4f4-4277-b1ae-f16cb6f7adcf,axon.PersonToArrest,ExternalId,Records.IncidentReport_RelPersonToArrest,Id,
+REPORTEXTERNALID,10b2cb53-5f70-4adc-bded-846b2a59b56a,axon.PersonToArrest,ReportExternalId,Records.IncidentReport_RelPersonToArrest,ReportId,
+REPORTNUMBER,P2601050052-1,axon.PersonToArrest,ReportNumber,Records.IncidentReport_RelPersonToArrest,ReportFriendlyId,
+INCIDENTEXTERNALID,214180c4-dd41-427a-a255-fb3761af2871,axon.PersonToArrest,IncidentExternalId,Records.EntIncident,Id,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.Id. See sidebar for query.
+INCIDENTNUMBER,P2601050052,axon.PersonToArrest,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
+FROMEXTERNALID,519de19a-fd0b-494a-9b15-4e034af28e91,axon.PersonToArrest,FromExternalId,Records.IncidentReport_RelPersonToArrest,IncidentReport_FromEntPersonId,
+TOEXTERNALID,b6ff7333-9d2d-46d2-bd67-7e2b7b1b4e76,axon.PersonToArrest,ToExternalId,Records.IncidentReport_RelPersonToArrest,IncidentReport_ToEntArrestId,
+REPORTCREATEDAT_INDEXED_UTC,2026-01-05 16:06:11,axon.PersonToArrest,ReportCreatedAt_Indexed_Utc,Records.IncidentReport_RelPersonToArrest,CreatedAt,
+REPORTUPDATEDAT_INDEXED_UTC,2026-01-06 20:22:36,axon.PersonToArrest,ReportUpdatedAt_Indexed_Utc,Records.IncidentReport_RelPersonToArrest,UpdatedAt,
+FILE_NAMES,axon.PersonToArrest/part-00000-04bf69a9-8e96-4279-9e91-8a84630c96f1-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,40572,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-08-20 8:53:28,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,,,,,,Snowflake Specific
+ETL_LOADED_AT,,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,,,,,,"Snowflake Specific
+""""""""""""""""
+""""""""
+""""
+""
+"

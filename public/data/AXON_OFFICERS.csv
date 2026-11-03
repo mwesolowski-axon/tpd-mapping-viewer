@@ -1,0 +1,24 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+OFFICEREXTERNALID,9c26d7bb-c562-4071-bef0-0316ee8fc216,axon.Officers,OfficerExternalId,Records.Officer,Id,
+BADGENUMBER,123456,axon.Officers,BadgeNumber,Records.Officer,BadgeNumber,
+LASTNAME,Jones,axon.Officers,LastName,Records.Officer,LastName,
+FIRSTNAME,Hank,axon.Officers,FirstName,Records.Officer,FirstName,
+USERNAME,HJones1,axon.Officers,Username,Records.Officer,Username,
+DISTRICT,ODWHQ,axon.Officers,District,Records.Officer,District,
+DISTRICTDESCRIPTION,Main Station HQ,axon.Officers,DistrictDescription,Records.Officer,DistrictDescription,
+AGE,,axon.Officers,Age,,,No V2 equivalent but not populated in V1
+SEX,,axon.Officers,Sex,,,No V2 equivalent but not populated in V1
+RACE,,axon.Officers,Race,,,No V2 equivalent but not populated in V1
+SUFFIX,,axon.Officers,Suffix,,,No V2 equivalent but not populated in V1
+HEIGHTIN,,axon.Officers,HeightIn,,,No V2 equivalent but not populated in V1
+WEIGHTLB,,axon.Officers,WeightLb,,,No V2 equivalent but not populated in V1
+BIRTHDATE,,axon.Officers,Birthdate,,,No V2 equivalent but not populated in V1
+ETHNICITY,,axon.Officers,Ethnicity,,,No V2 equivalent but not populated in V1
+MIDDLENAME,,axon.Officers,MiddleName,,,No V2 equivalent but not populated in V1
+EMPLOYMENTTYPE,,axon.Officers,EmploymentType,,,No V2 equivalent but not populated in V1
+EMAIL,Hank.Jones@tucsonaz.gov,axon.Officers,Email,Records.Officer,Email,
+RANKID,5deae586-fba4-462b-a7da-eaeee8d6,axon.Officers,RankId,Records.Officer,RankId,
+FILE_NAMES,axon.officers/part-00000-8d0104f7-9218-4feb-afaa-4b4885d5d660-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,6359,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-10-26 11:16:03,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific

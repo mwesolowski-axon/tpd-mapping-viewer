@@ -34,11 +34,12 @@ function withInlineCode(text) {
 // gets replaced in V2 by one dedicated column per value. Purely
 // presentational — driven by the columnFanout data on a TABLE_INFO entry
 // (see src/data/tableInfo.js).
-function ColumnFanout({ intro, legend, columns, footnote }) {
+function ColumnFanout({ title, intro, legend, columns, chipNotes, footnote }) {
   if (!columns?.length) return null
 
   return (
     <div className="column-fanout">
+      {title && <h3 className="column-fanout-title">{title}</h3>}
       {intro && <p className="column-fanout-intro">{withInlineCode(intro)}</p>}
 
       {legend?.length > 0 && (
@@ -52,11 +53,24 @@ function ColumnFanout({ intro, legend, columns, footnote }) {
       )}
 
       <ul className="column-fanout-list">
-        {columns.map((column) => (
-          <li className="column-fanout-chip" key={column}>
-            {column}
-          </li>
-        ))}
+        {columns.map((column) => {
+          const chipNote = chipNotes?.[column]
+          return (
+            <li className={`column-fanout-chip${chipNote ? ' has-chip-note' : ''}`} key={column}>
+              <span className="column-fanout-chip-label">{column}</span>
+              {chipNote && (
+                <span
+                  className="column-fanout-chip-note"
+                  title={chipNote}
+                  aria-label={chipNote}
+                  role="img"
+                >
+                  i
+                </span>
+              )}
+            </li>
+          )
+        })}
       </ul>
 
       {footnote && <p className="column-fanout-footnote">{withInlineCode(footnote)}</p>}

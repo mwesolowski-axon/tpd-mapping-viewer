@@ -1,7 +1,5 @@
 Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
-INCIDENTNUMBER,P2608028514,axon.CaseFactors,IncidentNumber,,,"Incident Number is not surfaced directly in Records.IncidentReport, but can be derived from Report Number. 
-
-Don't use LatestIncidentReport because earlier reports are not included. (-1 won't show up if -3 has an arrest on it)"
+INCIDENTNUMBER,P2608028514,axon.CaseFactors,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
 REPORTNUMBER,P2608028514-2,axon.CaseFactors,ReportNumber,Records.IncidentReport,ReportFriendlyId,
 FORMID,59909972,axon.CaseFactors,FormId,,,Raw form json data is not exposed in V2
 SECTION,onlineReport,axon.CaseFactors,Section,,,Used for json processing
@@ -30,4 +28,9 @@ ETL_LOAD_ID,20260914090151,,,,,Snowflake Specific
 ETL_LOADED_AT,2026-09-14 9:17:38,,,,,Snowflake Specific
 ETL_PREVIOUS_WATERMARK,2026-09-13 1:42:38,,,,,Snowflake Specific
 ETL_EFFECTIVE_START_WATERMARK,2026-09-12 23:42:38,,,,,Snowflake Specific
-ETL_CURRENT_WATERMARK,2026-09-14 2:27:33,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,2026-09-14 2:27:33,,,,,"Snowflake Specific
+""""""""""""""""
+""""""""
+""""
+""
+"

@@ -1,5 +1,5 @@
 Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
-INCIDENTNUMBER,P2507160026,axon.Deflection_TucsonPdAz,IncidentNumber,,,"Incident Number is not surfaced directly in Records.Deflection, but can be derived from Report Number."
+INCIDENTNUMBER,P2507160026,axon.Deflection_TucsonPdAz,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
 REPORTNUMBER,2507-DEF-00005,axon.Deflection_TucsonPdAz,ReportNumber,Records.Deflection,ReportFriendlyId,
 AUTHOR,FLopez1,axon.Deflection_TucsonPdAz,Author,Records.Officer,Username,
 AUTHOREXTERNALID,7a696aa8-a157-4104-a685-3f0e224cad40,axon.Deflection_TucsonPdAz,AuthorExternalId,Records.Deflection,AuthorId,
@@ -21,4 +21,9 @@ ADDITIONALINFORMATION,"BILLY WAS BOOKED ON A PROBATION VIOLATION FELONY WARRANT,
 FILE_NAMES,axon.Deflection_TucsonPdAz/part-00000-6a3e2220-a18b-4cc5-9cd8-a2c7502ab3b4-c000.snappy.parquet,,,,,Snowflake Specific
 FILE_ROW_NUMBER,422,,,,,Snowflake Specific
 FILE_LAST_MODIFIED,2026-10-07 11:14:08,,,,,Snowflake Specific
-OP,,,,,,Snowflake Specific
+OP,,,,,,"Snowflake Specific
+""""""""""""""""
+""""""""
+""""
+""
+"

@@ -1,8 +1,6 @@
 Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
 EXTERNALID,ad44ddfb-f614-427d-a954-4e5118ca33b5,axon.Arrests,ExternalId,Records.IncidentReport_EntArrest,Id,
-INCIDENTNUMBER,P2609040011,axon.Arrests,IncidentNumber,,,"Incident Number is not surfaced directly in EntArrest, but can be derived from Report Number. 
-
-Don't use LatestIncidentReport_EntArrest because earlier arrests are not included. (-1 won't show up if -3 has an arrest on it)"
+INCIDENTNUMBER,P2609040011,axon.Arrests,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
 REPORTNUMBER,P2609040011-1,axon.Arrests,ReportNumber,Records.IncidentReport_EntArrest,ReportFriendlyId,
 LOCATIONEXTERNALID,55e41d9e-9e1c-547b-82eb-d1572ef8d936,axon.Arrests,LocationExternalId,Records.IncidentReport_EntArrest,AxonArrestLocationLocation,
 ARRESTNUMBER,AR260170799,axon.Arrests,ArrestNumber,Records.IncidentReport_EntArrest,ArrestFriendlyId,
@@ -40,4 +38,8 @@ ETL_LOAD_ID,20260916090103,,,,,Snowflake Specific
 ETL_LOADED_AT,2026-09-16 9:12:59,,,,,Snowflake Specific
 ETL_PREVIOUS_WATERMARK,2026-09-15 9:13:10,,,,,Snowflake Specific
 ETL_EFFECTIVE_START_WATERMARK,2026-09-15 7:13:10,,,,,Snowflake Specific
-ETL_CURRENT_WATERMARK,2026-09-16 9:12:04,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,2026-09-16 9:12:04,,,,,"Snowflake Specific
+""""""""
+""""
+""
+"

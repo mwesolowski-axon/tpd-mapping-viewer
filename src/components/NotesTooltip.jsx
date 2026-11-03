@@ -8,7 +8,7 @@ const TOOLTIP_MAX_WIDTH = 340
 // JS (rendered in a portal, position: fixed) and clamped so it always stays
 // fully within the viewport, flipping above/below and sliding horizontally
 // as needed instead of being cut off at the screen edge.
-function NotesTooltip({ text, children, className = '', registerRef }) {
+function NotesTooltip({ text, children, className = '', registerRef, onContextMenu }) {
   const anchorRef = useRef(null)
   const [placement, setPlacement] = useState(null)
 
@@ -57,7 +57,7 @@ function NotesTooltip({ text, children, className = '', registerRef }) {
 
   if (!text) {
     return (
-      <div ref={setRefs} className={className}>
+      <div ref={setRefs} className={className} onContextMenu={onContextMenu}>
         {children}
       </div>
     )
@@ -72,6 +72,7 @@ function NotesTooltip({ text, children, className = '', registerRef }) {
       onMouseLeave={hide}
       onFocus={updatePlacement}
       onBlur={hide}
+      onContextMenu={onContextMenu}
     >
       {children}
       {placement &&

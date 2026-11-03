@@ -1,7 +1,5 @@
 Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
-INCIDENTNUMBER,P2606150134,axon.BiasMotivation,IncidentNumber,,,"Incident Number is not surfaced directly in EntOffense_AxonBiasMotivationInvolved, but can be derived from Report Number. 
-
-Don't use LatestIncidentReport_EntOffense_AxonBiasMotivationInvolved because earlier arrests are not included. (-1 won't show up if -3 has an arrest on it)"
+INCIDENTNUMBER,P2606150134,axon.BiasMotivation,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
 REPORTNUMBER,P2606150134-1,axon.BiasMotivation,ReportNumber,Records.IncidentReport_EntOffense_AxonBiasMotivationInvolved,ReportFriendlyId,
 OFFENSEEXTERNALID,c35fcec9-aa75-4b4a-91a9-2b478e5d2918,axon.BiasMotivation,OffenseExternalId,Records.IncidentReport_EntOffense_AxonBiasMotivationInvolved,OffenseFriendlyId,
 BIASMOTIVATIONINVOLVED,ANTI_BLACK_OR_AFRICAN_AMERICAN,axon.BiasMotivation,BiasMotivationInvolved,Records.IncidentReport_EntOffense_AxonBiasMotivationInvolved,Key,Key or KeyFull both contain the same information
@@ -15,4 +13,9 @@ ETL_LOAD_ID,,,,,,Snowflake Specific
 ETL_LOADED_AT,,,,,,Snowflake Specific
 ETL_PREVIOUS_WATERMARK,,,,,,Snowflake Specific
 ETL_EFFECTIVE_START_WATERMARK,,,,,,Snowflake Specific
-ETL_CURRENT_WATERMARK,,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,,,,,,"Snowflake Specific
+""""""""""""""""
+""""""""
+""""
+""
+"

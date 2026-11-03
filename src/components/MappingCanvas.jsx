@@ -16,7 +16,18 @@ const SORT_OPTIONS = [
   { id: 'desc', label: 'Z → A' },
 ]
 
-function MappingCanvas({ table, columns, status, sortOrder, onSortChange, focusRequest }) {
+function MappingCanvas({
+  table,
+  columns,
+  totalColumnCount,
+  status,
+  sortOrder,
+  onSortChange,
+  showSnowflakeSpecific,
+  onShowSnowflakeSpecificChange,
+  focusRequest,
+  onLinkContextMenu,
+}) {
   const viewportRef = useRef(null)
   const rowRefs = useRef({})
   const leftZoneRefs = useRef({})
@@ -211,21 +222,42 @@ function MappingCanvas({ table, columns, status, sortOrder, onSortChange, focusR
   return (
     <section className="mapping-canvas">
       <header className="canvas-toolbar">
-        <div className="canvas-toolbar-title">
+        <div
+          className="canvas-toolbar-title"
+          onContextMenu={(event) => onLinkContextMenu?.(event, table.id, null)}
+        >
           <p className="canvas-eyebrow">Column mappings</p>
           <h2>{table.name}</h2>
         </div>
-        <div className="sort-controls" role="group" aria-label="Sort columns">
-          {SORT_OPTIONS.map((option) => (
-            <button
-              key={option.id}
-              type="button"
-              className={sortOrder === option.id ? 'active' : ''}
-              onClick={() => onSortChange(option.id)}
-            >
-              {option.label}
-            </button>
-          ))}
+        <div className="canvas-toolbar-actions">
+          <label className="snowflake-visibility-toggle">
+            <input
+              type="checkbox"
+              checked={showSnowflakeSpecific}
+              onChange={(event) => onShowSnowflakeSpecificChange(event.target.checked)}
+            />
+            <span className="snowflake-visibility-toggle-ui" aria-hidden="true" />
+            <span className="snowflake-visibility-toggle-label">
+              Show Snowflake specific columns
+              {totalColumnCount != null && status === 'success' && (
+                <span className="snowflake-visibility-count">
+                  {columns.length}/{totalColumnCount}
+                </span>
+              )}
+            </span>
+          </label>
+          <div className="sort-controls" role="group" aria-label="Sort columns">
+            {SORT_OPTIONS.map((option) => (
+              <button
+                key={option.id}
+                type="button"
+                className={sortOrder === option.id ? 'active' : ''}
+                onClick={() => onSortChange(option.id)}
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
         </div>
       </header>
 
@@ -247,8 +279,10 @@ function MappingCanvas({ table, columns, status, sortOrder, onSortChange, focusR
             {columns.map((column) => (
               <MappingRow
                 key={column.id}
+                table={table}
                 column={column}
                 isFocused={column.id === focusRequest?.id}
+                onLinkContextMenu={onLinkContextMenu}
                 rowWidth={rowWidth}
                 registerRef={(el) => {
                   if (el) rowRefs.current[column.id] = el

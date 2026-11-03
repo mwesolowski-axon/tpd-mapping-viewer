@@ -1,0 +1,56 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+REPORTID,35475644,axon.Medical_TucsonPdAz,ReportId,,,No V2 Equivalent
+EXTERNALID,06629c6f-15bc-4db2-96ee-a59d8cbb16f2,axon.Medical_TucsonPdAz,ExternalId,Records.IncidentReport_AxonParties,ReportId,
+INCIDENTID,49cad9b0-d6f3-4976-9715-7a2e17642d28,axon.Medical_TucsonPdAz,IncidentId,Records.EntIncident,Id,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.Id. See sidebar for query.
+INCIDENTNUMBER,P2206100164,axon.Medical_TucsonPdAz,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
+REPORTNUMBER,P2206100164-1,axon.Medical_TucsonPdAz,ReportNumber,Records.IncidentReport_AxonParties,ReportFriendlyId,
+PERSONEXTERNALID,35efaa5c-d5bb-4ab6-acc4-c928821a524f,axon.Medical_TucsonPdAz,PersonExternalId,Records.IncidentReport_AxonParties,IndividualPerson,
+MEDICALTYPE,"[""INJURED_PERSON""]",axon.Medical_TucsonPdAz,MedicalType,Records.IncidentReport_AxonParties,MedicalMedicalTypeList,
+MEDICALATTENTION,T,axon.Medical_TucsonPdAz,MedicalAttention,Records.IncidentReport_AxonParties,MedicalInjuredPersonMedicalAttention,
+DESCRIPTIONOFINJURY,Laceration above left eye and torn ear lobe.,axon.Medical_TucsonPdAz,DescriptionOfInjury,Records.IncidentReport_AxonParties,MedicalInjuredPersonDescriptionOfInjury,
+DETAILSOFHOWTHEINJURYOCCURRED,Officers utilized hard hand control,axon.Medical_TucsonPdAz,DetailsOfHowTheInjuryOccurred,Records.IncidentReport_AxonParties,MedicalInjuredPersonDetailsOfHowTheInjuryOccured,
+LOCATIONOFINJURY,"[""FRONT""]",axon.Medical_TucsonPdAz,LocationOfInjury,Records.IncidentReport_AxonParties,MedicalInjuryInformationLocationOfInjuryList,
+INJURYLOCATIONFRONT,"[""HEAD""]",axon.Medical_TucsonPdAz,InjuryLocationFront,Records.IncidentReport_AxonParties,MedicalInjuryInformationInjuryLocationFrontList,
+INJURYLOCATIONBACK,"[""HEAD"",""LEFT_ARM"",""RIGHT_ARM"",""TORSO""]",axon.Medical_TucsonPdAz,InjuryLocationBack,Records.IncidentReport_AxonParties,MedicalInjuryInformationInjuryLocationBackList,
+BREATHINOXICANTODOR,MODERATE,axon.Medical_TucsonPdAz,BreathInoxicantOdor,Records.IncidentReport_AxonParties,MedicalPhysicalConditionBreathInoxicantOdor,
+ALCOHOLEFFECTS,OBVIOUS,axon.Medical_TucsonPdAz,AlcoholEffects,Records.IncidentReport_AxonParties,MedicalPhysicalConditionAlcoholEffects,
+ATTITUDE,"[""COMBATIVE""]",axon.Medical_TucsonPdAz,Attitude,Records.IncidentReport_AxonParties,MedicalPhysicalConditionAttitudeList,
+ATTITUDEOTHER,was uncooperative at first but not combative,axon.Medical_TucsonPdAz,AttitudeOther,Records.IncidentReport_AxonParties,MedicalPhysicalConditionAttitudeOther,
+UNUSUALACTIONS,"[""FIGHTING""]",axon.Medical_TucsonPdAz,UnusualActions,Records.IncidentReport_AxonParties,MedicalPhysicalConditionUnusualActionsList,
+UNUSUALACTIONSOTHER,"snapping teeth, uncontrolled defecation",axon.Medical_TucsonPdAz,UnusualActionsOther,Records.IncidentReport_AxonParties,MedicalPhysicalConditionUnusualActionsOther,
+SPEECH,"[""OTHER""]",axon.Medical_TucsonPdAz,Speech,Records.IncidentReport_AxonParties,MedicalPhysicalConditionSpeechList,
+SPEECHOTHER,Refused to speak,axon.Medical_TucsonPdAz,SpeechOther,Records.IncidentReport_AxonParties,MedicalPhysicalConditionSpeechOther,
+CLOTHESCONDITION,"[""DISHEVELED""]",axon.Medical_TucsonPdAz,ClothesCondition,Records.IncidentReport_AxonParties,MedicalPhysicalConditionClothesConditionList,
+CLOTHESCONDITIONOTHER,Shirtless,axon.Medical_TucsonPdAz,ClothesConditionOther,Records.IncidentReport_AxonParties,MedicalPhysicalConditionClothesConditionOther,
+ITEMSUSED,"[""H_H_COMPRESSED_GAUZE""]",axon.Medical_TucsonPdAz,ItemsUsed,Records.IncidentReport_AxonParties,MedicalItemsUsedItemsUsedList,
+CATTOURNIQUETSUSED,1,axon.Medical_TucsonPdAz,CatTourniquetsUsed,Records.IncidentReport_AxonParties,MedicalItemsUsedCatTourniquetsUsed,
+HYFINVENTCHESTSEALSUSED,1,axon.Medical_TucsonPdAz,HyFinVentChestSealsUsed,Records.IncidentReport_AxonParties,MedicalItemsUsedHyFinVentChestSealsUsed,
+HHCOMPRESSEDGAUZEUSED,2,axon.Medical_TucsonPdAz,HHCompressedGauzeUsed,Records.IncidentReport_AxonParties,MedicalItemsUsedHHCompressedGauzeUsed,
+NAMEOFHOSPITAL,BANNER_UMC_TUCSON_CAMPUS_MAIN,axon.Medical_TucsonPdAz,NameOfHospital,Records.IncidentReport_AxonParties,MedicalHospitalInformationNameOfHospital,
+OTHERHOSPITAL,ST RAPHAEL'S,axon.Medical_TucsonPdAz,OtherHospital,Records.IncidentReport_AxonParties,MedicalHospitalInformationOtherHospital,
+DATEENTERED,2022-06-10T07:00:00.000Z,axon.Medical_TucsonPdAz,DateEntered,Records.IncidentReport_AxonParties,MedicalHospitalInformationDateEntered,
+DATEDISCHARGED,2022-06-10T07:00:00.000Z,axon.Medical_TucsonPdAz,DateDischarged,Records.IncidentReport_AxonParties,MedicalHospitalInformationDateDischarged,
+OVERDOSEDRUGTYPESUSPECTED,"[""FENTANYL""]",axon.Medical_TucsonPdAz,OverdoseDrugTypeSuspected,Records.IncidentReport_AxonParties,MedicalOverdoseOverdoseDrugTypeSuspectedList,
+WASNALOXONENARCANUSED,NO,axon.Medical_TucsonPdAz,WasNaloxoneNarcanUsed,Records.IncidentReport_AxonParties,MedicalNaloxoneUseReportingWasNaloxoneNarcanAdministeredByTpd,
+NARCANADMINISTERED,Y,axon.Medical_TucsonPdAz,NarcanAdministered,Records.IncidentReport_AxonParties,MedicalNaloxoneUseReportingWasNaloxoneNarcanAdministeredPriorToTpdArrival,
+WHOADMINISTEREDIT,EMERGENCY_MEDICAL_SERVICES,axon.Medical_TucsonPdAz,WhoAdministeredIt,Records.IncidentReport_AxonParties,MedicalNaloxoneUseReportingWhoAdministeredIt,
+DOSESOFNARCAN,UNKNOWN,axon.Medical_TucsonPdAz,DosesOfNarcan,Records.IncidentReport_AxonParties,MedicalNaloxoneUseReportingHowManyDosesOfNaloxoneNarcanWereAdministeredPriorToArrival,
+REASONSYOUSUSPECTEDANOPIOIDOVERDOSE,"[""BLUE_LIPS_AND_OR_FINGERTIPS""]",axon.Medical_TucsonPdAz,ReasonsYouSuspectedAnOpioidOverdose,Records.IncidentReport_AxonParties,MedicalNaloxoneUseReportingReasonSYouSuspectedAnOpioidOverdoseList,
+FINALDISPOSITION,PATIENT_SURVIVED_ENCOUNTER_REFUSED_ADDITIONAL-TREATMENT,axon.Medical_TucsonPdAz,FinalDisposition,Records.IncidentReport_AxonParties,MedicalPatientOutcomeWhatHappenedToThePatientWhatWasThePatientsFinalDispositionForThisSuspectedOverdose,
+DESTINATIONTYPE,HOSPITAL_EMERGENCY_DEPARTMENT,axon.Medical_TucsonPdAz,DestinationType,Records.IncidentReport_AxonParties,MedicalPatientOutcomeDestinationType,
+NAMEOFFACILITYHOSPITAL,BANNER_UMC_MAIN,axon.Medical_TucsonPdAz,NameOfFacilityHospital,Records.IncidentReport_AxonParties,MedicalPatientOutcomeNameOfFacilityHospital,
+NAMEOFFACILITYMORGUEMORTUARY,,axon.Medical_TucsonPdAz,NameOfFacilityMorgueMortuary,Records.IncidentReport_AxonParties,MedicalPatientOutcomeNameOfFacilityMorgueMortuary,
+NAMEOFFACILITYBEHAVIORALINPATIENT,,axon.Medical_TucsonPdAz,NameOfFacilityBehavioralInPatient,Records.IncidentReport_AxonParties,MedicalPatientOutcomeNameOfFacilityBehavioralInPatient,
+NAMEOFFACILITYOTHER,,axon.Medical_TucsonPdAz,NameOfFacilityOther,Records.IncidentReport_AxonParties,MedicalPatientOutcomeNameOfFacilityOther,
+DOSAGEOFFICER,,axon.Medical_TucsonPdAz,DosageOfficer,,,"No V2 equivalent, but no non-NULL values"
+REPORTUPDATEDAT_UTC,2023-02-08 23:41:09,axon.Medical_TucsonPdAz,ReportUpdatedAt_UTC,Records.IncidentReport_AxonParties,UpdatedAt,
+RAWFORMDATA,"{""cfsCreatedDate"":""2022-06-11T01:52:26+00:00"",""cfsLocation"":""ad6b784c-dd14-4d67-8101-90e1d971a5ca"",""incidentFromDate"":""2022-06-11T01:52:00.000Z"",""incidentLocation"":{""location"":""ad6b784c-dd14-4d67-8101-90e1d971a5ca"",""type"":""HIGHWAY_ROAD_ALLEY_STREET_SIDEWALK""},""narratives"":[{""narrative"":""c114343c-8c4e-4b17-951c-67a84ec5d053""},{""narrative"":""93edf99e-4614-4bd4-9dd3-dc8e4eadd8a9""},{""narrative"":""71d091b3-f4ea-49a5-a8f0-4843ffc6a202""},{""narrative"":""4fba0262-24da-43d7-b780-84de94c8f89b""}],""offenses"":[{""offense"":""50472f23-051f-46af-899a-9924ba6a9c5f""}],""parties"":[{""contactInfoVerified"":""NA"",""individual"":{""person"":""35efaa5c-d5bb-4ab6-acc4-c928821a524f""},""medical"":{""hospitalInformation"":{""dateDischarged"":""2022-06-10T07:00:00.000Z"",""dateEntered"":""2022-06-10T07:00:00.000Z"",""nameOfHospital"":""BANNER_UMC_TUCSON_CAMPUS_MAIN""},""injuredPerson"":{""descriptionOfInjury"":""Laceration above left eye and torn ear lobe."",""detailsOfHowTheInjuryOccured"":""Officers utilized hard hand control"",""medicalAttention"":""T""},""injuryInformation"":{""injuryLocationFront"":[""HEAD""],""locationOfInjury"":[""FRONT""]},""medicalType"":[""INJURED_PERSON""],""physicalCondition"":{""attitude"":[""COMBATIVE""],""clothesCondition"":[""DISHEVELED""],""speech"":[""OTHER""],""speechOther"":""Refused to speak"",""unusualActions"":[""FIGHTING""]}}},{""contactInfoVerified"":""Y"",""individual"":{""person"":""dabb561c-7ba8-41d5-9cd1-640db0302ce0""}},{""contactInfoVerified"":""Y"",""individual"":{""person"":""6a9a2ff7-78bf-478c-a558-436f16b034ff""},""vine"":{""requestWaiverExceptionPerArs134405BAndSection8"":""NO"",""victimChoseToWaiveUponRequestRightsInThisCase"":""YES""}}],""properties"":[{""property"":""1bd8d6ef-e5dd-48d9-b0ff-eb2770c66f2c""},{""property"":""d9fe0a02-d107-4cf6-b0d2-748d295c667b"",""recoveryDetails"":{""location"":""ad6b784c-dd14-4d67-8101-90e1d971a5ca"",""recoveredBy"":""dde1031d-867f-4dad-81f4-6667ebcc822a"",""recoveryDate"":""2022-06-11T03:30:00.000Z""}}],""purpose"":""FELONY_CRIME"",""reportDateIndicator"":false}",axon.Medical_TucsonPdAz,RawFormData,,,Raw form json data is not exposed in V2
+FILE_NAMES,axon.medical_tucsonpdaz/part-00000-6c4e0b4f-4800-41e4-ad24-9858c1fd2ef7-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,16,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-10-21 10:54:27,,,,,Snowflake Specific
+OP,,,,,,"Snowflake Specific
+""""""""""""""""
+""""""""
+""""
+""
+"

@@ -1,5 +1,8 @@
 # Data Migration Mapping Explorer
 
+- **Repository:** [github.com/mwesolowski-axon/tpd-mapping-viewer](https://github.com/mwesolowski-axon/tpd-mapping-viewer)
+- **GitHub Pages:** [mwesolowski-axon.github.io/tpd-mapping-viewer](https://mwesolowski-axon.github.io/tpd-mapping-viewer/)
+
 An interactive, browser-based viewer for the Snowflake → V1 → V2 column mapping
 CSVs used to track the TPD data store migration. Built with React + Vite as a
 fully static site, so it can be hosted directly on GitHub Pages with no
@@ -55,22 +58,21 @@ subpath it's served from.
 
 ## Publish to GitHub Pages
 
-This repo includes `.github/workflows/deploy-pages.yml`. After you push to
-GitHub:
+This project is linked to
+[tpd-mapping-viewer](https://github.com/mwesolowski-axon/tpd-mapping-viewer)
+(`origin` → `https://github.com/mwesolowski-axon/tpd-mapping-viewer.git`).
 
-1. Create a **new empty repository** on GitHub (do not add a README if you
-   are pushing this folder as-is).
-2. Connect and push from the `mapping-viewer` directory:
+The repo includes `.github/workflows/deploy-pages.yml`. From this directory:
 
-   ```bash
-   git remote add origin https://github.com/YOUR_USER/YOUR_REPO.git
-   git push -u origin main
-   ```
+```bash
+git push origin main
+```
 
-3. On GitHub: **Settings → Pages → Build and deployment → Source** → choose
-   **GitHub Actions** (not “Deploy from a branch”). Save if prompted.
-4. The workflow runs on every push to `main`. When it finishes, the site is
-   at `https://YOUR_USER.github.io/YOUR_REPO/`.
+On GitHub: **Settings → Pages → Build and deployment → Source** → choose
+**GitHub Actions** (not “Deploy from a branch”). Save if prompted.
+
+The workflow runs on every push to `main`. When **deploy** succeeds, the site is
+at [https://mwesolowski-axon.github.io/tpd-mapping-viewer/](https://mwesolowski-axon.github.io/tpd-mapping-viewer/).
 
 ### Deploy job fails with 404 / “Ensure GitHub Pages has been enabled”
 
@@ -95,7 +97,8 @@ contents of `dist/` to a `gh-pages` branch instead (optional).
    `Snowflake Column, Snowflake Example Data, V1 Schema/View, V1 Column,
    V2 Schema/View, V2 Column, Notes`.
 2. Drop the CSV into `public/data/` (e.g. `public/data/AXON_INCIDENTS.csv`).
-3. Add one entry to `public/data/manifest.json`:
+3. Add one entry to `public/data/manifest.json` (order in the file does not matter;
+   the sidebar sorts tables A → Z by name):
 
    ```json
    {
@@ -105,8 +108,23 @@ contents of `dist/` to a `gh-pages` branch instead (optional).
    }
    ```
 
-4. Refresh the app — the new table appears in the sidebar automatically. No
-   rebuild logic or code changes are required.
+4. Keep a copy of the CSV in the workspace root (parent of `mapping-viewer/`) if
+   you maintain mappings there as well as under `public/data/`.
+5. If the table includes **IncidentNumber**, **IncidentId**, **OffenseIncidentNumber**, or
+   **IncidentExternalId**, run from `mapping-viewer/`:
+
+   ```bash
+   npm run update-incident-columns
+   ```
+
+   That applies the standard `EntDocument → RelIncidentDocument → EntIncident`
+   derive notes and V2 targets for every table in `manifest.json` (except
+   `AXON_INCIDENTS`, `AXON_CASES`, and `AXON_MOSTRECENTGENERALOFFENSE`, which
+   use their own incident paths). The info sidebar and tooltip overrides pick
+   up those rows automatically — you do not need to edit `incidentFromReport.js`
+   for each new table.
+
+6. Refresh the app — the new table appears in the sidebar automatically.
 
 ## Possible future enhancements
 

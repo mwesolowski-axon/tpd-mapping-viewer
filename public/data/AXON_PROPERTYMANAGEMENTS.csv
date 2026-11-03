@@ -1,0 +1,41 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+PROPERTYMANAGEMENTID,10807219,axon.PropertyManagements,PropertyManagementId,,,No V2 equivalent
+EXTERNALID,9e17cab1-37db-4dbe-af1f-dc802c87087c,axon.PropertyManagements,ExternalId,Records.EntProperty,Id,
+PROPERTYMANAGEMENTNUMBER,PRO2600304128,axon.PropertyManagements,PropertyManagementNumber,Records.EntProperty,PropertyFriendlyId,
+INCIDENTID,f43159d2-063b-49c9-880c-3f3994e66898,axon.PropertyManagements,IncidentId,Records.EntIncident,Id,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.Id. See sidebar for query.
+INCIDENTNUMBER,P2609010059,axon.PropertyManagements,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
+SUBMODULE,RECORDS,axon.PropertyManagements,Submodule,,,No V2 equivalent
+STARTRETENTIONDATE,,axon.PropertyManagements,StartRetentionDate,Records.EntProperty,StartRetentionDate,
+ENDRETENTIONDATE,,axon.PropertyManagements,EndRetentionDate,Records.EntProperty,EndRetentionDate,
+HOMELOCATION,,axon.PropertyManagements,HomeLocation,Records.EntProperty,HomeLocationId,
+NOTES,,axon.PropertyManagements,Notes,Records.EntProperty,Notes,
+STATUS,,axon.PropertyManagements,Status,Records.EntProperty,Status,
+CONFIGURABLESTATUS,,axon.PropertyManagements,ConfigurableStatus,Records.EntProperty,ConfigurableStatusId,
+CREATEDAT,2026-09-01 21:14:47.0380000 +00:00,axon.PropertyManagements,CreatedAt,Records.EntProperty,CreatedAt,
+AUTHOR,,axon.PropertyManagements,Author,Records.EntProperty,AuthorId,
+CURRENTLOCATIONSTORAGELOCATIONFRIENDLYID,,axon.PropertyManagements,CurrentLocationStorageLocationFriendlyId,Records.EntProperty,CurrentLocationStorageLocationId,
+CURRENTLOCATIONSTORAGELOCATIONNAME,,axon.PropertyManagements,CurrentLocationStorageLocationName,Records.RefStorageLocation,Name,
+CURRENTLOCATIONSTORAGELOCATIONTYPE,,axon.PropertyManagements,CurrentLocationStorageLocationType,Records.RefStorageLocation,Type,
+CURRENTLOCATIONSTORAGELOCATIONUPDATEDAT,,axon.PropertyManagements,CurrentLocationStorageLocationUpdatedAt,Records.RefStorageLocation,UpdatedAt,
+CURRENTLOCATIONSTORAGELOCATIONCREATEDAT,,axon.PropertyManagements,CurrentLocationStorageLocationCreatedAt,Records.RefStorageLocation,CreatedAt,
+CURRENTLOCATIONSTORAGELOCATIONDELETED,,axon.PropertyManagements,CurrentLocationStorageLocationDeleted,Records.RefStorageLocation,Deleted,
+HOMELOCATIONFRIENDLYID,,axon.PropertyManagements,HomeLocationFriendlyId,Records.EntProperty,HomeLocationId,
+HOMELOCATIONNAME,,axon.PropertyManagements,HomeLocationName,Records.RefStorageLocation,Name,
+HOMELOCATIONTYPE,,axon.PropertyManagements,HomeLocationType,Records.RefStorageLocation,Type,
+HOMELOCATIONUPDATEDAT,,axon.PropertyManagements,HomeLocationUpdatedAt,Records.RefStorageLocation,UpdatedAt,
+HOMELOCATIONCREATEDAT,,axon.PropertyManagements,HomeLocationCreatedAt,Records.RefStorageLocation,CreatedAt,
+HOMELOCATIONDELETED,,axon.PropertyManagements,HomeLocationDeleted,Records.RefStorageLocation,Deleted,
+UPDATEDAT_INDEXED_UTC,2026-09-08 11:01:29,axon.PropertyManagements,UpdatedAt_Indexed_UTC,,UpdatedAt,
+FILE_NAMES,axon_delta/axon.PropertyManagements/delta/load_id=20260909090056/part-00000-176db548-7fbd-421e-960d-dd5f8bbad236-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,951,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-09-09 9:06:08,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,20260909090056,,,,,Snowflake Specific
+ETL_LOADED_AT,2026-09-09 9:06:06,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,2026-09-08 9:12:18,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,2026-09-08 7:12:18,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,2026-09-09 9:05:27,,,,,"Snowflake Specific
+""""""""
+""""
+""
+"

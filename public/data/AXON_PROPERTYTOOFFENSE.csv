@@ -1,0 +1,22 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+EXTERNALID,9236210a-a606-4b75-8b36-7cd838c622fc,axon.PropertyToOffense,ExternalId,Records.IncidentReport_RelPropertyToOffense,Id,
+REPORTNUMBER,P2609020070-1,axon.PropertyToOffense,ReportNumber,Records.IncidentReport_RelPropertyToOffense,ReportFriendlyId,
+INCIDENTNUMBER,P2609020070,axon.PropertyToOffense,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
+REPORTUPDATEDAT_INDEXED_UTC,2026-09-03 23:12:14,axon.PropertyToOffense,ReportUpdatedAt_Indexed_Utc,Records.IncidentReport_RelPropertyToOffense,UpdatedAt,
+INVOLVEMENT,EVIDENCE,axon.PropertyToOffense,Involvement,Records.IncidentReport_RelPropertyToOffense,AxonInvolvement,
+TOEXTERNALID,f4e2221f-8653-4f0a-8f55-f31028b65969,axon.PropertyToOffense,ToExternalId,Records.IncidentReport_RelPropertyToOffense,IncidentReport_ToEntOffenseId,
+FROMEXTERNALID,6d0bd584-2188-481a-93f8-ad7ce1239762,axon.PropertyToOffense,FromExternalId,Records.IncidentReport_RelPropertyToOffense,IncidentReport_FromEntPropertyId,
+PROPERTYTOOFFENSERAWDATA,"{""axon"":{""involvement"":""EVIDENCE"",""propertyStatus"":""SEIZED""},""custom"":{""PropTWXNotified"":""NO""},""from"":""6d0bd584-2188-481a-93f8-ad7ce1239762"",""id"":""9236210a-a606-4b75-8b36-7cd838c622fc"",""to"":""f4e2221f-8653-4f0a-8f55-f31028b65969""}",axon.PropertyToOffense,PropertyToOffenseRawData,,,Raw form json data is not exposed in V2
+REPORTCREATEDAT_INDEXED_UTC,2026-09-02 16:36:51,axon.PropertyToOffense,ReportCreatedAt_Indexed_Utc,Records.IncidentReport_RelPropertyToOffense,CreatedAt,
+PROPERTYSTATUS,SEIZED,axon.PropertyToOffense,Propertystatus,Records.IncidentReport_RelPropertyToOffense,AxonPropertyStatus,
+FILE_NAMES,axon_delta/axon.PropertyToOffense/delta/load_id=20260904090050/part-00000-ff43503a-9e2f-44e1-90f2-ad0ee68bcb59-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,926,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-09-04 9:21:08,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,20260904090050,,,,,Snowflake Specific
+ETL_LOADED_AT,2026-09-04 9:21:06,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,2026-09-03 9:11:57,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,2026-09-03 7:11:57,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,2026-09-04 9:20:29,,,,,"Snowflake Specific
+""
+"

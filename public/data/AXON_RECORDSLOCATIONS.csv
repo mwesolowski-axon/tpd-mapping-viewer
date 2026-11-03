@@ -1,0 +1,50 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+ADDRESSTYPE,STREET_ADDRESS,axon.RecordsLocations,AddressType,Records.IncidentReport_EntLocation,AxonAddressType,
+LOCATIONNUMBER,LOC2300049806,axon.RecordsLocations,LocationNumber,Records.IncidentReport_EntLocation,LocationFriendlyId,
+UNITNUMBER,6B,axon.RecordsLocations,UnitNumber,Records.IncidentReport_EntLocation,AxonUnitNumber,
+STREETNAME,Stella,axon.RecordsLocations,StreetName,Records.IncidentReport_EntLocation,AxonStreetName,
+STREETPREFIXDIRECTION,E,axon.RecordsLocations,StreetPrefixDirection,Records.IncidentReport_EntLocation,AxonStreetPrefixDirection,
+CROSSSTREET2_STREETPREFIXTYPE,,axon.RecordsLocations,CrossStreet2_StreetPrefixType,Records.IncidentReport_EntLocation,AxonStreet2StreetPrefixType,
+CROSSSTREET2_STREETSUFFIXDIRECTION,,axon.RecordsLocations,CrossStreet2_StreetSuffixDirection,Records.IncidentReport_EntLocation,AxonStreet2StreetSuffixDirection,
+CROSSSTREET2_STREETTYPE,Hwy,axon.RecordsLocations,CrossStreet2_StreetType,Records.IncidentReport_EntLocation,AxonStreet2StreetType,
+REPORTNUMBER,P2609010046-1,axon.RecordsLocations,ReportNumber,Records.IncidentReport_EntLocation,ReportFriendlyId,
+INCIDENTNUMBER,P2609010046,axon.RecordsLocations,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
+EXTERNALID,25e60aa1-455f-5dba-b313-1a9ad516d0a8,axon.RecordsLocations,ExternalId,Records.IncidentReport_EntLocation,Id,
+HOUSENUMBER,7205,axon.RecordsLocations,HouseNumber,Records.IncidentReport_EntLocation,AxonHouseNumber,
+LATITUDE,32.185075,axon.RecordsLocations,Latitude,Records.IncidentReport_EntLocation,AxonLat,
+LONGITUDE,-110.838217,axon.RecordsLocations,Longitude,Records.IncidentReport_EntLocation,AxonLon,
+POSTALCODE,85730,axon.RecordsLocations,PostalCode,Records.IncidentReport_EntLocation,AxonPostalCode,
+POSTALCODEEXT,2336,axon.RecordsLocations,PostalCodeExt,Records.IncidentReport_EntLocation,AxonPostalCodeExt,
+CITY,Tucson,axon.RecordsLocations,City,Records.IncidentReport_EntLocation,AxonCity,
+COMMONNAME,Mission Manor Park,axon.RecordsLocations,CommonName,Records.IncidentReport_EntLocation,AxonAliasesList,
+COUNTRY,USA,axon.RecordsLocations,Country,Records.IncidentReport_EntLocation,AxonCountry,
+CROSSSTREET1_STREETNAME,Valencia,axon.RecordsLocations,CrossStreet1_StreetName,Records.IncidentReport_EntLocation,AxonStreet1StreetName,
+CROSSSTREET1_STREETPREFIXDIRECTION,E,axon.RecordsLocations,CrossStreet1_StreetPrefixDirection,Records.IncidentReport_EntLocation,AxonStreet1StreetPrefixDirection,
+STREETPREFIXTYPE,,axon.RecordsLocations,StreetPrefixType,Records.IncidentReport_EntLocation,AxonStreetPrefixType,
+STREETSUFFIXDIRECTION,,axon.RecordsLocations,StreetSuffixDirection,Records.IncidentReport_EntLocation,AxonStreetSuffixDirection,
+STREETTYPE,Rd,axon.RecordsLocations,StreetType,Records.IncidentReport_EntLocation,AxonStreetType,
+CROSSSTREET2_STREETNAME,Nogales,axon.RecordsLocations,CrossStreet2_StreetName,Records.IncidentReport_EntLocation,AxonStreet2StreetName,
+CROSSSTREET2_STREETPREFIXDIRECTION,S,axon.RecordsLocations,CrossStreet2_StreetPrefixDirection,Records.IncidentReport_EntLocation,AxonStreet2StreetPrefixDirection,
+CROSSSTREET1_STREETPREFIXTYPE,,axon.RecordsLocations,CrossStreet1_StreetPrefixType,Records.IncidentReport_EntLocation,AxonStreet1StreetPrefixType,
+CROSSSTREET1_STREETSUFFIXDIRECTION,,axon.RecordsLocations,CrossStreet1_StreetSuffixDirection,Records.IncidentReport_EntLocation,AxonStreet1StreetSuffixDirection,
+CROSSSTREET1_STREETTYPE,Rd,axon.RecordsLocations,CrossStreet1_StreetType,Records.IncidentReport_EntLocation,AxonStreet1StreetType,
+STATE,AZ,axon.RecordsLocations,State,Records.IncidentReport_EntLocation,AxonState,
+STREET,E Stella Rd,axon.RecordsLocations,Street,Records.IncidentReport_EntLocation,AxonStreet,
+REPORTCREATEDAT_INDEXED_UTC,2026-09-01 15:31:30,axon.RecordsLocations,ReportCreatedAt_Indexed_Utc,Records.IncidentReport_EntLocation,CreatedAt,
+REPORTUPDATEDAT_INDEXED_UTC,2026-09-03 20:51:53,axon.RecordsLocations,ReportUpdatedAt_Indexed_Utc,Records.IncidentReport_EntLocation,UpdatedAt,
+ZONE,T407,axon.RecordsLocations,Zone,Records.IncidentReport_EntLocation,AxonZone,
+UNITTYPE,Trailer,axon.RecordsLocations,UnitType,Records.IncidentReport_EntLocation,CustomAxonUnitType,
+RECORDSLOCATIONRAWDATA,"{""axon"":{""addressRange"":""7201-7299"",""addressType"":""STREET_ADDRESS"",""city"":""Tucson"",""country"":""USA"",""district"":""T4"",""houseNumber"":""7205"",""lat"":32.185075,""lon"":-110.838217,""postalCode"":""85730"",""postalCodeExt"":""2336"",""score"":100,""sector"":""7"",""state"":""AZ"",""street"":""E Stella Rd"",""streetName"":""Stella"",""streetPrefixDirection"":""E"",""streetPrefixType"":"""",""streetSuffixDirection"":"""",""streetType"":""Rd"",""unitNumber"":"""",""unitType"":"""",""verified"":true,""zone"":""T407""},""id"":""25e60aa1-455f-5dba-b313-1a9ad516d0a8"",""friendlyId"":""LOC2300049806""}",axon.RecordsLocations,RecordsLocationRawData,,,Raw form json data is not exposed in V2
+VERIFIED,TRUE,axon.RecordsLocations,Verified,Records.IncidentReport_EntLocation,AxonVerified,
+DISTRICT,T4,axon.RecordsLocations,District,Records.IncidentReport_EntLocation,AxonDistrict,
+SECTOR,7,axon.RecordsLocations,Sector,Records.IncidentReport_EntLocation,AxonSector,
+FILE_NAMES,axon_delta/axon.RecordsLocations/delta/load_id=20260904090050/part-00000-f2dfbcd5-f8e4-4215-8b69-f07de228a4c0-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,6359,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-09-04 9:01:47,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,20260904090050,,,,,Snowflake Specific
+ETL_LOADED_AT,2026-09-04 9:01:44,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,2026-09-03 9:01:40,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,2026-09-03 7:01:40,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,2026-09-04 9:01:23,,,,,"Snowflake Specific
+"

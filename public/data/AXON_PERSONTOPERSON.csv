@@ -1,0 +1,25 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+EXTERNALID,092b0e60-27e4-4739-9c58-12735dc659cb,axon.PersonToPerson,ExternalId,Records.IncidentReport_RelPersonToPerson,Id,
+REPORTNUMBER,P2601060195-1,axon.PersonToPerson,ReportNumber,Records.IncidentReport_RelPersonToPerson,ReportFriendlyId,
+INCIDENTNUMBER,P2601060195,axon.PersonToPerson,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
+FROMEXTERNALID,468006d5-5a1e-4986-babc-9e4406f3b135,axon.PersonToPerson,FromExternalId,Records.IncidentReport_RelPersonToPerson,IncidentReport_FromEntPersonId,
+TOEXTERNALID,364e3550-5eb8-4cf9-8336-6b9fc4d4f13b,axon.PersonToPerson,ToExternalId,Records.IncidentReport_RelPersonToPerson,IncidentReport_ToEntPersonId,
+TYPE,PARENT,axon.PersonToPerson,Type,Records.IncidentReport_RelPersonToPerson,AxonRelationshipType,
+FROMVARIANT,,axon.PersonToPerson,FromVariant,Records.IncidentReport_RelPersonToPerson,AxonRelationshipFromVariant,
+PERSONTOPERSONRAWDATA,"{""axon"":{""relationship"":{""type"":""PARENT""}},""from"":""468006d5-5a1e-4986-babc-9e4406f3b135"",""id"":""092b0e60-27e4-4739-9c58-12735dc659cb"",""to"":""364e3550-5eb8-4cf9-8336-6b9fc4d4f13b""}",axon.PersonToPerson,PersonToPersonRawData,,,Raw form json data is not exposed in V2
+REPORTCREATEDAT_INDEXED_UTC,2026-01-07 4:51:20,axon.PersonToPerson,ReportCreatedAt_Indexed_Utc,Records.IncidentReport_RelPersonToPerson,CreatedAt,
+REPORTUPDATEDAT_INDEXED_UTC,2026-01-11 8:21:25,axon.PersonToPerson,ReportUpdatedAt_Indexed_Utc,Records.IncidentReport_RelPersonToPerson,UpdatedAt,
+FILE_NAMES,axon.PersonToPerson/part-00000-96b75816-82ba-4082-adcf-b33ca24345c4-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,29409,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-08-20 8:56:45,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,,,,,,Snowflake Specific
+ETL_LOADED_AT,,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,,,,,,"Snowflake Specific
+""""""""""""""""
+""""""""
+""""
+""
+"

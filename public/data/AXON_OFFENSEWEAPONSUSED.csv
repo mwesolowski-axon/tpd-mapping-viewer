@@ -1,0 +1,16 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+OFFENSEEXTERNALID,c11fc309-6fca-4b61-a8e4-b7f31fbb2d47,axon.OffenseWeaponsUsed,OffenseExternalId,Records.IncidentReport_EntOffense_AxonWeaponForceInvolved,ParentId,
+OFFENSEINCIDENTNUMBER,P2601180033,axon.OffenseWeaponsUsed,OffenseIncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
+OFFENSEREPORTNUMBER,P2601180033-1,axon.OffenseWeaponsUsed,OffenseReportNumber,Records.IncidentReport_EntOffense_AxonWeaponForceInvolved,ReportFriendlyId,
+WEAPONFORCEINVOLVED,HANDGUN,axon.OffenseWeaponsUsed,WeaponForceInvolved,Records.IncidentReport_EntOffense_AxonWeaponForceInvolved,Key,
+REPORTCREATEDAT_INDEXED_UTC,2026-01-18 10:50:47,axon.OffenseWeaponsUsed,ReportCreatedAt_Indexed_Utc,Records.IncidentReport_EntOffense_AxonWeaponForceInvolved,CreatedAt,
+REPORTUPDATEDAT_INDEXED_UTC,2026-01-24 13:10:44,axon.OffenseWeaponsUsed,ReportUpdatedAt_Indexed_Utc,Records.IncidentReport_EntOffense_AxonWeaponForceInvolved,UpdatedAt,
+FILE_NAMES,axon.offenseweaponsused/part-00000-0755f14a-0671-4ccd-9609-7bed2c59090d-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,220299,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-10-26 10:49:04,,,,,Snowflake Specific
+OP,,,,,,"Snowflake Specific
+""""""""""""""""
+""""""""
+""""
+""
+"

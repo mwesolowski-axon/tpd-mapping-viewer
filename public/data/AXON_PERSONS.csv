@@ -1,0 +1,76 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+REPORTNUMBER,P2601010005-2,axon.Persons,ReportNumber,Records.IncidentReport_EntPerson,ReportFriendlyId,
+INCIDENTNUMBER,P2601010005,,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
+EXTERNALID,b8452721-90e9-48f2-b342-6156acd5c186,,ExternalId,Records.IncidentReport_EntPerson,Id,
+PERSONEXTERNALID,b8452721-90e9-48f2-b342-6156acd5c186,,PersonExternalId,Records.RelCanonicalDuplicate,ToId,
+CANONICALEXTERNALID,6e25514a-4bd6-44ce-ae34-9387fcea0de4,,CanonicalExternalId,Records.IncidentReport_EntPerson,Id*,"Canonical Person records are linked through Records.RelCanonicalDuplicate. 
+
+Records.RelCanonicalDuplicate.FromId <- Canonical Records.IncidentReport_EntPerson.Id
+Records.RelCanonicalDuplicate.ToId <- Transactional Records.IncidentReport_EntPerson.Id"
+CANONICALPERSONNUMBER,PER2500466066,,CanonicalPersonNumber,Records.IncidentReport_EntPerson,PersonFriendlyId*,"Canonical Person records are linked through Records.RelCanonicalDuplicate. "
+LASTNAME,Orozco,,LastName,Records.IncidentReport_EntPerson,AxonLastName,
+FIRSTNAME,Jose,,FirstName,Records.IncidentReport_EntPerson,AxonFirstName,
+PERSONNUMBER,PER2300027111,,PersonNumber,Records.IncidentReport_EntPerson,PersonFriendlyId,
+MIDDLENAME,Antonio,,MiddleName,Records.IncidentReport_EntPerson,AxonMiddleName,
+PREFIX,,,Prefix,Records.IncidentReport_EntPerson,AxonFirstName,
+SUFFIX,JUNIOR,,Suffix,Records.IncidentReport_EntPerson,AxonSuffix,
+BIRTHDATE,1987-01-09,,BirthDate,Records.IncidentReport_EntPerson,AxonBirthdate,
+DOBUNKNOWN,,,DOBUnknown,Records.IncidentReport_EntPerson,AxonBirthdateUnknown,
+PLACEOFBIRTH,,,PlaceOfBirth,Records.IncidentReport_EntPerson,AxonBirthplace,
+PLACEOFBIRTHCITY,,,PlaceOfBirthCity,,,"No V2 equivalent, but no non-NULL values"
+PLACEOFBIRTHSTATE,,,PlaceOfBirthState,,,"No V2 equivalent, but no non-NULL values"
+AGE,38,,Age,Records.IncidentReport_EntPerson,AxonAge,
+AGEMIN,,,AgeMin,Records.IncidentReport_EntPerson,AxonAgeRangeAgeMin,
+AGEMAX,,,AgeMax,Records.IncidentReport_EntPerson,AxonAgeRangeAgeMax,
+ISJUVENILE,,,IsJuvenile,,,"No V2 equivalent, but no non-NULL values"
+SEX,MALE,,Sex,Records.IncidentReport_EntPerson,AxonSex,
+HAIRCOLOR,BLACK,,HairColor,Records.IncidentReport_EntPerson,AxonHairColor,
+HAIRLENGTH,,,HairLength,Records.IncidentReport_EntPerson,AxonHairLength,
+HAIRSTYLE,,,HairStyle,Records.IncidentReport_EntPerson,AxonHairStyle,
+HAIRTYPE,,,HairType,Records.IncidentReport_EntPerson,AxonHairType,
+EYECOLOR,BROWN,,EyeColor,Records.IncidentReport_EntPerson,AxonEyeColor,
+HEIGHTTYPE,,,HeightType,,,"No V2 equivalent, but no non-NULL values"
+HEIGHTIN,78,,HeightIn,Records.IncidentReport_EntPerson,AxonHeightIn,
+HEIGHTINMIN,,,HeightInMin,Records.IncidentReport_EntPerson,AxonHeightInRangeHeightInMin,
+HEIGHTINMAX,,,HeightInMax,Records.IncidentReport_EntPerson,AxonHeightInRangeHeightInMax,
+WEIGHTTYPE,,,WeightType,,,"No V2 equivalent, but no non-NULL values"
+WEIGHTLB,400,,WeightLb,Records.IncidentReport_EntPerson,AxonWeightLb,
+WEIGHTLBMIN,,,WeightLbMin,Records.IncidentReport_EntPerson,AxonWeightLbRangeWeightLbMin,
+WEIGHTLBMAX,,,WeightLbMax,Records.IncidentReport_EntPerson,AxonWeightLbRangeWeightLbMax,
+BUILD,,,Build,Records.IncidentReport_EntPerson,AxonBuild,
+COMPLEXION,,,Complexion,Records.IncidentReport_EntPerson,AxonComplexion,
+FACIALHAIR,,,FacialHair,Records.IncidentReport_EntPerson,AxonFacialHair,
+DESCRIPTION,,,Description,Records.IncidentReport_EntPerson,AxonDescription,
+ETHNICITY,HISPANIC_OR_LATINO,,Ethnicity,Records.IncidentReport_EntPerson,AxonEthnicity,
+RACE,UNKNOWN,,Race,Records.IncidentReport_EntPerson,AxonRace,
+TYPE,KNOWN,,Type,Records.IncidentReport_EntPerson,AxonType,
+LANGUAGE,,,Language,Records.IncidentReport_EntPerson,AxonLanguage,
+EMPLOYER,,,Employer,Records.IncidentReport_EntPerson,AxonEmployer,
+OCCUPATION,,,Occupation,Records.IncidentReport_EntPerson,AxonOccupation,
+RESIDENTSTATUS,NON_RESIDENT,,ResidentStatus,Records.IncidentReport_EntPerson,AxonResidentStatus,
+GANGAFFILIATION,,,GangAffiliation,,,"No V2 equivalent, but no non-NULL values"
+GRADELEVEL,,,GradeLevel,Records.IncidentReport_EntPerson,AxonGradeLevel,
+INFANTCODE,,,InfantCode,Records.IncidentReport_EntPerson,AxonInfantCode,
+MARITALSTATUS,,,MaritalStatus,Records.IncidentReport_EntPerson,AxonMaritalStatus,
+SCHOOL,,,School,Records.IncidentReport_EntPerson,AxonSchool,
+GENDERIDENTITY,,,GenderIdentity,,,"No V2 equivalent, but no non-NULL values"
+LIMITEDENGLISHPROFICIENT,,,LimitedEnglishProficient,,,"No V2 equivalent, but no non-NULL values"
+SUSPECTSTATUS,,,SuspectStatus,,,"No V2 equivalent, but no non-NULL values"
+GENERALDESCRIPTION,,,GeneralDescription,,,"No V2 equivalent, but no non-NULL values"
+PERSONRAWDATA,"{""@entityType"":""Person"",""@rels"":{""PersonToLocation"":[{""@direction"":""to"",""@otherEntity"":""b000ffd5-6460-5093-98db-cf3240ef47f0"",""@relationType"":""PersonToLocation"",""axon"":{""type"":""HOME""},""id"":""a999c692-9f4d-469e-853c-173e6c331419""}]},""axon"":{""age"":38,""birthdate"":""1987-01-09T07:00:00.000Z"",""contact"":{""phoneNumbers"":[{""type"":""MOBILE"",""value"":""5208787031""},{""type"":""HOME"",""value"":""5206331413""}]},""ethnicity"":""HISPANIC_OR_LATINO"",""eyeColor"":""BROWN"",""firstName"":""Jose"",""hairColor"":""BLACK"",""heightIn"":78,""identityDocuments"":[{""driverLicense"":{""issuingState"":""AZ"",""number"":""D02290473""},""type"":""DRIVERS_LICENSE""},{""ssn"":{""number"":""600942557""},""type"":""SSN""},{""type"":""DRIVERS_LICENSE""}],""lastName"":""Orozco"",""middleName"":""Antonio"",""race"":""UNKNOWN"",""residentStatus"":""NON_RESIDENT"",""sex"":""MALE"",""suffix"":""JUNIOR"",""type"":""KNOWN"",""weightLb"":400},""id"":""b8452721-90e9-48f2-b342-6156acd5c186"",""friendlyId"":""PER2300027111""}",,PersonRawData,,,Raw form json data is not exposed in V2
+REPORTCREATEDAT_INDEXED_UTC,2026-02-23 17:37:07,,ReportCreatedAt_Indexed_Utc,,,CreatedAt
+REPORTUPDATEDAT_INDEXED_UTC,2026-08-07 1:59:46,,ReportUpdatedAt_Indexed_Utc,,,UpdatedAt
+FILE_NAMES,axon.Persons/part-00000-cd870699-5b3d-482c-bd3d-aa24d03a9d4a-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,3697842,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-08-20 8:47:38,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,,,,,,Snowflake Specific
+ETL_LOADED_AT,,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,,,,,,"Snowflake Specific
+""""""""""""""""
+""""""""
+""""
+""
+"

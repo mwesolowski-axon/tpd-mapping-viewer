@@ -2,9 +2,7 @@ Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,
 PARENTEXTERNALID,6370d88f-cf7a-4ea2-858c-978636cb6216,axon.CitationsCharges,ParentExternalId,Records.IncidentReport_SubCitation_AxonCharges,ParentId,
 CITATIONID,1198350,axon.CitationsCharges,CitationId,,,No V2 mapping.
 REPORTNUMBER,P2206100135-1,axon.CitationsCharges,ReportNumber,Records.IncidentReport_SubCitation_AxonCharges,ReportFriendlyId,
-INCIDENTNUMBER,P2206100135,axon.CitationsCharges,IncidentNumber,Records.IncidentReport_SubCitation_AxonCharges,,"Incident Number is not surfaced directly in Records.IncidentReport_SubCitation_AxonCharges, but can be derived from Report Number. 
-
-Don't use LatestIncidentReport because earlier reports are not included. (-1 won't show up if -3 has an arrest on it)"
+INCIDENTNUMBER,P2206100135,axon.CitationsCharges,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
 CITATIONNUMBER,,axon.CitationsCharges,CitationNumber,,,"No V2 version, but no non-Null versions in V1"
 CHARGEID,056370de-916b-433c-a309-b525496568b0,axon.CitationsCharges,ChargeId,Records.IncidentReport_SubCitation_AxonCharges,Charge,
 COUNTS,1,axon.CitationsCharges,Counts,Records.IncidentReport_SubCitation_AxonCharges,Counts,
@@ -23,4 +21,9 @@ ETL_LOAD_ID,,,,,,Snowflake Specific
 ETL_LOADED_AT,,,,,,Snowflake Specific
 ETL_PREVIOUS_WATERMARK,,,,,,Snowflake Specific
 ETL_EFFECTIVE_START_WATERMARK,,,,,,Snowflake Specific
-ETL_CURRENT_WATERMARK,,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,,,,,,"Snowflake Specific
+""""""""""""""""
+""""""""
+""""
+""
+"

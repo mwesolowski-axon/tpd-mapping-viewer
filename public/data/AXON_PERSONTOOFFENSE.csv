@@ -1,0 +1,27 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+EXTERNALID,87c2a8f4-9a11-4856-85e5-b97113c59068,axon.PersonToOffense,ExternalId,Records.IncidentReport_RelPersonToOffense,Id,
+REPORTNUMBER,P2601050052-1,axon.PersonToOffense,ReportNumber,Records.IncidentReport_RelPersonToOffense,ReportFriendlyId,
+INCIDENTNUMBER,P2601050052,axon.PersonToOffense,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
+FROMEXTERNALID,519de19a-fd0b-494a-9b15-4e034af28e91,axon.PersonToOffense,FromExternalId,Records.IncidentReport_RelPersonToOffense,IncidentReport_FromEntPersonId,
+TOEXTERNALID,3788222e-0227-4532-ad47-b267917b34c7,axon.PersonToOffense,ToExternalId,Records.IncidentReport_RelPersonToOffense,IncidentReport_ToEntOffenseId,
+INVOLVEMENT,ARRESTEE,axon.PersonToOffense,Involvement,Records.IncidentReport_RelPersonToOffense,AxonInvolvement,
+VICTIMTYPE,INDIVIDUAL,axon.PersonToOffense,VictimType,Records.IncidentReport_RelPersonToOffense,AxonVictimType,
+VICTIMINJURYTYPE,APPARENT_MINOR_INJURY,axon.PersonToOffense,VictimInjuryType,Records.IncidentReport_RelPersonToOffense,AxonVictimInjuryTypeList,
+PERSONTOOFFENSERAWDATA,"{""axon"":{""involvement"":""ARRESTEE""},""from"":""519de19a-fd0b-494a-9b15-4e034af28e91"",""id"":""87c2a8f4-9a11-4856-85e5-b97113c59068"",""to"":""3788222e-0227-4532-ad47-b267917b34c7""}",axon.PersonToOffense,PersonToOffenseRawData,,,Raw form json data is not exposed in V2
+REPORTCREATEDAT_INDEXED_UTC,2026-01-05 16:06:11,axon.PersonToOffense,ReportCreatedAt_Indexed_Utc,Records.IncidentReport_RelPersonToOffense,CreatedAt,
+REPORTUPDATEDAT_INDEXED_UTC,2026-01-06 20:22:36,axon.PersonToOffense,ReportUpdatedAt_Indexed_Utc,Records.IncidentReport_RelPersonToOffense,UpdatedAt,
+FILE_NAMES,axon.PersonToOffense/part-00000-ba7f5ba2-35f9-444b-ab00-246b7806ede6-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,820419,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-08-20 8:55:23,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,,,,,,Snowflake Specific
+ETL_LOADED_AT,,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,,,,,,Snowflake Specific
+,,,,,,"
+""""""""""""""""
+""""""""
+""""
+""
+"

@@ -25,7 +25,7 @@ DRIVERLICENSEEXPIRATIONDATE,2030-07-08,axon.IdentityDocuments,DriverLicenseExpir
 - PassportExpirationDate
 - CommonAccessCardExpirationDate
 - OtherExpirationDate"
-INCIDENTNUMBER,P2610190001,axon.IdentityDocuments,IncidentNumber,,,Incident Number is not surfaced directly in Records.IncidentReport_EntPerson_AxonIdentityDocuments
+INCIDENTNUMBER,P2610190001,axon.IdentityDocuments,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
 PERSONEXTERNALID,1CF03648-7BB9-4389-B90B-66EE0ADE0D09,axon.IdentityDocuments,PersonExternalId,Records.IncidentReport_EntPerson_AxonIdentityDocuments,ParentId,
 COUNTRY,US,axon.IdentityDocuments,Country,Records.IncidentReport_EntPerson_AxonIdentityDocuments,PassportCountry,Typically provided for passports and passport cards
 CLASS,CLASS_D,axon.IdentityDocuments,Class,Records.IncidentReport_EntPerson_AxonIdentityDocuments,DriverLicenseClass,
@@ -44,4 +44,9 @@ ETL_LOAD_ID,20261019090049,,,,,Snowflake Specific
 ETL_LOADED_AT,2026-10-19 9:02:07,,,,,Snowflake Specific
 ETL_PREVIOUS_WATERMARK,2026-10-18 9:02:00,,,,,Snowflake Specific
 ETL_EFFECTIVE_START_WATERMARK,2026-10-18 7:02:00,,,,,Snowflake Specific
-ETL_CURRENT_WATERMARK,2026-10-19 9:01:50,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,2026-10-19 9:01:50,,,,,"Snowflake Specific
+""""""""""""""""
+""""""""
+""""
+""
+"

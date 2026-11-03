@@ -1,23 +1,31 @@
-import { STATUS_META, matchesSearch } from '../utils/mapping'
+import { SNOWFLAKE_SPECIFIC_STATUS_META, STATUS_META, matchesSearch } from '../utils/mapping'
 
 function ColumnList({
   table,
   columns,
+  totalColumnCount,
   status,
   selectedColumnId,
   onSelectColumn,
+  onLinkContextMenu,
   searchQuery,
   onSearchChange,
 }) {
   const filtered = columns.filter((col) => matchesSearch(col, searchQuery))
+  const total = totalColumnCount ?? columns.length
 
   return (
     <section className="column-list-pane">
-      <div className="pane-header">
+      <div
+        className="pane-header"
+        onContextMenu={(event) =>
+          table && onLinkContextMenu?.(event, table.id, null)
+        }
+      >
         <h2>{table ? table.name : 'Select a table'}</h2>
         {table && status === 'success' && (
           <span className="column-count">
-            {filtered.length} / {columns.length} columns
+            {filtered.length} / {total} columns
           </span>
         )}
       </div>
@@ -46,14 +54,19 @@ function ColumnList({
         {table &&
           status === 'success' &&
           filtered.map((col) => {
-            const meta = STATUS_META[col.status]
+            const meta = col.isSnowflakeSpecific
+              ? SNOWFLAKE_SPECIFIC_STATUS_META
+              : STATUS_META[col.status]
             const isActive = col.id === selectedColumnId
             return (
               <button
                 key={col.id}
                 type="button"
-                className={`column-item${isActive ? ' active' : ''}`}
+                className={`column-item${isActive ? ' active' : ''}${col.isSnowflakeSpecific ? ' is-snowflake-specific' : ''}`}
                 onClick={() => onSelectColumn(col)}
+                onContextMenu={(event) =>
+                  table && onLinkContextMenu?.(event, table.id, col.id)
+                }
               >
                 <div className="column-item-row">
                   <span className="column-name">{col.snowflakeColumn}</span>

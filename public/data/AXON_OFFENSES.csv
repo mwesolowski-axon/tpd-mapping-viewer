@@ -1,0 +1,60 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+SECTION,902,axon.Offenses,Section,Records.IncidentReport_AxonOffenses,AxonUcr,
+DESCRIPTION,Other Assaults - No Injury,axon.Offenses,Description,Records.IncidentReport_EntCharge,AxonShortDescription,
+OFFENSERAWDATA,"{""@entityType"":""Offense"",""@rels"":{""OffenseToCharge"":[{""@direction"":""to"",""@otherEntity"":""aca23177-1676-4899-872b-233701f607c6"",""@relationType"":""OffenseToCharge"",""id"":""f51e6786-64f0-4929-b0a8-9b2cb0cdcea8""}]},""axon"":{""completion"":""COMPLETED"",""nibrsUCRCode"":""13C"",""wasBiasMotivationInvolved"":false,""wasCriminalGangActivityInvolved"":false,""wasOffenderSuspectedOfUsing"":false},""id"":""8fc19a73-696f-4187-89b6-c57c9a566532"",""friendlyId"":""8fc19a73-696f-4187-89b6-c57c9a566532""}",axon.Offenses,OffenseRawData,,,Raw form json data is not exposed in V2
+NOTE,APT_FLOOR: 25; LOCATION_COMMENT: @HARMONY ARMS APARTMENTS,axon.Offenses,Note,Records.IncidentReport,AxonIncidentLocationNote,
+OCCURREDTODATE_MOUNTAIN,2026-04-06 02:03:00.0000000 -06:00,axon.Offenses,OccurredFromDate_Mountain,,,Only provided in UTC
+OCCURREDTODATE_ARIZONA,2026-04-06 01:03:00.0000000 -07:00,axon.Offenses,OccurredFromDate_Arizona,,,Only provided in UTC
+EXCLUDEFROMNIBRS,TRUE,axon.Offenses,ExcludeFromNibrs,Records.IncidentReport_EntOffense	,AxonExcludeFromNibrs,
+CLEAREDEXCEPTIONALLY,,axon.Offenses,ClearedExceptionally,Records.IncidentReport,AxonClearedExceptionally,
+CLEARANCEDATE,,axon.Offenses,ClearanceDate,Records.IncidentReport,AxonClearanceDate,
+OCCURREDFROMDATE,2026-04-05 08:03:00.0000000 +00:00,axon.Offenses,OccurredFromDate,Records.IncidentReport,AxonIncidentFromDate,
+OCCURREDFROMDATE_MOUNTAIN,2026-04-05 02:03:00.0000000 -06:00,axon.Offenses,OccurredFromDate_Mountain,,,Only provided in UTC
+OCCURREDFROMDATE_ARIZONA,2026-04-05 01:03:00.0000000 -07:00,axon.Offenses,OccurredFromDate_Arizona,,,Only provided in UTC
+OCCURREDFROMDATE_PACIFIC,2026-04-05 01:03:00.0000000 -07:00,axon.Offenses,OccurredFromDate_Pacific,,,Only provided in UTC
+CRIMINALGANGACTIVITYINVOLVED,FALSE,axon.Offenses,CriminalGangActivityInvolved,Records.IncidentReport_EntOffense	,AxonWasCriminalGangActivityInvolved,
+WEAPONFORCEINVOLVED,,axon.Offenses,WeaponForceInvolved,Records.IncidentReport_EntOffense	,AxonWasWeaponForceInvolved,
+ISBIASMOTIVATIONINVOLVED,FALSE,axon.Offenses,IsBiasMotivationInvolved,Records.IncidentReport_EntOffense	,AxonWasBiasMotivationInvolved,
+OCCURREDTODATE_PACIFIC,2026-04-06 01:03:00.0000000 -07:00,axon.Offenses,OccurredToDate_Pacific,,,Only provided in UTC
+DOMESTIC_INCIDENT,NO,axon.Offenses,DOMESTIC_INCIDENT,Records.IncidentReport,AxonDomesticViolenceFlag,
+SEVERITY,NOT_APPLICABLE,axon.Offenses,Severity,Records.IncidentReport_AxonOffenses,AxonSeverity,
+TYPE,RESIDENCE_HOME,axon.Offenses,Type,Records.IncidentReport,AxonIncidentLocationType,
+OCCURREDFROMDATE_EASTERN,2026-04-05 04:03:00.0000000 -04:00,axon.Offenses,OccurredFromDate_Eastern,,,Only provided in UTC
+OCCURREDFROMDATE_CENTRAL,2026-04-05 03:03:00.0000000 -05:00,axon.Offenses,OccurredFromDate_Central,,,Only provided in UTC
+ADDRESSTYPE,,axon.Offenses,AddressType,Records.IncidentReport_EntLocation,AxonAddressType,
+CITY,,axon.Offenses,City,Records.IncidentReport_EntLocation,AxonCity,
+COUNTRY,,axon.Offenses,Country,Records.IncidentReport_EntLocation,AxonCountry,
+HOUSENUMBER,,axon.Offenses,HouseNumber,Records.IncidentReport_EntLocation,AxonHouseNumber,
+INCIDENTNUMBER,P2604050018,axon.Offenses,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
+REPORTNUMBER,P2604050018-1,axon.Offenses,ReportNumber,Records.IncidentReport_EntOffense	,ReportFriendlyId,
+EXTERNALID,8fc19a73-696f-4187-89b6-c57c9a566532,axon.Offenses,ExternalId,Records.IncidentReport_EntOffense	,Id,
+REPORTCREATEDAT_INDEXED_UTC,2026-04-05 8:46:30,axon.Offenses,ReportCreatedAt_Indexed_Utc,Records.IncidentReport_EntOffense	,CreatedAt,
+REPORTUPDATEDAT_INDEXED_UTC,2026-04-05 9:15:59,axon.Offenses,ReportUpdatedAt_Indexed_Utc,Records.IncidentReport_EntOffense	,UpdatedAt,
+LATITUDE,,axon.Offenses,Latitude,Records.IncidentReport_EntLocation,AxonLat,
+LONGITUDE,,axon.Offenses,Longitude,Records.IncidentReport_EntLocation,AxonLon,
+POSTALCODE,,axon.Offenses,PostalCode,Records.IncidentReport_EntLocation,AxonPostalCode,
+CARGOTHEFT,FALSE,axon.Offenses,CargoTheft,Records.IncidentReport_EntOffense	,AxonCargoTheft,
+METHODOFENTRY,NO_FORCE,axon.Offenses,MethodOfEntry,Records.IncidentReport_EntOffense	,AxonMethodOfEntry,
+NIBRSUCRCODE,13C,axon.Offenses,NibrsUcrCode,Records.IncidentReport_EntOffense	,AxonNibrsUcrCode,
+COMPLETION,COMPLETED,axon.Offenses,Completion,Records.IncidentReport_EntOffense	,AxonCompletion,
+OFFENDERSUSPECTEDOFUSING,FALSE,axon.Offenses,OffenderSuspectedOfUsing,Records.IncidentReport_EntOffense	,AxonWasOffenderSuspectedOfUsing,
+POSTALCODEEXT,,axon.Offenses,PostalCodeExt,Records.IncidentReport_EntLocation,AxonPostalCodeExt,
+STATE,,axon.Offenses,State,Records.IncidentReport_EntLocation,AxonState,
+STREET,,axon.Offenses,Street,Records.IncidentReport_EntLocation,AxonStreetName,
+OCCURREDTODATE,2026-04-06 08:03:00.0000000 +00:00,axon.Offenses,OccurredToDate,Records.IncidentReport,AxonIncidentToDate,
+OCCURREDTODATE_EASTERN,2026-04-06 04:03:00.0000000 -04:00,axon.Offenses,OccurredToDate_Eastern,,,Only provided in UTC
+OCCURREDTODATE_CENTRAL,2026-04-06 03:03:00.0000000 -05:00,axon.Offenses,OccurredToDate_Central,,,Only provided in UTC
+FILE_NAMES,axon.offenses/part-00004-8bcde4b9-f0be-4c0e-90da-89781c25c985-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,9201,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-08-20 8:01:17,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,,,,,,Snowflake Specific
+ETL_LOADED_AT,,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,,,,,,"Snowflake Specific
+""""""""""""""""
+""""""""
+""""
+""
+"

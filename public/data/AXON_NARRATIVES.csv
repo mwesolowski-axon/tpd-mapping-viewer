@@ -1,0 +1,69 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+EXTERNALID,ee20662e-67f0-4880-9707-36c709c1116a,axon.Narratives,ExternalId,Records.IncidentReport_EntNarrative,NarrativeFriendlyId,
+INCIDENTNUMBER,P2601070061,axon.Narratives,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
+INCIDENTID,0cb77a48-db89-4cd1-98cf-1993158464ca,axon.Narratives,IncidentId,Records.EntIncident,Id,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.Id. See sidebar for query.
+REPORTCREATEDAT_INDEXED_UTC,2026-01-07 16:50:59,axon.Narratives,ReportCreatedAt_Indexed_Utc,Records.IncidentReport_EntNarrative,CreatedAt,
+REPORTUPDATEDAT_INDEXED_UTC,2026-01-07 18:57:10,axon.Narratives,ReportUpdatedAt_Indexed_Utc,Records.IncidentReport_EntNarrative,UpdatedAt,
+REPORTNUMBER,P2601070061-1,axon.Narratives,ReportType,,,
+NARRATIVES,"********BWC Utilized and Muted when Appropriate********
+On 01/07/2026, I was dispatched to Unit 5 of Catalina Casitas located at 3135 N Flowing Wells Rd, in reference to a stolen vehicle. 
+
+The stolen vehicle is a 2026 white GMC Sierra (AABBCC/AZ, VIN# 12ABC3456DEFG789HI). It is valued at $84,000. There are no running step boards on the vehicle and the vehicle has 35 sized tires instead of the stock tires. There are no weapons or personal property inside the vehicle. The registered owner, Jane Smith and her boyfriend/primary driver, Joe Williams are in possession of the key fob. No one was given permission to drive the vehicle. 
+
+Upon my arrival, I made contact with Jane Smith and Joe Williams. 
+On 01/06/2025 at approximately 2100 hours, Joe parked the vehicle outside of his residence, Unit 5. His unit is located on the far west of the property. He locked and secured his vehicle and did not return for the remainder of the night. 
+On 01/07/2025 at approximately 0900 hours, Joe returned to his vehicle to go to work and discovered the vehicle was missing. 
+There are no video cameras on his residence or in the immediate area. There are no witnesses. 
+
+There is GPS tracking through the GMC application on Joe's smartphone. The vehicle was last pinging at 8 W Calle Duraznos, Heroica Nogales, Sonora, Mexico. There is no time when it was pinging and it is currently not able to be pinged. 
+
+Jane Smith wants to prosecute. Joe Williams read and signed the Stolen Vehicle Agreement on her behalf. They were provided with a VINE form. 
+
+TWX PR# 52875 was notified at 1013 hours. An Attempt to Locate (ATL) was issued for the vehicle, reference ATL# 365784. 
+TWX advised me that the vehicle crossed into Mexico via the DeConcini Port on 01/06/2025 at 2243 hours. 
+
+Sergeant Gutierrez (36036) was notified. I was later contacted by Sergeant Gutierrez that the vehicle's last ping location was checked and it was not there. 
+
+
+NFI. 
+Techau
+103491
+ODW/2",axon.Narratives,Narratives,Records.IncidentReport_EntNarrative,AxonContent,
+NARRATIVERAWDATA,"{""axon"":{""content"":""********BWC Utilized and Muted when Appropriate********
+On 01/07/2026, I was dispatched to Unit 5 of Catalina Casitas located at 3135 N Flowing Wells Rd, in reference to a stolen vehicle. 
+
+The stolen vehicle is a 2026 white GMC Sierra (AABBCC/AZ, VIN# 12ABC3456DEFG789HI). It is valued at $84,000. There are no running step boards on the vehicle and the vehicle has 35 sized tires instead of the stock tires. There are no weapons or personal property inside the vehicle. The registered owner, Jane Smith and her boyfriend/primary driver, Joe Williams are in possession of the key fob. No one was given permission to drive the vehicle. 
+
+Upon my arrival, I made contact with Jane Smith and Joe Williams. 
+On 01/06/2025 at approximately 2100 hours, Joe parked the vehicle outside of his residence, Unit 5. His unit is located on the far west of the property. He locked and secured his vehicle and did not return for the remainder of the night. 
+On 01/07/2025 at approximately 0900 hours, Joe returned to his vehicle to go to work and discovered the vehicle was missing. 
+There are no video cameras on his residence or in the immediate area. There are no witnesses. 
+
+There is GPS tracking through the GMC application on Joe's smartphone. The vehicle was last pinging at 8 W Calle Duraznos, Heroica Nogales, Sonora, Mexico. There is no time when it was pinging and it is currently not able to be pinged. 
+
+Jane Smith wants to prosecute. Joe Williams read and signed the Stolen Vehicle Agreement on her behalf. They were provided with a VINE form. 
+
+TWX PR# 52875 was notified at 1013 hours. An Attempt to Locate (ATL) was issued for the vehicle, reference ATL# 365784. 
+TWX advised me that the vehicle crossed into Mexico via the DeConcini Port on 01/06/2025 at 2243 hours. 
+
+Sergeant Gutierrez (36036) was notified. I was later contacted by Sergeant Gutierrez that the vehicle's last ping location was checked and it was not there. 
+
+
+NFI. 
+Techau
+103491
+ODW/2
+""},""id"":""ee20662e-67f0-4880-9707-36c709c1116a"",""friendlyId"":""ee20662e-67f0-4880-9707-36c709c1116a""}",axon.Narratives,NarrativeRawData,,,
+REPORTID,7ca59b5f-4a81-4713-84dd-968f823cb369,axon.Narratives,ReportId,Records.IncidentReport_EntNarrative,ReportId,
+REPORTTYPE,GENERAL_OFFENSE,axon.Narratives,ReportType,,,
+USERID,c01c397a-374f-4592-8f4a-c63930218119,axon.Narratives,UserId,Records.IncidentReport_EntNarrative,AuthorId,
+USERNAME,mtechau1,axon.Narratives,Username,Records.Officer,Username,Records.IncidentReport_EntNarrative.AuthorId = Records.Officer.Id
+FILE_NAMES,axon.Narratives/part-00002-0d861c03-d53d-43a3-a0e5-a3d09c45a2ac-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,10516,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-01-09 13:43:09,,,,,Snowflake Specific
+OP,,,,,,"Snowflake Specific
+""""""""""""""""
+""""""""
+""""
+""
+"

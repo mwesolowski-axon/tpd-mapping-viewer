@@ -1,0 +1,35 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+RECOVERYDATE_CENTRAL,2026-10-05 01:06:00.0000000 -05:00,axon.PropertiesRecoveryDetails,RecoveryDate_Central,,,Only provided in UTC
+RECOVERYDATE_MOUNTAIN,2026-10-05 00:06:00.0000000 -06:00,axon.PropertiesRecoveryDetails,RecoveryDate_Mountain,,,Only provided in UTC
+RECOVERYDATE_ARIZONA,2026-10-04 23:06:00.0000000 -07:00,axon.PropertiesRecoveryDetails,RecoveryDate_Arizona,,,Only provided in UTC
+PROPERTYSTATUS,,axon.PropertiesRecoveryDetails,PropertyStatus,,,"No V2 equivalent, but no non-NULL values"
+REPORTNUMBER,P2610040134-1,axon.PropertiesRecoveryDetails,ReportNumber,Records.IncidentReport_AxonProperties,ReportFriendlyId,
+RECOVERYNOTE,CENTER CONSOLE OF VEHICLE,axon.PropertiesRecoveryDetails,RecoveryNote,Records.IncidentReport_AxonProperties,RecoveryDetailsNote,
+RECOVERYLOCATIONEXTERNALID,6667cc67-6faa-5fd6-9074-0876713bce46,axon.PropertiesRecoveryDetails,RecoveryLocationExternalId,Records.IncidentReport_AxonProperties,RecoveryDetailsLocation,
+RECOVEREDSEIZEDBYSEARCHTYPE,,axon.PropertiesRecoveryDetails,RecoveredSeizedBySearchType,,,"No V2 equivalent, but no non-NULL values"
+PROPERTYEXTERNALID,04b97195-5ef0-4e17-827d-e07189b45d7c,axon.PropertiesRecoveryDetails,PropertyExternalId,Records.IncidentReport_AxonProperties,Property,
+INCIDENTNUMBER,P2610040134,axon.PropertiesRecoveryDetails,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
+PROPERTYFRIENDLYID,PRO2600314371,axon.PropertiesRecoveryDetails,PropertyFriendlyId,Records.IncidentReport_EntProperty,PropertyFriendlyId,Linked via Records.IncidentReport_AxonProperties.Property = Records.IncidentReport_EntProperty.Id
+RECOVERYDATE,2026-10-05 6:06:00,axon.PropertiesRecoveryDetails,RecoveryDate,Records.IncidentReport_AxonProperties,RecoveryDetailsRecoveryDate,
+EXTERNALID,04b97195-5ef0-4e17-827d-e07189b45d7c,axon.PropertiesRecoveryDetails,ExternalId,Records.IncidentReport_AxonProperties,Property,
+RECOVERYDATE_PACIFIC,2026-10-04 23:06:00.0000000 -07:00,axon.PropertiesRecoveryDetails,RecoveryDate_Pacific,,,Only provided in UTC
+REPORTUPDATEDAT_INDEXED_UTC,2026-10-09 10:25:53,axon.PropertiesRecoveryDetails,ReportUpdatedAt_Indexed_Utc,Records.IncidentReport_AxonProperties,UpdatedAt,
+PROPERTYNUMBER,,axon.PropertiesRecoveryDetails,PropertyNumber,,,"No V2 equivalent, but no non-NULL values"
+RECOVERYDETAILSRAWDATA,"{""location"":""6667cc67-6faa-5fd6-9074-0876713bce46"",""recoveredBy"":""5d4bf8a0-5896-4cea-980e-fa12a4a0e2ec"",""recoveryDate"":""2026-10-05T06:06:00.000Z""}",axon.PropertiesRecoveryDetails,RecoveryDetailsRawData,,,Raw form json data is not exposed in V2
+REPORTCREATEDAT_INDEXED_UTC,2026-10-05 5:27:18,axon.PropertiesRecoveryDetails,ReportCreatedAt_Indexed_Utc,Records.IncidentReport_AxonProperties,CreatedAt,
+RECOVERINGSEIZINGOFFICEREXTERNALID,5d4bf8a0-5896-4cea-980e-fa12a4a0e2ec,axon.PropertiesRecoveryDetails,RecoveringSeizingOfficerExternalId,Records.IncidentReport_AxonProperties,RecoveryDetailsRecoveredBy,
+RECOVERYDATE_EASTERN,2026-10-05 02:06:00.0000000 -04:00,axon.PropertiesRecoveryDetails,RecoveryDate_Eastern,,,Only provided in UTC
+FILE_NAMES,axon_delta/axon.propertiesrecoverydetails/delta/load_id=20261010090113/part-00000-03c15052-c770-4a6c-84f9-513e2b910410-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,1367,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-10-10 9:09:59,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,20261010090113,,,,,Snowflake Specific
+ETL_LOADED_AT,2026-10-10 9:09:57,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,2026-10-09 9:14:47,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,2026-10-09 7:14:47,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,2026-10-10 9:08:12,,,,,"Snowflake Specific
+""""""""""""""""
+""""""""
+""""
+""
+"

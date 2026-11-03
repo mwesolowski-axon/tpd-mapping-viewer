@@ -1,0 +1,47 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+EXTERNALID,ee516ee1-8ab2-40af-9c7a-529651420fe6,axon.Properties,ExternalId,Records.IncidentReport_EntProperty,Id,
+INCIDENTNUMBER,P2610040134,axon.Properties,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
+REPORTNUMBER,P2610040134-1,axon.Properties,ReportNumber,Records.IncidentReport_EntProperty,ReportFriendlyId,
+PROPERTYFRIENDLYID,PRO2600314315,axon.Properties,PropertyFriendlyId,Records.IncidentReport_EntProperty,PropertyFriendlyId,
+MAKE,,axon.Properties,Make,Records.IncidentReport_EntProperty,AxonMake,
+SIZE,PL_BAG,axon.Properties,Size,Records.IncidentReport_EntProperty,AxonSize,
+TYPE,PORTABLE_ELECTRONIC_COMMUNICATIONS,axon.Properties,Type,Records.IncidentReport_EntProperty,AxonType,
+BRAND,APPLE,axon.Properties,Brand,Records.IncidentReport_EntProperty,AxonBrand,
+MODEL,IPHONE 13,axon.Properties,Model,Records.IncidentReport_EntProperty,AxonModel,
+SERIAL,N45C6K671P,axon.Properties,Serial,Records.IncidentReport_EntProperty,AxonSerial,
+COLOR,WHITE,axon.Properties,Color,Records.IncidentReport_EntProperty,AxonColor,
+BIOHAZARD,,axon.Properties,Biohazard,Records.IncidentReport_EntProperty,AxonBiohazard,
+BRANDNAME,,axon.Properties,BrandName,Records.IncidentReport_EntProperty,AxonBrandName,
+ARTICLE,PI24,axon.Properties,Article,Records.IncidentReport_EntProperty,AxonArticle,
+SENDTOPEP,,axon.Properties,SendToPep,Records.IncidentReport_EntProperty,AxonSendToPep,
+QUANTITYESTIMATE,1,axon.Properties,QuantityEstimate,Records.IncidentReport_EntProperty,AxonQuantityEstimate,
+DRUGTYPESUSPECTED,OTHER_DEPRESSANTS,axon.Properties,DrugTypeSuspected,Records.IncidentReport_EntProperty,AxonDrugTypeSuspected,
+MONETARYVALUECENTS,25996,axon.Properties,MonetaryValueCents,Records.IncidentReport_EntProperty,AxonMonetaryValueCents,
+EVIDENCETAGNUMBER,,axon.Properties,EvidenceTagNumber,Records.IncidentReport_EntProperty,AxonEvidenceTagNumber,
+OVERTHREEDRUGTYPES,FALSE,axon.Properties,OverThreeDrugTypes,Records.IncidentReport_EntProperty,AxonOverThreeDrugTypes,
+RECOVEREDVALUECENTS,25996,axon.Properties,RecoveredValueCents,Records.IncidentReport_EntProperty,AxonRecoveredValueCents,
+DESCRIPTION,BLACK CELLPHONE,axon.Properties,Description,Records.IncidentReport_EntProperty,AxonDescription,
+MEASUREMENT,GM,axon.Properties,Measurement,Records.IncidentReport_EntProperty,AxonMeasurement,
+CUSTODYREASON,,axon.Properties,CustodyReason,Records.IncidentReport_EntProperty,AxonCustodyReason,
+FIREARMDETAILSBARREL,"7.5""",axon.Properties,FirearmDetailsBarrel,Records.IncidentReport_EntProperty,AxonFirearmDetailsBarrel,
+FIREARMDETAILSCALIBER,9,axon.Properties,FirearmDetailsCaliber,Records.IncidentReport_EntProperty,AxonFirearmDetailsCaliber,
+FIREARMDETAILSIMPORTER,TAURUS,axon.Properties,FirearmDetailsImporter,Records.IncidentReport_EntProperty,AxonFirearmDetailsImporter,
+FIREARMDETAILSFIREARMTYPE,PISTOL_SEMI_AUTOMATIC,axon.Properties,FirearmDetailsFirearmType,Records.IncidentReport_EntProperty,AxonFirearmDetailsFirearmType,
+FIREARMDETAILSFIREARMCATEGORY,,axon.Properties,FirearmDetailsFirearmCategory,Records.IncidentReport_EntProperty,AxonFirearmDetailsFirearmCategory,
+PROPERTYRAWDATA,"{""@entityType"":""Property"",""@rels"":{},""axon"":{""article"":""PI24"",""description"":""BLACK CELLPHONE"",""size"":""PL_BAG"",""type"":""PORTABLE_ELECTRONIC_COMMUNICATIONS""},""custom"":{""PropTWXNotified"":""NO"",""itemNumber"":""RM01"",""submitalLocation"":""C14B""},""id"":""ee516ee1-8ab2-40af-9c7a-529651420fe6"",""friendlyId"":""PRO2600314315""}",axon.Properties,PropertyRawData,,,Raw form json data is not exposed in V2
+REPORTCREATEDAT_INDEXED_UTC,2026-10-05 5:27:18,axon.Properties,ReportCreatedAt_Indexed_Utc,Records.IncidentReport_EntProperty,CreatedAt,
+REPORTUPDATEDAT_INDEXED_UTC,2026-10-09 10:25:53,axon.Properties,ReportUpdatedAt_Indexed_Utc,Records.IncidentReport_EntProperty,UpdatedAt,
+FILE_NAMES,axon_delta/axon.Properties/delta/load_id=20261010090113/part-00000-f8056082-f4f2-4216-90b9-a660fded4505-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,2270,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-10-10 9:07:26,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,20261010090113,,,,,Snowflake Specific
+ETL_LOADED_AT,2026-10-10 9:07:24,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,2026-10-09 9:12:23,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,2026-10-09 7:12:23,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,2026-10-10 9:07:03,,,,,"Snowflake Specific
+""""""""""""""""
+""""""""
+""""
+""
+"

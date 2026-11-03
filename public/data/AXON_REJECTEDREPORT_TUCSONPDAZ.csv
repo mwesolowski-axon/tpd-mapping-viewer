@@ -1,0 +1,15 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+INCIDENTID,e11969fb-7de8-46e9-aee1-726338e601cc,axon.RejectedReport_TucsonPdAz,IncidentId,Records.TaskActionComment,IncidentId,"COALESCE(TaskActionComment.IncidentId, EntIncident.Id) when comment has no IncidentId — see sidebar V2 query."
+INCIDENTNUMBER,P2609010040,axon.RejectedReport_TucsonPdAz,IncidentNumber,Records.TaskAction,IncidentNumber,On Records.TaskAction (also on TaskActionComment when a comment row exists). See sidebar for full V2 shape.
+REPORTID,cb9c511b-bef0-404d-b7e9-de440696aadd,axon.RejectedReport_TucsonPdAz,ReportId,Records.TaskAction,ParentId,Mapped from TaskAction so report ids stay populated when there is no comment row.
+REPORTNUMBER,P2609010040-1,axon.RejectedReport_TucsonPdAz,ReportNumber,Records.TaskAction,ParentNumber,Mapped from TaskAction so report ids stay populated when there is no comment row.
+REPORTAUTHORID,d1bf7e71-778f-4ff3-b8ea-e6adb049eaa5,axon.RejectedReport_TucsonPdAz,ReportAuthorID,Records.TaskAction,UserId,V2 typed equivalent of JSON_VALUE(rawdata, '$.owner.id').
+REPORTAUTHOR,JSanchez1,axon.RejectedReport_TucsonPdAz,ReportAuthor,Records.TaskAction,UserName,V2 typed equivalent of JSON_VALUE(rawdata, '$.owner.username').
+REJECTEDBYID,e7a7eaf4-2083-4ce2-9586-d6c6663928e3,axon.RejectedReport_TucsonPdAz,RejectedByID,Records.TaskAction,LastTransitionedById,V2 typed equivalent of JSON_VALUE(rawdata, '$.lastTransitionedBy.id').
+REJECTEDBY,BLichty1,axon.RejectedReport_TucsonPdAz,RejectedBy,Records.TaskAction,LastTransitionedByUserName,V2 typed equivalent of JSON_VALUE(rawdata, '$.lastTransitionedBy.username').
+COMMENT,NEED OFFENSE CODE,axon.RejectedReport_TucsonPdAz,Comment,Records.TaskActionComment,Comments,LEFT JOIN preserves task actions with no comment (V1 used OUTER APPLY OPENJSON on comments).
+TASKACTIONARIZONATIME,2026-09-01 14:40:55.9180000 -07:00,axon.RejectedReport_TucsonPdAz,TaskActionArizonaTime,Records.TaskAction,TaskActionCreatedAt,Stored UTC in V2; convert AT TIME ZONE 'UTC' AT TIME ZONE 'US Mountain Standard Time' — see sidebar.
+FILE_NAMES,axon.RejectedReport_TucsonPdAz/part-00000-0c65a8e3-0822-41e5-ac39-0e41ea59494b-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,96336,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-10-27 10:50:26,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific

@@ -1,0 +1,16 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+INCIDENTNUMBER,P2602270193,axon.MethodOfTransportation_TucsonPdAz,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
+REPORTNUMBER,P2602270193-1,axon.MethodOfTransportation_TucsonPdAz,ReportNumber,Records.IncidentReport_AxonParties_MethodofTransportation,ReportFriendlyId,
+PERSONEXTERNALID,a8cdb6f4-bfe9-4a6d-8564-eb96a7990f60,axon.MethodOfTransportation_TucsonPdAz,PersonExternalId,Records.IncidentReport_AxonParties_MethodofTransportation,ParentId,
+PERSONINVOLVEMENT,ARRESTEE,axon.MethodOfTransportation_TucsonPdAz,PersonInvolvement,Records.IncidentReport_RelPersonToOffense,AxonInvolvement,Joined on ReportFriendlyId and ParentId as the IncidentReport_FromEntPersonId
+METHODOFTRANSPORTATION,"[""FLED_ON_PUBLIC_TRANSPORTATION"",""PUBLIC_TRANSIT""]",axon.MethodOfTransportation_TucsonPdAz,MethodOfTransportation,Records.IncidentReport_AxonParties,MethodofTransportationList,Can also be retrieved from Records.IncidentReport_AxonParties_MethodofTransportation as individual entries
+FILE_NAMES,axon.MethodofTransportation_TucsonPdAz/part-00000-0fd1eef2-cdf6-4b77-b5cb-e9ab143e146e-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,3,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-10-22 11:22:01,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+,,,,,,"
+""""""""""""""""
+""""""""
+""""
+""
+"

@@ -1,0 +1,24 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+EXTERNALID,fb0fcd13-d439-4728-a79e-83eedb2278bd,axon.PersonToVehicle,ExternalId,Records.IncidentReport_RelPersonToVehicle,Id,
+REPORTNUMBER,P2610040134-1,axon.PersonToVehicle,ReportNumber,Records.IncidentReport_RelPersonToVehicle,ReportFriendlyId,
+INCIDENTNUMBER,P2610040134,axon.PersonToVehicle,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
+FROMEXTERNALID,457b1cad-6780-46ed-9bd6-4a547448919c,axon.PersonToVehicle,FromExternalId,Records.IncidentReport_RelPersonToVehicle,IncidentReport_FromEntPersonId,
+TOEXTERNALID,63dcde1b-6d5d-4fa0-ab32-2d634dfbcf1a,axon.PersonToVehicle,ToExternalId,Records.IncidentReport_RelPersonToVehicle,IncidentReport_ToEntVehicleId,
+INVOLVEMENT,REGISTERED_OWNER,axon.PersonToVehicle,Involvement,Records.IncidentReport_RelPersonToVehicle,AxonInvolvement,
+PERSONTOVEHICLERAWDATA,"{""axon"":{""involvement"":""REGISTERED_OWNER""},""from"":""457b1cad-6780-46ed-9bd6-4a547448919c"",""id"":""fb0fcd13-d439-4728-a79e-83eedb2278bd"",""to"":""63dcde1b-6d5d-4fa0-ab32-2d634dfbcf1a""}",axon.PersonToVehicle,PersonToVehicleRawData,,,Raw form json data is not exposed in V2
+REPORTCREATEDAT_INDEXED_UTC,2026-10-05 5:27:18,axon.PersonToVehicle,ReportCreatedAt_Indexed_Utc,Records.IncidentReport_RelPersonToVehicle,CreatedAt,
+REPORTUPDATEDAT_INDEXED_UTC,2026-10-09 10:25:53,axon.PersonToVehicle,ReportUpdatedAt_Indexed_Utc,Records.IncidentReport_RelPersonToVehicle,UpdatedAt,
+FILE_NAMES,axon_delta/axon.PersonToVehicle/delta/load_id=20261010090113/part-00000-eea15e36-42f4-49ec-9846-e5bd6ccb2ebd-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,97,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-10-10 9:10:25,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,20261010090113,,,,,Snowflake Specific
+ETL_LOADED_AT,2026-10-10 9:10:23,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,2026-10-09 8:51:51,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,2026-10-09 6:51:51,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,2026-10-10 9:09:37,,,,,"Snowflake Specific
+""""""""""""""""
+""""""""
+""""
+""
+"

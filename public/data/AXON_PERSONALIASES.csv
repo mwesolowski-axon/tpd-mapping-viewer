@@ -1,0 +1,17 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+PERSONID,120612006,axon.PersonAliases,PersonId,,,"No direct V2 equivalent, but V2 does contain PersonFriendlyId which is associated with the Person Entitiy (e.g. PER220110328)"
+PERSONEXTERNALID,D0AB0204-868D-4412-AD1C-EAC9297E298A,axon.PersonAliases,PersonExternalId,Records.IncidentReport_EntPerson_AxonAliases,ParentId,
+REPORTID,b8d1d88e-5298-4d28-984b-deca5277e264,axon.PersonAliases,ReportId,Records.IncidentReport_EntPerson_AxonAliases,ReportId,
+REPORTNUMBER,P2601020202-7,axon.PersonAliases,ReportNumber,Records.IncidentReport_EntPerson_AxonAliases,ReportFriendlyId,
+ALIAS,"SILVERADO, PAUL",axon.PersonAliases,Alias,Records.IncidentReport_EntPerson_AxonAliases,Key,
+REPORTCREATEDAT_INDEXED_UTC,2026-04-19 9:00:36,axon.PersonAliases,ReportCreatedAt_Indexed_Utc,Records.IncidentReport_EntPerson_AxonAliases,CreatedAt,
+REPORTUPDATEDAT_INDEXED_UTC,2026-08-05 21:57:44,axon.PersonAliases,ReportUpdatedAt_Indexed_Utc,Records.IncidentReport_EntPerson_AxonAliases,UpdatedAt,
+FILE_NAMES,axon.PersonAliases/part-00000-271e7989-a224-4ad6-8912-1b0dab00fbb4-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,47634,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-08-20 9:07:03,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,,,,,,Snowflake Specific
+ETL_LOADED_AT,,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,,,,,,Snowflake Specific

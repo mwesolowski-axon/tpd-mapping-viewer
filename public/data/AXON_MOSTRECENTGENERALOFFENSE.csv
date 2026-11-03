@@ -1,0 +1,46 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+AUTHOR,SWright1,axon.MostRecentGeneralOffense,Author,Records.Officer,Username,Joins on Records.LatestIncidentReport.AuthorId = Records.Officer.Id
+AUTHORID,05244569-db5e-4964-95c6-d9bc1ba2e48e,axon.MostRecentGeneralOffense,AuthorId,Records.LatestIncidentReport,AuthorId,
+CLEAREDEXCEPTIONALLY,CUSTODY_OTHER_JURISDICTION,axon.MostRecentGeneralOffense,ClearedExceptionally,Records.EntIncident,AxonClearedExceptionally,
+CREATEDAT,2026-08-09 00:32:03.3560000 +00:00,axon.MostRecentGeneralOffense,CreatedAt,Records.LatestIncidentReport,CreatedAt,
+CREATEDAT_ARIZONA,2026-08-08 17:32:03.3560000 -07:00,axon.MostRecentGeneralOffense,CreatedAt_Arizona,,,Only given in UTC
+CREATEDAT_CENTRAL,2026-08-08 19:32:03.3560000 -05:00,axon.MostRecentGeneralOffense,CreatedAt_Central,,,Only given in UTC
+CREATEDAT_EASTERN,2026-08-08 20:32:03.3560000 -04:00,axon.MostRecentGeneralOffense,CreatedAt_Eastern,,,Only given in UTC
+CREATEDAT_MOUNTAIN,2026-08-08 18:32:03.3560000 -06:00,axon.MostRecentGeneralOffense,CreatedAt_Mountain,,,Only given in UTC
+CREATEDAT_PACIFIC,2026-08-08 17:32:03.3560000 -07:00,axon.MostRecentGeneralOffense,CreatedAt_Pacific,,,Only given in UTC
+EXTERNALID,181fe40d-d08b-44fb-afff-3cc9f484d020,axon.MostRecentGeneralOffense,ExternalId,Records.LatestIncidentReport,ReportId,
+INCIDENTID,e4b0498d-4cd6-4ed8-ac1a-48bc904a61a8,axon.MostRecentGeneralOffense,IncidentId,Records.LatestIncidentReport,IncidentId,
+INCIDENTLOCATIONNOTE,NW SIDE OF PARKING LOT,axon.MostRecentGeneralOffense,IncidentLocationNote,Records.LatestIncidentReport,AxonIncidentLocationNote,
+INCIDENTNUMBER,P2601260001,axon.MostRecentGeneralOffense,IncidentNumber,Records.LatestIncidentReport,IncidentFriendlyId,
+ISDRAFT,TRUE,axon.MostRecentGeneralOffense,IsDraft,Records.LatestIncidentReport,IsDraft,"V1 renders IsDraft as FALSE or TRUE
+V2 represents IsDraft as 0 or 1"
+LOCATIONEXTERNALID,b3824ca0-59ad-5e09-93f0-438d39803364,axon.MostRecentGeneralOffense,LocationExternalId,Records.LatestIncidentReport,AxonIncidentLocationLocation,
+NIBRSCOMPLIANT,FALSE,axon.MostRecentGeneralOffense,NibrsCompliant,Records.LatestIncidentReport,NibrsCompliant,
+OCCURREDFROMDATE,2026-01-25 23:30:00.0000000 +00:00,axon.MostRecentGeneralOffense,OccurredFromDate,Records.LatestIncidentReport,AxonIncidentFromDate,
+OCCURREDFROMDATE_ARIZONA,2026-01-25 16:30:00.0000000 -07:00,axon.MostRecentGeneralOffense,OccurredFromDate_Arizona,,,Only given in UTC
+OCCURREDFROMDATE_CENTRAL,2026-01-25 17:30:00.0000000 -06:00,axon.MostRecentGeneralOffense,OccurredFromDate_Central,,,Only given in UTC
+OCCURREDFROMDATE_EASTERN,2026-01-25 18:30:00.0000000 -05:00,axon.MostRecentGeneralOffense,OccurredFromDate_Eastern,,,Only given in UTC
+OCCURREDFROMDATE_MOUNTAIN,2026-01-25 16:30:00.0000000 -07:00,axon.MostRecentGeneralOffense,OccurredFromDate_Mountain,,,Only given in UTC
+OCCURREDFROMDATE_PACIFIC,2026-01-25 15:30:00.0000000 -08:00,axon.MostRecentGeneralOffense,OccurredFromDate_Pacific,,,Only given in UTC
+OCCURREDTODATE,2026-01-26 03:30:00.0000000 +00:00,axon.MostRecentGeneralOffense,OccurredToDate,Records.LatestIncidentReport,AxonIncidentToDate,
+OCCURREDTODATE_ARIZONA,2026-01-25 20:30:00.0000000 -07:00,axon.MostRecentGeneralOffense,OccurredToDate_Arizona,,,Only given in UTC
+OCCURREDTODATE_CENTRAL,2026-01-25 21:30:00.0000000 -06:00,axon.MostRecentGeneralOffense,OccurredToDate_Central,,,Only given in UTC
+OCCURREDTODATE_EASTERN,2026-01-25 22:30:00.0000000 -05:00,axon.MostRecentGeneralOffense,OccurredToDate_Eastern,,,Only given in UTC
+OCCURREDTODATE_MOUNTAIN,2026-01-25 20:30:00.0000000 -07:00,axon.MostRecentGeneralOffense,OccurredToDate_Mountain,,,Only given in UTC
+OCCURREDTODATE_PACIFIC,2026-01-25 19:30:00.0000000 -08:00,axon.MostRecentGeneralOffense,OccurredToDate_Pacific,,,Only given in UTC
+PURPOSE,FELONY_CRIME,axon.MostRecentGeneralOffense,Purpose,Records.LatestIncidentReport,AxonPurpose,
+REPORTCATEGORY,RecordsReport,axon.MostRecentGeneralOffense,ReportCategory,,,"No V2 Equivalent, but all V1 values are ""RecordsReport"""
+REPORTDATEINDICATOR,FALSE,axon.MostRecentGeneralOffense,ReportDateIndicator,Records.LatestIncidentReport,AxonReportDateIndicator,"V1 represents ReportDateIndicator as FALSE or TRUE
+V2 represents AxonReportDateIndicator as 0 or 1"
+REPORTNUMBER,P2601260001-2,axon.MostRecentGeneralOffense,ReportNumber,Records.LatestIncidentReport,ReportFriendlyId,
+REPORTTYPE,GENERAL_OFFENSE,axon.MostRecentGeneralOffense,ReportType,,,"No V2 Equivalent, but all V1 values are ""GENERAL_OFFENSE"""
+RESTRICTED,NULL,axon.MostRecentGeneralOffense,Restricted,,,Restrictions are noted by entries on the Records.Restriction view
+SEALED,NULL,axon.MostRecentGeneralOffense,Sealed,,,"No V2 equivalent, but no non-NULL values"
+SEQUENCEID,2,axon.MostRecentGeneralOffense,SequenceId,Records.LatestIncidentReport,SequenceId,
+TXID,1b1f0573-938b-11f1-8bf0-3ae67ea3b3ba,axon.MostRecentGeneralOffense,Txid,,,No V2 Equivalent
+UPDATEDAT,2026-08-09 00:41:48.9950000 +00:00,axon.MostRecentGeneralOffense,UpdatedAt,Records.LatestIncidentReport,UpdatedAt,
+UPDATEDAT_INDEXED_UTC,2026-08-09 0:41:49,axon.MostRecentGeneralOffense,UpdatedAt_Indexed_UTC,Records.LatestIncidentReport,UpdatedAt,
+FILE_NAMES,axon.mostrecentgeneraloffense/part-00015-bbcee81d-3d20-4b8e-a16c-0899761d4558-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,176359,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-01-30 15:59:43,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific

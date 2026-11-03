@@ -1,8 +1,6 @@
 Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
 EXTERNALID,593be05d-6fd2-4472-bbbf-150d0d546445,axon.Citations,ExternalId,Records.IncidentReport_SubCitation,Id,
-INCIDENTNUMBER,P2605190055,axon.Citations,IncidentNumber,,,"Incident Number is not surfaced directly in Records.IncidentReport_SubCitation, but can be derived from Report Number. 
-
-Don't use LatestIncidentReport because earlier reports are not included. (-1 won't show up if -3 has an arrest on it)"
+INCIDENTNUMBER,P2605190055,axon.Citations,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
 REPORTNUMBER,P2605190055-1,axon.Citations,ReportNumber,Records.IncidentReport_SubCitation,ReportFriendlyId,
 LOCATIONEXTERNALID,a3d18c6f-3ea2-4c52-be3f-6ff54d105dbd,axon.Citations,LocationExternalId,Records.IncidentReport_SubCitation,AxonLocation,
 REPORTEDAT,2026-05-19 15:50:00.0000000 +00:00,axon.Citations,ReportedAt,Records.IncidentReport_SubCitation,AxonReportedAt,Full Value of AxonReportedAt
@@ -43,4 +41,9 @@ ETL_LOAD_ID,,,,,,Snowflake Specific
 ETL_LOADED_AT,,,,,,Snowflake Specific
 ETL_PREVIOUS_WATERMARK,,,,,,Snowflake Specific
 ETL_EFFECTIVE_START_WATERMARK,,,,,,Snowflake Specific
-ETL_CURRENT_WATERMARK,,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,,,,,,"Snowflake Specific
+""""""""""""""""
+""""""""
+""""
+""
+"

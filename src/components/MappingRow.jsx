@@ -1,19 +1,17 @@
 import NotesTooltip from './NotesTooltip'
-import CopyButton from './CopyButton'
+import FieldCopyStack from './FieldCopyStack'
 
-function SideNode({ variant, label, column, connected }) {
+function SideNode({ variant, schema, column, connected, onContextMenu }) {
   const emptyLabel = variant === 'v1' ? 'No V1 mapping' : 'No V2 mapping'
+  const variantLabel = variant === 'v1' ? 'V1' : 'V2'
 
   return (
-    <div className={`mapping-node ${variant}${connected ? '' : ' empty'}`}>
+    <div
+      className={`mapping-node ${variant}${connected ? '' : ' empty'}`}
+      onContextMenu={onContextMenu}
+    >
       {connected ? (
-        <>
-          <div className="node-eyebrow">{label}</div>
-          <div className="node-title-row">
-            <div className="node-title">{column}</div>
-            <CopyButton value={column} label={`${variant.toUpperCase()} column name`} />
-          </div>
-        </>
+        <FieldCopyStack variantLabel={variantLabel} schema={schema} column={column} />
       ) : (
         <div className="node-empty-label">{emptyLabel}</div>
       )}
@@ -31,7 +29,16 @@ function Connector({ connected }) {
   )
 }
 
-function MappingRow({ column, isFocused, registerRef, registerLeftZoneRef, registerRightZoneRef, rowWidth }) {
+function MappingRow({
+  table,
+  column,
+  isFocused,
+  registerRef,
+  registerLeftZoneRef,
+  registerRightZoneRef,
+  rowWidth,
+  onLinkContextMenu,
+}) {
   const {
     snowflakeColumn,
     exampleData,
@@ -44,29 +51,46 @@ function MappingRow({ column, isFocused, registerRef, registerLeftZoneRef, regis
     hasV2,
   } = column
 
+  const isSnowflakeSpecific = column.isSnowflakeSpecific
+  const onRowLinkMenu =
+    onLinkContextMenu && table
+      ? (event) => onLinkContextMenu(event, table.id, column.id)
+      : undefined
+
   return (
     <div
-      className={`mapping-row${isFocused ? ' focused' : ''}`}
+      className={`mapping-row${isFocused ? ' focused' : ''}${isSnowflakeSpecific ? ' is-snowflake-specific' : ''}`}
       data-column-id={column.id}
       style={rowWidth ? { width: `${rowWidth}px` } : undefined}
+      onContextMenu={onRowLinkMenu}
     >
       <div className="row-zone row-zone-left" ref={registerLeftZoneRef}>
-        <SideNode variant="v1" label={v1Schema || 'V1'} column={v1Column} connected={hasV1} />
+        <SideNode
+          variant="v1"
+          schema={v1Schema}
+          column={v1Column}
+          connected={hasV1}
+          onContextMenu={onRowLinkMenu}
+        />
         <Connector connected={hasV1} />
       </div>
 
-      <NotesTooltip text={notes} className="mapping-node snowflake" registerRef={registerRef}>
-        <div className="node-eyebrow">Snowflake Column</div>
-        <div className="node-title-row">
-          <div className="node-title">{snowflakeColumn}</div>
-          <CopyButton value={snowflakeColumn} label="Snowflake column name" />
+      <NotesTooltip
+        text={notes}
+        className={`mapping-node snowflake${isSnowflakeSpecific ? ' snowflake-meta' : ''}${notes ? ' has-note' : ''}`}
+        registerRef={registerRef}
+        onContextMenu={onRowLinkMenu}
+      >
+        <div className="node-eyebrow">
+          {isSnowflakeSpecific ? 'Snowflake metadata' : 'Snowflake Column'}
         </div>
-        {exampleData && (
-          <div className="node-example">
-            <span className="example-label">Example data</span>
-            <code>{exampleData}</code>
-          </div>
-        )}
+        <FieldCopyStack
+          variantLabel="Snowflake"
+          column={snowflakeColumn}
+          exampleData={exampleData}
+          tableName={table?.name}
+          snowflakeMode
+        />
         {notes && (
           <span className="note-indicator" aria-hidden="true">
             i
@@ -76,7 +100,13 @@ function MappingRow({ column, isFocused, registerRef, registerLeftZoneRef, regis
 
       <div className="row-zone row-zone-right" ref={registerRightZoneRef}>
         <Connector connected={hasV2} />
-        <SideNode variant="v2" label={v2Schema || 'V2'} column={v2Column} connected={hasV2} />
+        <SideNode
+          variant="v2"
+          schema={v2Schema}
+          column={v2Column}
+          connected={hasV2}
+          onContextMenu={onRowLinkMenu}
+        />
       </div>
     </div>
   )

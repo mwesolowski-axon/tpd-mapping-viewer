@@ -4,14 +4,15 @@ import JoinHubDiagram from './JoinHubDiagram'
 import SqlExample from './SqlExample'
 import ColumnFanout from './ColumnFanout'
 import { TABLE_INFO } from '../data/tableInfo'
+import { getTableInfo } from '../data/tableInfoHelpers'
 
 // A collapsible right-hand sidebar that surfaces extra, table-specific
 // context (multi-view join lineage, one-column-becomes-many explanations,
 // example queries, ...) that doesn't fit into the flat Snowflake -> V1 -> V2
 // row format. Renders nothing for tables that have no entry in TABLE_INFO,
 // so it stays out of the way for the common case of a simple mapping.
-function InfoSidebar({ table }) {
-  const info = table ? TABLE_INFO[table.id] : null
+function InfoSidebar({ table, columns }) {
+  const info = table ? getTableInfo(table.id, TABLE_INFO, columns) : null
   const [isOpen, setIsOpen] = useState(true)
 
   // Default to open every time the user navigates to a (different) table
@@ -57,9 +58,19 @@ function InfoSidebar({ table }) {
               </div>
             )}
 
-            {info.summary && <p className="info-summary">{info.summary}</p>}
+            {(Array.isArray(info.summary) ? info.summary : info.summary ? [info.summary] : []).map(
+              (paragraph) => (
+                <p className="info-summary" key={paragraph}>
+                  {paragraph}
+                </p>
+              )
+            )}
 
             <ColumnFanout {...info.columnFanout} />
+
+            {info.columnFanouts?.map((fanout) => (
+              <ColumnFanout key={fanout.title ?? fanout.columns[0]} {...fanout} />
+            ))}
 
             <JoinDiagram nodes={info.diagram?.nodes} />
 
@@ -70,6 +81,21 @@ function InfoSidebar({ table }) {
                 {note}
               </p>
             ))}
+
+            {info.incidentFromReport && (
+              <div className="info-section">
+                <h3 className="info-section-title">{info.incidentFromReport.sectionTitle}</h3>
+                <p className="info-summary">{info.incidentFromReport.summary}</p>
+                <JoinDiagram nodes={info.incidentFromReport.diagram?.nodes} />
+                {info.incidentFromReport.sqlExamples && (
+                  <div className="sql-example-list">
+                    {info.incidentFromReport.sqlExamples.items.map((item) => (
+                      <SqlExample key={item.title} title={item.title} sql={item.sql} />
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
       )}

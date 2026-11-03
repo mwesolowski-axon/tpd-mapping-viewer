@@ -64,6 +64,146 @@
       "id": "AXON_IDENTITYDOCUMENTS",
       "name": "AXON_IDENTITYDOCUMENTS",
       "file": "data/AXON_IDENTITYDOCUMENTS.csv"
+    },
+    {
+      "id": "AXON_INCIDENTS",
+      "name": "AXON_INCIDENTS",
+      "file": "data/AXON_INCIDENTS.csv"
+    },
+    {
+      "id": "AXON_MARKINGS",
+      "name": "AXON_MARKINGS",
+      "file": "data/AXON_MARKINGS.csv"
+    },
+    {
+      "id": "AXON_MEDICAL_TUCSONPDAZ",
+      "name": "AXON_MEDICAL_TUCSONPDAZ",
+      "file": "data/AXON_MEDICAL_TUCSONPDAZ.csv"
+    },
+    {
+      "id": "AXON_METHODOFTRANSPORTATION_TUCSONPDAZ",
+      "name": "AXON_METHODOFTRANSPORTATION_TUCSONPDAZ",
+      "file": "data/AXON_METHODOFTRANSPORTATION_TUCSONPDAZ.csv"
+    },
+    {
+      "id": "AXON_MOSTRECENTGENERALOFFENSE",
+      "name": "AXON_MOSTRECENTGENERALOFFENSE",
+      "file": "data/AXON_MOSTRECENTGENERALOFFENSE.csv"
+    },
+    {
+      "id": "AXON_NARRATIVEONLY",
+      "name": "AXON_NARRATIVEONLY",
+      "file": "data/AXON_NARRATIVEONLY.csv"
+    },
+    {
+      "id": "AXON_NARRATIVES",
+      "name": "AXON_NARRATIVES",
+      "file": "data/AXON_NARRATIVES.csv"
+    },
+    {
+      "id": "AXON_OFFENSES",
+      "name": "AXON_OFFENSES",
+      "file": "data/AXON_OFFENSES.csv"
+    },
+    {
+      "id": "AXON_OFFENSEWEAPONSUSED",
+      "name": "AXON_OFFENSEWEAPONSUSED",
+      "file": "data/AXON_OFFENSEWEAPONSUSED.csv"
+    },
+    {
+      "id": "AXON_OFFICERS",
+      "name": "AXON_OFFICERS",
+      "file": "data/AXON_OFFICERS.csv"
+    },
+    {
+      "id": "AXON_ORGANIZATIONS",
+      "name": "AXON_ORGANIZATIONS",
+      "file": "data/AXON_ORGANIZATIONS.csv"
+    },
+    {
+      "id": "AXON_ORGANIZATIONTOVEHICLE",
+      "name": "AXON_ORGANIZATIONTOVEHICLE",
+      "file": "data/AXON_ORGANIZATIONTOVEHICLE.csv"
+    },
+    {
+      "id": "AXON_PERSONALIASES",
+      "name": "AXON_PERSONALIASES",
+      "file": "data/AXON_PERSONALIASES.csv"
+    },
+    {
+      "id": "AXON_PERSONS",
+      "name": "AXON_PERSONS",
+      "file": "data/AXON_PERSONS.csv"
+    },
+    {
+      "id": "AXON_PERSONSENTITYRELATIONS",
+      "name": "AXON_PERSONSENTITYRELATIONS",
+      "file": "data/AXON_PERSONSENTITYRELATIONS.csv"
+    },
+    {
+      "id": "AXON_PERSONTOARREST",
+      "name": "AXON_PERSONTOARREST",
+      "file": "data/AXON_PERSONTOARREST.csv"
+    },
+    {
+      "id": "AXON_PERSONTOLOCATION",
+      "name": "AXON_PERSONTOLOCATION",
+      "file": "data/AXON_PERSONTOLOCATION.csv"
+    },
+    {
+      "id": "AXON_PERSONTOOFFENSE",
+      "name": "AXON_PERSONTOOFFENSE",
+      "file": "data/AXON_PERSONTOOFFENSE.csv"
+    },
+    {
+      "id": "AXON_PERSONTOPERSON",
+      "name": "AXON_PERSONTOPERSON",
+      "file": "data/AXON_PERSONTOPERSON.csv"
+    },
+    {
+      "id": "AXON_PERSONTOPROPERTY",
+      "name": "AXON_PERSONTOPROPERTY",
+      "file": "data/AXON_PERSONTOPROPERTY.csv"
+    },
+    {
+      "id": "AXON_PERSONTOVEHICLE",
+      "name": "AXON_PERSONTOVEHICLE",
+      "file": "data/AXON_PERSONTOVEHICLE.csv"
+    },
+    {
+      "id": "AXON_PROPERTIES",
+      "name": "AXON_PROPERTIES",
+      "file": "data/AXON_PROPERTIES.csv"
+    },
+    {
+      "id": "AXON_PROPERTIESRECOVERYDETAILS",
+      "name": "AXON_PROPERTIESRECOVERYDETAILS",
+      "file": "data/AXON_PROPERTIESRECOVERYDETAILS.csv"
+    },
+    {
+      "id": "AXON_PROPERTYMANAGEMENTS",
+      "name": "AXON_PROPERTYMANAGEMENTS",
+      "file": "data/AXON_PROPERTYMANAGEMENTS.csv"
+    },
+    {
+      "id": "AXON_PROPERTYTOOFFENSE",
+      "name": "AXON_PROPERTYTOOFFENSE",
+      "file": "data/AXON_PROPERTYTOOFFENSE.csv"
+    },
+    {
+      "id": "AXON_RECORDSLOCATIONS",
+      "name": "AXON_RECORDSLOCATIONS",
+      "file": "data/AXON_RECORDSLOCATIONS.csv"
+    },
+    {
+      "id": "AXON_REPORTS",
+      "name": "AXON_REPORTS",
+      "file": "data/AXON_REPORTS.csv"
+    },
+    {
+      "id": "AXON_REJECTEDREPORT_TUCSONPDAZ",
+      "name": "AXON_REJECTEDREPORT_TUCSONPDAZ",
+      "file": "data/AXON_REJECTEDREPORT_TUCSONPDAZ.csv"
     }
   ]
 }

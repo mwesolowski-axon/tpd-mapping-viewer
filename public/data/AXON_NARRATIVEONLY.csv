@@ -1,0 +1,23 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+EXTERNALID,bd33e577-ca74-4a76-9d55-f49560fc850f,axon.NarrativeOnly,ExternalId,Records.NarrativeOnly,Id,
+REPORTNUMBER,P2601020193-7,axon.NarrativeOnly,ReportNumber,Records.NarrativeOnly,ReportFriendlyId,
+CREATEDAT,2026-01-03 12:08:21.3570000 +00:00,axon.NarrativeOnly,CreatedAt,Records.NarrativeOnly,CreatedAt,
+FORMNARRATIVE,"On 01/02/2025, while operating as a solo CSO unit, I responded to the intersection of E Golf Links Rd and S Swan Rd reference a fatal motor vehicle collision. I was tasked with blocking the Eastbound lanes.
+Later I was instructed to follow Gary's towing to the Tucson Police Department tow lot. The involved vehicles, a 2018 Toyota Camry (V5A9L0/AZ), a 2012 Volkswagen Jetta (#9LA8L2/AZ) and a 2007 Toyota Corolla (CRZ1277/AZ) were transported and submitted as evidence via BEAST.
+I did not interview anyone nor conduct and further investigation into the incident.
+TWX was advised (#202326).
+BWC
+NFI
+Morelos
+103816",axon.NarrativeOnly,FormNarrative,Records.NarrativeOnly,AxonNarrative,See sidebar →
+UPDATEDAT,2026-02-25 00:37:11.6880000 +00:00,axon.NarrativeOnly,UpdatedAt,Records.NarrativeOnly,UpdatedAt,
+REPORTUPDATEDAT_INDEXED_UTC,2026-02-25 0:37:12,axon.NarrativeOnly,ReportUpdatedAt_Indexed_Utc,Records.NarrativeOnly,UpdatedAt,
+FILE_NAMES,axon.NarrativeOnly/part-00002-ee651a39-2f22-4a5e-ba5a-6ea0c82977cd-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,214463,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-08-20 13:18:29,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,,,,,,Snowflake Specific
+ETL_LOADED_AT,,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,,,,,,Snowflake Specific

@@ -20,7 +20,9 @@ export function useManifest() {
       })
       .then((data) => {
         if (cancelled) return
-        setTables(Array.isArray(data.tables) ? data.tables : [])
+        const list = Array.isArray(data.tables) ? data.tables : []
+        list.sort((a, b) => (a.name || a.id).localeCompare(b.name || b.id))
+        setTables(list)
         setStatus('success')
       })
       .catch((err) => {

@@ -1,5 +1,5 @@
 Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
-INCIDENTNUMBER,P2610060163,axon.Form4C_TucsonPdAz,IncidentNumber,Records.EntIncident,IncidentFriendlyId,"Incident Number is not surfaced directly in Records.Deflection, but can be derived from Records.RelIncidentDocument connecting Records.Form4C.Id as the ToID to Records.EntIncident.Id as the FromId."
+INCIDENTNUMBER,P2610060163,axon.Form4C_TucsonPdAz,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
 REPORTNUMBER,2610-FORM4C-00037,axon.Form4C_TucsonPdAz,ReportNumber,Records.Form4C,ReportFriendlyId,
 REPORTID,60595164,axon.Form4C_TucsonPdAz,ReportId,,No V2 equivalent,
 EXTERNALID,51bf4b52-5067-44d4-8eb5-6eebfde92165,axon.Form4C_TucsonPdAz,ExternalId,Records.Form4C,Id,
@@ -51,4 +51,9 @@ REFERRALACTION,NO_REFERRAL,axon.Form4C_TucsonPdAz,ReferralAction,Records.Form4C,
 FILE_NAMES,axon.Form4c_TucsonPdAz/part-00000-8c7b3b27-76eb-48dc-87c1-d1d0b3cda104-c000.snappy.parquet,,,,,Snowflake Specific
 FILE_ROW_NUMBER,12529,,,,,Snowflake Specific
 FILE_LAST_MODIFIED,2026-10-07 10:45:07,,,,,Snowflake Specific
-OP,,,,,,Snowflake Specific
+OP,,,,,,"Snowflake Specific
+""""""""""""""""
+""""""""
+""""
+""
+"

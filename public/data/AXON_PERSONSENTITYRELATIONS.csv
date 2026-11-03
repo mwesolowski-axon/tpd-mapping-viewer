@@ -1,0 +1,11 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+TOEXTERNALID,221f2f5f-d0ba-47e2-a174-9fde9eb84833,axon.PersonsEntityRelations,ToExternalId,Records.RelDocumentPerson,ToId,
+RELATIONID,4673908,axon.PersonsEntityRelations,RelationId,Records.RelDocumentPerson,RelationId,
+TYPE,DocumentPerson,axon.PersonsEntityRelations,Type,Records.RelDocumentPerson,RelationType,
+CANONICALPERSONNUMBER,PER2300099354,axon.PersonsEntityRelations,CanonicalPersonNumber,Records.EntPerson,PersonFriendlyId,Canonical Person records are connected via Records.RelDocumentPerson.ToId = Records.EntPerson.Id
+CANONICALEXTERNALID,221f2f5f-d0ba-47e2-a174-9fde9eb84833,axon.PersonsEntityRelations,CanonicalExternalId,Records.EntPerson,Id,
+FROMEXTERNALID,216a1fcd-1e5c-4340-ac97-05e594e67037,axon.PersonsEntityRelations,FromExternalId,Records.RelDocumentPerson,FromId,
+FILE_NAMES,axon.PersonsEntityRelations/part-00001-c9aa9c5b-0dd8-4192-a0ad-facd4e2093bf-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,1,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-10-27 10:39:41,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific

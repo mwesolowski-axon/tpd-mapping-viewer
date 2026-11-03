@@ -1,0 +1,24 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+PARENTEXTERNALID,dc4fc134-2d18-4734-ad77-23f35f069e81,axon.Markings,ParentExternalId,Records.IncidentReport_EntPerson_AxonMarkings,ParentId,
+PARENTENTITYTYPE,Person,axon.Markings,ParentEntityType,,,"No V2 equivalent — V2 splits markings by report type and entity (Person vs Vehicle) as described in the sidebar, instead of a single ParentEntityType column."
+REPORTNUMBER,P2601050014-1,axon.Markings,ReportNumber,Records.IncidentReport_EntPerson_AxonMarkings,ReportFriendlyId,
+INCIDENTNUMBER,P2601050014,axon.Markings,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
+TYPE,TATTOO,axon.Markings,Type,Records.IncidentReport_EntPerson_AxonMarkings,Type,
+LOCATION,LEFT_WRIST,axon.Markings,Location,Records.IncidentReport_EntPerson_AxonMarkings,Location,
+DESCRIPTION,SEMI COLON SKULL,axon.Markings,Description,Records.IncidentReport_EntPerson_AxonMarkings,Description,
+REPORTCREATEDAT_INDEXED_UTC,2026-01-05 9:05:40,axon.Markings,ReportCreatedAt_Indexed_Utc,Records.IncidentReport_EntPerson_AxonMarkings,CreatedAt,
+REPORTUPDATEDAT_INDEXED_UTC,2026-01-06 20:15:45,axon.Markings,ReportUpdatedAt_Indexed_Utc,Records.IncidentReport_EntPerson_AxonMarkings,UpdatedAt,
+FILE_NAMES,axon.Markings/part-00000-2c2a64da-dfe3-4403-a14f-5f1d73b3eb73-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,138045,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-08-20 9:07:40,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,,,,,,Snowflake Specific
+ETL_LOADED_AT,,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,,,,,,"Snowflake Specific
+""""""""""""""""
+""""""""
+""""
+""
+"

@@ -1,0 +1,15 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+ExternalId,4348d8ff-7c80-408f-87e5-86b4463df15a,axon.OrganizationToVehicle,ExternalId,Records.IncidentReport_RelOrganizationToVehicle,Id,
+ReportNumber,P2610070066-1,axon.OrganizationToVehicle,ReportNumber,Records.IncidentReport_RelOrganizationToVehicle,ReportFriendlyId,
+IncidentNumber,P2610070066,axon.OrganizationToVehicle,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
+FromExternalId,6bc82ef8-9590-48c1-8051-ca8ef5501e5d,axon.OrganizationToVehicle,FromExternalId,Records.IncidentReport_RelOrganizationToVehicle,IncidentReport_FromEntOrganizationId,
+ToExternalId,a4707c3f-bc67-4f15-a04b-4a9d4e81d8fd,axon.OrganizationToVehicle,ToExternalId,Records.IncidentReport_RelOrganizationToVehicle,IncidentReport_ToEntVehicleId,
+Involvement,REGISTERED_OWNER,axon.OrganizationToVehicle,Involvement,Records.IncidentReport_RelOrganizationToVehicle,AxonInvolvement,
+OrganizationToVehicleRawData,"{""axon"":{""involvement"":""REGISTERED_OWNER""},""from"":""6bc82ef8-9590-48c1-8051-ca8ef5501e5d"",""id"":""4348d8ff-7c80-408f-87e5-86b4463df15a"",""to"":""a4707c3f-bc67-4f15-a04b-4a9d4e81d8fd""}",axon.OrganizationToVehicle,OrganizationToVehicleRawData,,,Raw form json data is not exposed in V2
+ReportCreatedAt_Indexed_Utc,2026-10-07 17:36:48,axon.OrganizationToVehicle,ReportCreatedAt_Indexed_Utc,Records.IncidentReport_RelOrganizationToVehicle,CreatedAt,
+ReportUpdatedAt_Indexed_Utc,2026-10-26 2:13:05,axon.OrganizationToVehicle,ReportUpdatedAt_Indexed_Utc,Records.IncidentReport_RelOrganizationToVehicle,UpdatedAt,"
+""""""""""""""""
+""""""""
+""""
+""
+"

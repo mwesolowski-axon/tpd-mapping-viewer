@@ -1,0 +1,23 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+EXTERNALID,2cede71c-65cc-4bb2-9fad-6f8e8360ad98,axon.Organizations,ExternalId,Records.IncidentReport_EntOrganization,Id,
+REPORTNUMBER,P2601078515-1,axon.Organizations,ReportNumber,Records.IncidentReport_EntOrganization,ReportFriendlyId,
+INCIDENTNUMBER,P2601078515,axon.Organizations,IncidentNumber,Records.EntIncident,IncidentFriendlyId,Derive via ReportFriendlyId (ReportNumber): EntDocument → RelIncidentDocument → EntIncident.IncidentFriendlyId. See sidebar for query.
+NAME,WALMART SUPER CENTER,axon.Organizations,Name,Records.IncidentReport_EntOrganization,AxonName,
+TYPE,BUSINESS,axon.Organizations,Type,Records.IncidentReport_EntOrganization,AxonType,
+ORGANIZATIONRAWDATA,"{""@entityType"":""Organization"",""@rels"":{""OrganizationToLocation"":[{""@direction"":""to"",""@otherEntity"":""0270c0ee-cdf2-58ed-a183-4929c6fdc5ee"",""@relationType"":""OrganizationToLocation"",""axon"":{""note"":"""",""type"":""WORK""},""id"":""1e83b0e3-07b2-4c13-92a0-f1729b4bda4d""}]},""axon"":{""name"":""WALMART SUPER CENTER"",""type"":""BUSINESS""},""id"":""2cede71c-65cc-4bb2-9fad-6f8e8360ad98"",""friendlyId"":""ORG2600001596""}",axon.Organizations,OrganizationRawData,,,Raw form json data is not exposed in V2
+REPORTCREATEDAT_INDEXED_UTC,2026-01-07 20:32:10,axon.Organizations,ReportCreatedAt_Indexed_Utc,Records.IncidentReport_EntOrganization,CreatedAt,
+REPORTUPDATEDAT_INDEXED_UTC,2026-08-05 13:56:19,axon.Organizations,ReportUpdatedAt_Indexed_Utc,Records.IncidentReport_EntOrganization,UpdatedAt,
+FILE_NAMES,axon.Organizations/part-00000-36510f6f-ed4b-43bd-b59c-9a6b135906bf-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,156320,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-08-20 8:39:57,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,,,,,,Snowflake Specific
+ETL_LOADED_AT,,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,,,,,,"Snowflake Specific
+""""""""""""""""
+""""""""
+""""
+""
+"
