@@ -18,6 +18,7 @@ import { buildDeepLink, parseDeepLink, syncDeepLinkToAddressBar } from './utils/
 import { ToastProvider, useToast } from './context/ToastContext'
 import { TABLE_INFO } from './data/tableInfo'
 import { getTableInfo, tableHasInfoSidebar } from './data/tableInfoHelpers'
+import { downloadTableExport } from './utils/tableExport'
 
 function AppContent() {
   const { showToast } = useToast()
@@ -128,7 +129,7 @@ function AppContent() {
       tableHasInfoSidebar(TABLE_INFO[selectedTable.id], selectedTable.id, columns),
   )
 
-  const openLinkMenu = useCallback((event, tableId, columnId) => {
+  const openLinkMenu = useCallback((event, tableId, columnId, options = {}) => {
     if (!tableId) return
     event.preventDefault()
     event.stopPropagation()
@@ -136,6 +137,8 @@ function AppContent() {
       x: event.clientX,
       y: event.clientY,
       href: buildDeepLink({ tableId, columnId: columnId || null }),
+      tableId,
+      showTableDownload: Boolean(options.showTableDownload),
     })
   }, [])
 
@@ -150,6 +153,25 @@ function AppContent() {
       }
     },
     [showToast],
+  )
+
+  const handleDownloadTable = useCallback(
+    async (tableId) => {
+      setLinkMenu(null)
+      const table = tables.find((t) => t.id === tableId)
+      if (!table) {
+        showToast('Table not found')
+        return
+      }
+      showToast('Preparing export…')
+      try {
+        await downloadTableExport(table, TABLE_INFO)
+        showToast('Spreadsheet downloaded')
+      } catch {
+        showToast('Could not download export')
+      }
+    },
+    [tables, showToast],
   )
 
   function handleSelectTable(tableId) {
@@ -220,6 +242,7 @@ function AppContent() {
         menu={linkMenu}
         onClose={() => setLinkMenu(null)}
         onCopy={handleCopyLink}
+        onDownloadTable={handleDownloadTable}
       />
     </div>
   )

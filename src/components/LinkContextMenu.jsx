@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { createPortal } from 'react-dom'
 
-function LinkContextMenu({ menu, onClose, onCopy }) {
+function LinkContextMenu({ menu, onClose, onCopy, onDownloadTable }) {
   useEffect(() => {
     if (!menu) return undefined
 
@@ -44,6 +44,16 @@ function LinkContextMenu({ menu, onClose, onCopy }) {
       >
         Copy link
       </button>
+      {menu.showTableDownload && onDownloadTable && (
+        <button
+          type="button"
+          role="menuitem"
+          className="link-context-menu-item"
+          onClick={() => onDownloadTable(menu.tableId)}
+        >
+          Download table export
+        </button>
+      )}
     </div>,
     document.body,
   )

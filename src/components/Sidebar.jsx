@@ -48,7 +48,9 @@ function Sidebar({
               type="button"
               className={`table-item${table.id === selectedTableId ? ' active' : ''}`}
               onClick={() => onSelectTable(table.id)}
-              onContextMenu={(event) => onLinkContextMenu?.(event, table.id, null)}
+              onContextMenu={(event) =>
+                onLinkContextMenu?.(event, table.id, null, { showTableDownload: true })
+              }
             >
               <span className="table-icon" aria-hidden="true">
                 ▤
