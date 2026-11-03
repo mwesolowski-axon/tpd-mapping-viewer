@@ -4,6 +4,7 @@ import ColumnList from './components/ColumnList'
 import MappingCanvas from './components/MappingCanvas'
 import InfoSidebar from './components/InfoSidebar'
 import GlobalSearchBar from './components/GlobalSearchBar'
+import MappingProgressBar from './components/MappingProgressBar'
 import LinkContextMenu from './components/LinkContextMenu'
 import { useManifest } from './hooks/useManifest'
 import { useTableData } from './hooks/useTableData'
@@ -172,11 +173,14 @@ function AppContent() {
 
   return (
     <div className="app-frame">
-      <GlobalSearchBar
-        index={globalIndex}
-        indexStatus={globalIndexStatus}
-        onSelectResult={handleGlobalSearchSelect}
-      />
+      <div className="app-top-bar">
+        <GlobalSearchBar
+          index={globalIndex}
+          indexStatus={globalIndexStatus}
+          onSelectResult={handleGlobalSearchSelect}
+        />
+        <MappingProgressBar tables={tables} tablesStatus={tablesStatus} />
+      </div>
       <div className={`app-shell${hasInfoSidebar ? ' has-info-sidebar' : ''}`}>
         <Sidebar
           tables={tables}
