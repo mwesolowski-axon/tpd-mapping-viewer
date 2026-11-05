@@ -1,0 +1,17 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+TASKACTIONID,81860507,axon.TaskActionsComments,TaskActionId,,,No V2 Equivalent
+EXTERNALID,a2aec80e-0573-4c13-a194-66aa71aba20c-39466080,axon.TaskActionsComments,ExternalId,Records.TaskActionComment,TaskActionId,
+TASKEXTERNALID,a2aec80e-0573-4c13-a194-66aa71aba20c,axon.TaskActionsComments,TaskExternalId,Records.TaskActionComment,TaskId,
+INCIDENTID,330ffca1-5ca6-4a28-b682-100a19ce6cfc,axon.TaskActionsComments,IncidentId,Records.TaskActionComment,IncidentId,
+INCIDENTNUMBER,P2607200115,axon.TaskActionsComments,IncidentNumber,Records.TaskActionComment,IncidentNumber,
+PARENTNUMBER,P2607200115-1,axon.TaskActionsComments,ParentNumber,Records.TaskActionComment,ParentNumber,
+PARENTTYPE,Report,axon.TaskActionsComments,ParentType,Records.TaskActionComment,ParentType,
+STATELABEL,REVIEW,axon.TaskActionsComments,StateLabel,Records.TaskActionComment,StateLabel,
+COMMENTID,bd15c383-c6d9-44ab-9408-bb9800dd2e73,axon.TaskActionsComments,CommentId,Records.TaskActionComment,Id,
+CREATEDAT,2026-07-28 19:54:03,axon.TaskActionsComments,CreatedAt,Records.TaskActionComment,CreatedAt,
+OWNERID,56f3e586-c3ec-429f-94e8-7385a07b0119,axon.TaskActionsComments,OwnerId,Records.TaskActionComment,OwnerId,
+COMMENTS,"Could not see any comments for corrections, submitting again in case this was kicked back erroneously.",axon.TaskActionsComments,Comments,Records.TaskActionComment,Comments,
+FILE_NAMES,axon.TaskActionsComments/part-00000-ab297dcb-3a94-4281-ad1f-f4b6d1d04a3b-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,11586,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-11-04 10:51:10,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific

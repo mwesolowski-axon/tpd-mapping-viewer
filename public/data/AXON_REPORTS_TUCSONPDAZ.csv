@@ -1,0 +1,28 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+INCIDENTNUMBER,P2603080046,axon.Reports_TucsonPdAz,IncidentNumber,Records.EntIncident,IncidentFriendlyId,
+REPORTNUMBER,P2603080046-1,axon.Reports_TucsonPdAz,ReportNumber,Records.IncidentReport,ReportFriendlyId,
+REPORTTYPE,GENERAL_OFFENSE,axon.Reports_TucsonPdAz,ReportType,,,See Sidebar
+REPORTTYPENAME,Incident Report,axon.Reports_TucsonPdAz,ReportTypeName,,,See Sidebar
+REPORTCATEGORY,RecordsReport,axon.Reports_TucsonPdAz,ReportCategory,,,See Sidebar
+AUTHORID,ebff75c8-25e4-4a4a-910e-d024d4dc0855,axon.Reports_TucsonPdAz,AuthorId,Records.IncidentReport,AuthorId,
+AUTHOR,VHorner1,axon.Reports_TucsonPdAz,Author,Records.Officer,Username,
+AUTHORBADGENUMBER,201144,axon.Reports_TucsonPdAz,AuthorBadgeNumber,Records.Officer,BadgeNumber,
+ISDRAFT,FALSE,axon.Reports_TucsonPdAz,IsDraft,Records.IncidentReport,IsDraft,
+NIBRSCOMPLIANT,TRUE,axon.Reports_TucsonPdAz,NibrsCompliant,Records.IncidentReport,NibrsCompliant,
+SEQUENCEID,1,axon.Reports_TucsonPdAz,SequenceId,Records.IncidentReport,SequenceId,
+INCIDENTLOCATIONNOTE,SPARK BY HILTON,axon.Reports_TucsonPdAz,IncidentLocationNote,Records.IncidentReport,AxonIncidentLocationNote,
+SEALED,,axon.Reports_TucsonPdAz,Sealed,Records.IncidentReport,SealTypeIndicator,
+RESTRICTED,FALSE,axon.Reports_TucsonPdAz,Restricted,,,Restrictions are noted by entries on the Records.Restriction view
+CREATEDAT,2026-03-08 15:00:59,axon.Reports_TucsonPdAz,CreatedAt,Records.IncidentReport,CreatedAt,
+CREATEDAT_ARIZONA,2026-03-08 8:00:59,axon.Reports_TucsonPdAz,CreatedAt_Arizona,,,Only given in UTC
+UPDATEDAT_ARIZONA,2026-04-28 7:37:07,axon.Reports_TucsonPdAz,UpdatedAt_Arizona,Records.IncidentReport,*UpdatedAt,V2 stores in UTC
+INCIDENTFROMDATE_ARIZONA,2026-03-07 20:00:00,axon.Reports_TucsonPdAz,IncidentFromDate_Arizona,Records.IncidentReport,*AxonIncidentFromDate,V2 stores in UTC
+INCIDENTTODATE_ARIZONA,2026-03-08 7:00:00,axon.Reports_TucsonPdAz,IncidentToDate_Arizona,Records.IncidentReport,*AxonIncidentToDate,V2 stores in UTC
+DATEREPORTED_ARIZONA,2026-03-08 7:25:00,axon.Reports_TucsonPdAz,DateReported_Arizona,Records.IncidentReport,*CustomUsDateReported,V2 stores in UTC
+PURPOSE,FELONY_CRIME,axon.Reports_TucsonPdAz,Purpose,Records.IncidentReport,AxonPurpose,
+REPORTDATEINDICATOR,TRUE,axon.Reports_TucsonPdAz,ReportDateIndicator,Records.IncidentReport,AxonReportDateIndicator,
+CLEAREDEXCEPTIONALLY,,axon.Reports_TucsonPdAz,ClearedExceptionally,Records.IncidentReport,AxonClearedExceptionally,
+DOMESTIC_INCIDENT,NO,axon.Reports_TucsonPdAz,DOMESTIC_INCIDENT,Records.IncidentReport,AxonDomesticViolenceFlag,
+LOCATIONEXTERNALID,1262273d-4830-42f1-b3b7-553480c895b4,axon.Reports_TucsonPdAz,LocationExternalId,Records.IncidentReport,AxonIncidentLocationLocation,
+UPDATEDAT_INDEXED_ARIZONA,2026-04-28 7:37:07,axon.Reports_TucsonPdAz,UpdatedAt_Indexed_Arizona,,,Only given in UTC
+CREATEDAT_INDEXED_ARIZONA,2026-03-08 8:00:59,axon.Reports_TucsonPdAz,CreatedAt_Indexed_Arizona,,,Only given in UTC

@@ -32,7 +32,43 @@
 //         chain?: { id, label, hint?, connectorText }[]  // ...unless it needs further hops, e.g.
 //       }[]                                        //    hub -> bridge view -> final view
 //     }
+//     bulletSections: { title: string, items: string[] }[]  // nested report-type routing lists
 //   }
+
+/** Shared ReportType / ReportTypeName → Records.* routing (AXON_REPORTS, AXON_REPORTS_TUCSONPDAZ). */
+const AXON_REPORTS_REPORT_TYPE_BULLETS = [
+  {
+    title: 'Standard ReportType → V2 view:',
+    items: [
+      'GENERAL_OFFENSE (ReportTypeName: Incident Report) → Records.IncidentReport',
+      'FIELD_INTERVIEW → Records.FieldInterview',
+      'NARRATIVE → Records.NarrativeOnly',
+      'WARRANT → Records.Warrant',
+      'CUSTOM → See Below:',
+    ],
+  },
+  {
+    title: 'Custom ReportTypeName → V2 view:',
+    items: [
+      'ATF Crime Gun → Records.ATFCrimeGun',
+      'Cold Case Summary → Records.CaseSummary',
+      'Court Disposition Report → Records.CourtDispositionReport',
+      'Deflection → Records.Deflection',
+      'Detectives Only - Closing Supplement → Records.DetectivesOnlyClosingSupplement',
+      'Form 4C → Records.Form4C',
+      'Gang Member Eval → Records.GangMemberEval',
+      'IFAK Replacement → Records.IFAKReplacement',
+      'Livescan - Name Check → Records.LivescanNameCheck',
+      'Motor Vehicle Fatalities → Records.MotorVehicleFatalities',
+      'Records Only - TWX Form → Records.RecordsOnlyTWXForm',
+      'Runaway Juvenile → Records.RunawayJuvenile',
+      'Sex Trafficking → Records.SexTrafficking',
+      'TRACS Citation → Records.TRACSCitation',
+      'TRACS Collision → Records.TRACSCollision',
+    ],
+  },
+]
+
 export const TABLE_INFO = {
   AXON_ARRESTS: {
     title: 'Arrest mappings',
@@ -439,67 +475,11 @@ WHERE ei.IncidentFriendlyId = '<Incident Number>';`,
   },
   AXON_REPORTS: {
     title: 'Report type drives the V2 document view',
-    summary: [
+    summary:
       'V1 axon.Reports is a single view for all report kinds. V2 splits documents by form: most column mappings in this CSV use Records.IncidentReport because the sample row is GENERAL_OFFENSE (Incident Report). For any other row, use ReportType and ReportTypeName below to pick the correct Records.* view before joining report-scoped fields or ExternalId.',
-      'IncidentNumber and IncidentId are not on those document views as a pair — derive them from this row’s ReportNumber (ReportFriendlyId) via EntDocument → RelIncidentDocument → EntIncident, as in the incident section below. Use ReportNumber (e.g. P2606260176-1) as `<ReportNumber>` in the query, not the bare P-number unless it matches that report id.',
-    ],
+    bulletSections: AXON_REPORTS_REPORT_TYPE_BULLETS,
     incidentFromReport: true,
-    joinHub: {
-      hub: {
-        label: 'Records.IncidentReport',
-        hint: 'GENERAL_OFFENSE sample — Id, ReportFriendlyId, Axon…',
-      },
-      spokes: [
-        {
-          id: 'EntDocument',
-          label: 'Records.EntDocument',
-          hint: 'ReportFriendlyId',
-          connectorText: 'ReportNumber → EntDocument.ReportFriendlyId',
-          chain: [
-            {
-              id: 'RelIncidentDocument',
-              label: 'Records.RelIncidentDocument',
-              hint: 'document ↔ incident',
-              connectorText: 'EntDocument.Id = RelIncidentDocument.ToId',
-            },
-            {
-              id: 'EntIncident',
-              label: 'Records.EntIncident',
-              hint: 'IncidentFriendlyId, Id',
-              connectorText: 'RelIncidentDocument.FromId = EntIncident.Id',
-            },
-          ],
-        },
-        {
-          id: 'Officer',
-          label: 'Records.Officer',
-          hint: 'Username',
-          connectorText: 'IncidentReport.AuthorId = Officer.Id (author on GO reports)',
-        },
-      ],
-    },
     notes: [
-      'Standard ReportType → V2 view:',
-      'GENERAL_OFFENSE (ReportTypeName: Incident Report) → Records.IncidentReport',
-      'FIELD_INTERVIEW → Records.FieldInterview',
-      'NARRATIVE → Records.NarrativeOnly',
-      'WARRANT → Records.Warrant',
-      'Custom ReportTypeName → V2 view:',
-      'ATF Crime Gun → Records.ATFCrimeGun',
-      'Cold Case Summary → Records.CaseSummary',
-      'Court Disposition Report → Records.CourtDispositionReport',
-      'Deflection → Records.Deflection',
-      'Detectives Only - Closing Supplement → Records.DetectivesOnlyClosingSupplement',
-      'Form 4C → Records.Form4C',
-      'Gang Member Eval → Records.GangMemberEval',
-      'IFAK Replacement → Records.IFAKReplacement',
-      'Livescan - Name Check → Records.LivescanNameCheck',
-      'Motor Vehicle Fatalities → Records.MotorVehicleFatalities',
-      'Records Only - TWX Form → Records.RecordsOnlyTWXForm',
-      'Runaway Juvenile → Records.RunawayJuvenile',
-      'Sex Trafficking → Records.SexTrafficking',
-      'TRACS Citation → Records.TRACSCitation',
-      'TRACS Collision → Records.TRACSCollision',
       'RESTRICTED has no direct V2 column on the document view — restrictions are noted by entries on Records.Restriction.',
     ],
     columnNoteOverrides: {
@@ -508,6 +488,91 @@ WHERE ei.IncidentFriendlyId = '<Incident Number>';`,
       EXTERNALID: 'See sidebar →',
       INCIDENTNUMBER: 'See sidebar →',
       INCIDENTID: 'See sidebar →',
+      REPORTNUMBER: 'See sidebar →',
+    },
+  },
+  AXON_REPORTS_TUCSONPDAZ: {
+    title: 'Report type drives the V2 document view',
+    summary:
+      'V1 axon.Reports_TucsonPdAz is the Tucson PD slice of axon.Reports. V2 still splits documents by form: this CSV’s sample row is GENERAL_OFFENSE, so most mapped columns target Records.IncidentReport. For other report kinds, use ReportType and ReportTypeName below to pick the correct Records.* view before joining report-scoped fields.',
+    bulletSections: AXON_REPORTS_REPORT_TYPE_BULLETS,
+    incidentFromReport: true,
+    notes: [
+      'Arizona vs UTC: V1 exposes *_Arizona and *_Indexed_Arizona columns as Arizona local wall time. V2 Records.IncidentReport stores the paired business timestamps in UTC (CreatedAt, UpdatedAt, AxonIncidentFromDate, AxonIncidentToDate, CustomUsDateReported, etc.). Columns noted “Only given in UTC” in this mapping have no separate Arizona field in V2 — derive local time from the UTC column when needed, e.g. `AT TIME ZONE \'UTC\' AT TIME ZONE \'US Mountain Standard Time\'`.',
+      'RESTRICTED has no direct V2 column on the document view — restrictions are noted by entries on Records.Restriction.',
+    ],
+    columnNoteOverrides: {
+      REPORTTYPE: 'See sidebar →',
+      REPORTTYPENAME: 'See sidebar →',
+      REPORTCATEGORY: 'See sidebar →',
+      INCIDENTNUMBER: 'See sidebar →',
+      REPORTNUMBER: 'See sidebar →',
+    },
+  },
+  AXON_RESUME_TUCSONPDAZ: {
+    title: 'Resume (Tucson) on Records.IncidentReport',
+    summary:
+      'V1 axon.Resume_TucsonPdAz exposes resume text and report/incident identifiers. Mapped V2 fields live on Records.IncidentReport (CustomResumeContent, CustomUsOptionalResumeList, ReportFriendlyId, UpdatedAt, Id) and Records.EntIncident (Id, IncidentFriendlyId) for the same logical row.',
+    incidentFromReport: true,
+    joinHub: {
+      hub: {
+        label: 'Records.IncidentReport',
+        hint: 'CustomResumeContent, ReportFriendlyId, Id, UpdatedAt',
+      },
+      spokes: [
+        {
+          id: 'EntIncident',
+          label: 'Records.EntIncident',
+          hint: 'Id, IncidentFriendlyId',
+          connectorText: 'IncidentReport.IncidentId = EntIncident.Id',
+        },
+      ],
+    },
+    notes: [
+      'In V2 this custom surface is a subset of Records.IncidentReport — only rows where CustomResumeContent is not null. There is no separate Records view name for Resume_TucsonPdAz; apply that filter when reproducing the V1 table.',
+      'Use ReportFriendlyId (ReportNumber, e.g. P2603040042-1) as `<ReportNumber>` in the incident-from-report queries below when resolving incident id/number via EntDocument.',
+    ],
+    columnNoteOverrides: {
+      INCIDENTNUMBER: 'See sidebar →',
+      INCIDENTID: 'See sidebar →',
+      REPORTNUMBER: 'See sidebar →',
+    },
+  },
+  AXON_TASKACTIONS: {
+    summary:
+      'LASTTRANSITIONEDBY in V1 is one JSON field (id + username). V2 splits it into LastTransitionedById and LastTransitionedByUserName on the same TaskAction row.',
+  },
+  AXON_USERS: {
+    title: 'User rows on report documents',
+    summary:
+      'V1 axon.Users is one Snowflake view for user/partner fields on any report revision. In V2 those columns live on a form-specific *_EntUser view tied to the parent document — not always Records.IncidentReport_EntUser. Use the same ReportType / ReportTypeName routing as AXON_REPORTS to pick the parent Records.* document view, then join or select that form’s *_EntUser sibling for badge, name, email, partner id, and report-scoped timestamps.',
+    bulletSections: [
+      {
+        title: 'Examples of Records.*_EntUser views (by report form):',
+        items: [
+          'Records.CourtDispositionReport_EntUser',
+          'Records.EntCallForService_EntUser',
+          'Records.Form4C_EntUser',
+          'Records.FounDropPropertyForm_EntUser',
+          'Records.GangMemberEval_EntUser',
+          'Records.IFAKReplacement_EntUser',
+          'Records.ImpoundReleaseForm_EntUser',
+          'Records.IncidentReport_EntUser',
+          'Records.LatestIncidentReport_EntUser',
+          'Records.LeadSheet_EntUser',
+          'Records.MotorVehicleFatalities_EntUser',
+          'Records.RecordsOnlyTWXForm_EntUser',
+          'Records.SpecialCircumstancesCanvass_EntUser',
+          'Records.TRACSCitation_EntUser',
+          'Records.TRACSCollision_EntUser',
+          'Records.Warrant_EntUser',
+          'Records.WarrantSupplement_EntUser',
+        ],
+      },
+    ],
+    incidentFromReport: true,
+    columnNoteOverrides: {
+      INCIDENTNUMBER: 'See sidebar →',
       REPORTNUMBER: 'See sidebar →',
     },
   },

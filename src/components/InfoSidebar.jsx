@@ -3,6 +3,7 @@ import JoinDiagram from './JoinDiagram'
 import JoinHubDiagram from './JoinHubDiagram'
 import SqlExample from './SqlExample'
 import ColumnFanout from './ColumnFanout'
+import InfoBulletSections from './InfoBulletSections'
 import { TABLE_INFO } from '../data/tableInfo'
 import { getTableInfo } from '../data/tableInfoHelpers'
 
@@ -43,7 +44,7 @@ function InfoSidebar({ table, columns }) {
         <div className="info-sidebar-content">
           <div className="info-sidebar-header">
             <p className="canvas-eyebrow">Additional context</p>
-            <h2>{info.title}</h2>
+            {info.title ? <h2>{info.title}</h2> : null}
           </div>
 
           <div className="info-sidebar-body">
@@ -75,6 +76,8 @@ function InfoSidebar({ table, columns }) {
             <JoinDiagram nodes={info.diagram?.nodes} />
 
             <JoinHubDiagram hub={info.joinHub?.hub} spokes={info.joinHub?.spokes} />
+
+            <InfoBulletSections sections={info.bulletSections} />
 
             {info.notes?.map((note) => (
               <p className="info-note" key={note}>

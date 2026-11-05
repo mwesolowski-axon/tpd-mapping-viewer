@@ -26,6 +26,7 @@ export function tableHasInfoSidebar(info, tableId, columns) {
         info.columnFanout ||
         info.columnFanouts?.length ||
         info.sqlExamples ||
+        info.bulletSections?.length ||
         info.notes?.length,
     )
   }

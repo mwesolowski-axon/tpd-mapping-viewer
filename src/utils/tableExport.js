@@ -134,6 +134,18 @@ export function serializeTableInfo(info) {
     )
   }
 
+  if (info.bulletSections?.length) {
+    const lines = []
+    for (const section of info.bulletSections) {
+      lines.push(section.title)
+      for (const item of section.items ?? []) {
+        lines.push(`  • ${item}`)
+      }
+      lines.push('')
+    }
+    sections.push(lines.join('\n').trim())
+  }
+
   if (info.notes?.length) {
     sections.push(paragraphBlock('Notes', info.notes.map((n) => `• ${n}`).join('\n')))
   }

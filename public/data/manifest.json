@@ -201,9 +201,39 @@
       "file": "data/AXON_REPORTS.csv"
     },
     {
+      "id": "AXON_REPORTS_TUCSONPDAZ",
+      "name": "AXON_REPORTS_TUCSONPDAZ",
+      "file": "data/AXON_REPORTS_TUCSONPDAZ.csv"
+    },
+    {
       "id": "AXON_REJECTEDREPORT_TUCSONPDAZ",
       "name": "AXON_REJECTEDREPORT_TUCSONPDAZ",
       "file": "data/AXON_REJECTEDREPORT_TUCSONPDAZ.csv"
+    },
+    {
+      "id": "AXON_RESUME_TUCSONPDAZ",
+      "name": "AXON_RESUME_TUCSONPDAZ",
+      "file": "data/AXON_RESUME_TUCSONPDAZ.csv"
+    },
+    {
+      "id": "AXON_TASKACTIONS",
+      "name": "AXON_TASKACTIONS",
+      "file": "data/AXON_TASKACTIONS.csv"
+    },
+    {
+      "id": "AXON_TASKACTIONSCOMMENTS",
+      "name": "AXON_TASKACTIONSCOMMENTS",
+      "file": "data/AXON_TASKACTIONSCOMMENTS.csv"
+    },
+    {
+      "id": "AXON_TASKS",
+      "name": "AXON_TASKS",
+      "file": "data/AXON_TASKS.csv"
+    },
+    {
+      "id": "AXON_USERS",
+      "name": "AXON_USERS",
+      "file": "data/AXON_USERS.csv"
     }
   ]
 }

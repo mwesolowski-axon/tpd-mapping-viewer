@@ -1,0 +1,21 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+USERRAWDATA,"{""badgeNumber"":""203198"",""firstName"":""Nathan"",""id"":""a37bd6b1-2f38-4176-a86c-178ad766782c"",""lastName"":""Blount"",""friendlyId"":""a37bd6b1-2f38-4176-a86c-178ad766782c""}",axon.Users,UserRawData,,,Raw form json data is not exposed in V2
+REPORTCREATEDAT_INDEXED_UTC,2026-05-29 4:46:19,axon.Users,ReportCreatedAt_Indexed_Utc,Records.IncidentReport_EntUser,CreatedAt,
+REPORTUPDATEDAT_INDEXED_UTC,2026-06-03 22:30:58,axon.Users,ReportUpdatedAt_Indexed_Utc,Records.IncidentReport_EntUser,UpdatedAt,
+BADGENUMBER,203198,axon.Users,BadgeNumber,Records.IncidentReport_EntUser,AxonBadgeNumber,
+FIRSTNAME,Nathan,axon.Users,FirstName,Records.IncidentReport_EntUser,AxonFirstName,
+LASTNAME,Blount,axon.Users,LastName,Records.IncidentReport_EntUser,AxonLastName,
+EXTERNALID,a37bd6b1-2f38-4176-a86c-178ad766782c,axon.Users,ExternalId,Records.IncidentReport_EntUser,Id,
+INCIDENTNUMBER,P2605028513,axon.Users,IncidentNumber,Records.EntIncident,IncidentFriendlyId,
+REPORTNUMBER,P2605028513-3,axon.Users,ReportNumber,Records.IncidentReport_EntUser,ReportFriendlyId,
+PARTNERID,,axon.Users,PartnerId,Records.IncidentReport_EntUser,AxonPartnerId,
+EMAIL,,axon.Users,Email,Records.IncidentReport_EntUser,AxonEmail,
+FILE_NAMES,axon.Users/part-00002-b4f4b985-3eac-4713-bbeb-cc52127c3676-c000.snappy.parquet,,,,,Snowflake Specific
+FILE_ROW_NUMBER,26060,,,,,Snowflake Specific
+FILE_LAST_MODIFIED,2026-08-20 9:09:26,,,,,Snowflake Specific
+OP,,,,,,Snowflake Specific
+ETL_LOAD_ID,,,,,,Snowflake Specific
+ETL_LOADED_AT,,,,,,Snowflake Specific
+ETL_PREVIOUS_WATERMARK,,,,,,Snowflake Specific
+ETL_EFFECTIVE_START_WATERMARK,,,,,,Snowflake Specific
+ETL_CURRENT_WATERMARK,,,,,,Snowflake Specific

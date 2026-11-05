@@ -109,6 +109,9 @@ export const INCIDENT_FROM_REPORT_TABLE_IDS = new Set([
   'AXON_PROPERTYTOOFFENSE',
   'AXON_RECORDSLOCATIONS',
   'AXON_REPORTS',
+  'AXON_REPORTS_TUCSONPDAZ',
+  'AXON_RESUME_TUCSONPDAZ',
+  'AXON_USERS',
 ])
 
 /** Tables with custom incident joins — do not apply report-from-document CSV notes. */

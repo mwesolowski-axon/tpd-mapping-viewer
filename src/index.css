@@ -1443,6 +1443,39 @@ input[type='search'] {
   margin-top: 12px;
 }
 
+.info-bullet-sections {
+  margin-top: 16px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.info-bullet-section-root {
+  list-style: disc;
+  margin: 0 0 14px;
+  padding-left: 1.35rem;
+}
+
+.info-bullet-section-root:last-child {
+  margin-bottom: 0;
+}
+
+.info-bullet-section-title {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.info-bullet-section-nested {
+  list-style: circle;
+  margin: 8px 0 0;
+  padding-left: 1.35rem;
+  color: var(--text-muted);
+}
+
+.info-bullet-section-nested li + li {
+  margin-top: 4px;
+}
+
 .info-note {
   margin: 0;
   font-size: 12.5px;

@@ -1,0 +1,20 @@
+Snowflake Column,Snowflake Example Data,V1 Schema/View,V1 Column,V2 Schema/View,V2 Column,Notes
+TASKACTIONID,81330782,axon.TaskActions,TaskActionId,,,No V2 Equivalent
+EXTERNALID,579eaa2f-39d5-4e05-90b4-5208a3e5b124-38989969,axon.TaskActions,ExternalId,Records.TaskAction,Id,
+TASKEXTERNALID,579eaa2f-39d5-4e05-90b4-5208a3e5b124,axon.TaskActions,TaskExternalId,Records.TaskAction,TaskId,
+PARENTNUMBER,P2604010001-6,axon.TaskActions,ParentNumber,Records.TaskAction,ParentNumber,
+INCIDENTNUMBER,P2604010001,axon.TaskActions,IncidentNumber,Records.TaskAction,IncidentNumber,
+PARENTTYPE,Report,axon.TaskActions,ParentType,Records.TaskAction,ParentType,
+STATELABEL,REVIEW,axon.TaskActions,StateLabel,Records.TaskAction,StateLabel,
+TASKACTIONCREATEDAT,2026-04-04 23:11:46,axon.TaskActions,TaskActionCreatedAt,Records.TaskAction,TaskActionCreatedAt,
+WORKFLOWID,report,axon.TaskActions,WorkflowId,Records.TaskAction,WorkflowId,
+WORKFLOWSTATEID,REVIEW,axon.TaskActions,WorkflowStateId,Records.TaskAction,WorkflowStateId,
+WORKFLOWSTATEDESCRIPTION,Report is ready to be reviewed by a Sergeant.,axon.TaskActions,WorkflowStateDescription,Records.TaskAction,WorkflowStateDescription,
+USERID,ef749938-39b5-43b8-bb3f-fcd355cf2956,axon.TaskActions,UserId,Records.TaskAction,UserId,
+USERNAME,CBurnet1,axon.TaskActions,UserName,Records.TaskAction,UserName,
+LASTASSIGNEDAT,2026-04-11 3:51:31,axon.TaskActions,LastAssignedAt,Records.TaskAction,LastAssignedAt,
+LASTASSIGNEDBYUSERNAME,CBurnet1,axon.TaskActions,LastAssignedByUserName,Records.TaskAction,LastAssignedByUserName,
+LASTASSIGNEDBYUSERID,ef749938-39b5-43b8-bb3f-fcd355cf2956,axon.TaskActions,LastAssignedByUserId,Records.TaskAction,LastAssignedByUserId,
+LASTTRANSITIONEDBY,"{""id"":""35f94f56-06c0-4c01-bc6f-250e2b3ad1ae"",""username"":""laguirr1""}",axon.TaskActions,LastTransitionedBy,Records.TaskAction,LastTransitionedById | LastTransitionedByUserName,V1 contains both values in one field. V2 splits it into two separate columns
+TASKCREATEDAT,,axon.TaskActions,TaskCreatedAt,Records.TaskAction,TaskCreatedAt,
+TASKACTIONCREATEDAT_INDEXED_UTC,2026-04-04 23:11:46,axon.TaskActions,TaskActionCreatedAt_Indexed_Utc,Records.TaskAction,TaskActionCreatedAt_Indexed_Utc,
